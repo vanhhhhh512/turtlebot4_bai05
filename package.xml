@@ -2,9 +2,12 @@
 <package format="3">
   <name>bai05_turtlebot4</name><version>0.1.0</version>
   <description>Week 5: saved-map localization, sequential Nav2 goals and camera YOLO.</description>
-  <maintainer email="23020719@vnu.edu.vn">Do Viet Anh</maintainer>
+  <maintainer email="student@example.invalid">Do Viet Anh</maintainer>
   <license>Apache-2.0</license>
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>launch</exec_depend><exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend><exec_depend>python3-yaml</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
   <exec_depend>rclpy</exec_depend><exec_depend>nav2_simple_commander</exec_depend>
   <exec_depend>geometry_msgs</exec_depend><exec_depend>sensor_msgs</exec_depend>
   <exec_depend>nav_msgs</exec_depend><exec_depend>std_msgs</exec_depend>
