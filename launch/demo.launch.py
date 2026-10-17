@@ -13,6 +13,7 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     share = get_package_share_directory('bai05_turtlebot4')
+    bai04 = get_package_share_directory('bai04_turtlebot4')
     sim = get_package_share_directory('turtlebot4_ignition_bringup')
     nav = get_package_share_directory('turtlebot4_navigation')
 
@@ -42,7 +43,7 @@ def generate_launch_description():
         DeclareLaunchArgument('yolo_model', default_value='yolo11n.pt'),
         DeclareLaunchArgument('device', default_value='0'),
         DeclareLaunchArgument('server_display', default_value=os.environ.get('DISPLAY', ':0')),
-        DeclareLaunchArgument('map', default_value=os.path.join(share, 'maps', 'map.yaml')),
+        DeclareLaunchArgument('map', default_value=os.path.join(bai04, 'maps', 'map.yaml')),
         SetEnvironmentVariable('IGN_GAZEBO_RESOURCE_PATH', ':'.join([
             os.path.join(share, 'worlds'), os.path.join(share, 'models'),
             os.path.join(sim, 'worlds'), '/opt/ros/humble/share',
@@ -59,7 +60,7 @@ def generate_launch_description():
         include(sim, 'turtlebot4_spawn.launch.py', {
             'world': 'maze', 'model': 'standard',
             'x': '0.0', 'y': '0.0', 'yaw': '0.0', 'rviz': 'false'}),
-        include(nav, 'localization.launch.py', {
+        include(bai04, 'localization.launch.py', {
             'map': LaunchConfiguration('map'), 'use_sim_time': 'true'}),
         include(nav, 'nav2.launch.py', {
             'use_sim_time': 'true', 'params_file': os.path.join(share, 'config', 'nav2.yaml')}),

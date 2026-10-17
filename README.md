@@ -6,6 +6,11 @@ Chương trình dùng lại bản đồ `maze` tuần 4, định vị AMCL, gử
 `nav2_simple_commander` và nhận diện ảnh RGB của OAK-D bằng Ultralytics YOLO11n.
 Hai node Python chạy độc lập: navigation tiếp tục hoạt động khi xử lý ảnh.
 
+Source nền là repository [Bài 04](https://github.com/vanhhhhh512/turtlebot4_bai04):
+package `bai04_turtlebot4` cung cấp bản đồ và launch localization được Bài 05
+gọi trực tiếp. Hai file map trong repository này là bản sao nguyên byte để nộp
+hồ sơ. Node gửi goal, node YOLO và world thêm vật thể là phần mở rộng Bài 05.
+
 ## Cài đặt
 
 Cần ROS 2 Humble và TurtleBot 4 Simulator đã cấu hình repository apt theo
@@ -19,10 +24,15 @@ sudo apt install ros-humble-turtlebot4-simulator ros-humble-turtlebot4-navigatio
 python3 -m pip install ultralytics opencv-python
 mkdir -p ~/turtlebot5_ws/src
 cd ~/turtlebot5_ws/src
+git clone https://github.com/vanhhhhh512/turtlebot4_bai04.git bai04_turtlebot4
 git clone https://github.com/vanhhhhh512/turtlebot4_bai05.git bai05_turtlebot4
 cd ~/turtlebot5_ws
 source /opt/ros/humble/setup.bash
-colcon build --symlink-install --packages-select bai05_turtlebot4
+colcon build --symlink-install \
+  --base-paths src/bai04_turtlebot4 src/bai04_turtlebot4/upstream src/bai05_turtlebot4 \
+  --packages-select irobot_create_nodes irobot_create_control bai04_turtlebot4 bai05_turtlebot4 \
+  --allow-overriding irobot_create_nodes irobot_create_control \
+  --cmake-args -DBUILD_TESTING=OFF -DCMAKE_BUILD_TYPE=Release
 source install/setup.bash
 ```
 
@@ -60,8 +70,9 @@ Các goal được đặt trong frame `map`, yaw tính bằng radian:
 | 2 | -2.93 | 2.91 | 1.57079632679 |
 | 3 | 3.57 | -3.59 | 0.0 |
 
-Sửa `config/goals.yaml` trước lượt mới nếu thay goal. Bản đồ trong `maps/` giữ
-nguyên từ bài 04; `worlds/maze_yolo.sdf` giữ tường của maze và bổ sung mô hình
+Sửa `config/goals.yaml` trước lượt mới nếu thay goal. Launch mặc định nạp map
+từ package `bai04_turtlebot4`; bản sao trong `maps/` giữ nguyên từ Bài 04.
+`worlds/maze_yolo.sdf` giữ tường của maze và bổ sung mô hình
 người/ghế. Các vật thêm vào được LiDAR/costmap quan sát, không ghi lại vào map gốc.
 
 ## Chạy riêng từng phần
