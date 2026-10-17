@@ -1,0 +1,26 @@
+base_world: maze
+objects:
+- name: person_goal1
+  model: malevisitoronphone
+  x: 5.0
+  y: 3.0
+  z: 0.0
+  yaw: 3.14159
+- name: chair_goal1
+  model: chair
+  x: 4.6
+  y: 3.8
+  z: 0.0
+  yaw: 0.0
+- name: person_goal2
+  model: malevisitoronphone
+  x: -3.0
+  y: 5.0
+  z: 0.0
+  yaw: -1.5708
+- name: person_goal3
+  model: malevisitoronphone
+  x: 5.5
+  y: -3.6
+  z: 0.0
+  yaw: 3.14159

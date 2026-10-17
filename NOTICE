@@ -1,0 +1,20 @@
+Week 5 implementation: Do Viet Anh, 23020719.
+
+The maze world is derived from TurtleBot 4 Simulator's maze.sdf as installed for
+ROS 2 Humble, Clearpath Robotics / turtlebot4_simulator.
+https://github.com/turtlebot/turtlebot4_simulator
+
+MaleVisitorOnPhone version 2: Wan Yi Seow, OpenRobotics, Gazebo Fuel.
+Chair version 3: Cole Biesemeyer, OpenRobotics, Gazebo Fuel.
+Fuel metadata for both assets declares Creative Commons Attribution 4.0 International.
+https://creativecommons.org/licenses/by/4.0/
+Original model.config files and mesh/material data are retained. Only mesh URI
+references in model.sdf are made relative for offline loading.
+https://fuel.gazebosim.org/1.0/OpenRobotics/models/MaleVisitorOnPhone/2
+https://fuel.gazebosim.org/1.0/OpenRobotics/models/Chair/3
+
+The Nav2 parameter file is derived from turtlebot4_navigation/config/nav2.yaml.
+The RViz configuration is derived from the student's week 4 package and Nav2.
+
+Ultralytics YOLO and model weights are external dependencies and are subject to
+their respective upstream licensing: https://www.ultralytics.com/license

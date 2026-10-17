@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.8)
+project(bai05_turtlebot4)
+find_package(ament_cmake REQUIRED)
+install(DIRECTORY launch config maps rviz worlds models DESTINATION share/${PROJECT_NAME})
+install(PROGRAMS scripts/navigate_goals.py scripts/yolo_detector.py DESTINATION lib/${PROJECT_NAME})
+ament_package()
