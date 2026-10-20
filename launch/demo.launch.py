@@ -34,12 +34,14 @@ def generate_launch_description():
                                output='screen'),
                 TimerAction(period=35.0, actions=[ExecuteProcess(
                     cmd=['ign', 'gazebo', '-g', '-v', '2', '--gui-config',
-                         os.path.join(share, 'config', 'gazebo_gui.config')], output='screen')])]
+                         os.path.join(share, 'config', 'gazebo_gui.config')], output='screen',
+                    condition=IfCondition(LaunchConfiguration('show_gazebo_gui')))])]
 
     return LaunchDescription([
         DeclareLaunchArgument('output_dir', default_value=os.path.expanduser('~/bai05_run')),
         DeclareLaunchArgument('run_route', default_value='true'),
         DeclareLaunchArgument('show_rviz', default_value='true'),
+        DeclareLaunchArgument('show_gazebo_gui', default_value='true'),
         DeclareLaunchArgument('yolo', default_value='true'),
         DeclareLaunchArgument('yolo_model', default_value='yolo11n.pt'),
         DeclareLaunchArgument('device', default_value='0'),
@@ -61,8 +63,9 @@ def generate_launch_description():
         include(sim, 'turtlebot4_spawn.launch.py', {
             'world': 'maze', 'model': 'standard',
             'x': '0.0', 'y': '0.0', 'yaw': '0.0', 'rviz': 'false'}),
-        TimerAction(period=10.0, actions=[include(bai04, 'localization.launch.py', {
-            'map': LaunchConfiguration('map'), 'use_sim_time': 'true'}),
+        TimerAction(period=10.0, actions=[include(nav, 'localization.launch.py', {
+            'map': LaunchConfiguration('map'), 'use_sim_time': 'true',
+            'params': os.path.join(share, 'config', 'localization.yaml')}),
         ]),
         TimerAction(period=20.0, actions=[include(nav, 'nav2.launch.py', {
             'use_sim_time': 'true', 'params_file': os.path.join(share, 'config', 'nav2.yaml')})]),

@@ -117,6 +117,43 @@ class RouteNavigator(BasicNavigator):
         while rclpy.ok() and time.monotonic() < deadline:
             rclpy.spin_once(self, timeout_sec=0.1)
 
+    def localization_error(self):
+        """Compare fresh AMCL and Gazebo poses in this simulation's map frame."""
+        if not self.amcl or not self.gt:
+            return None
+        now = self.get_clock().now().nanoseconds * 1e-9
+        if (now - stamp_s(self.amcl.header.stamp) > 3 or
+                now - stamp_s(self.gt.header.stamp) > 3):
+            return None
+        a, g = pose_dict(self.amcl.pose.pose), pose_dict(self.gt.pose.pose)
+        return math.hypot(a['x'] - g['x'], a['y'] - g['y'])
+
+    def relocalize_from_gazebo(self, goal, error):
+        """Simulation-only recovery: stop Nav2 before resetting a lost AMCL estimate."""
+        self.event('LOCALIZATION_LOST', goal=goal, position_error_m=error,
+                   amcl=pose_dict(self.amcl.pose.pose), gt=pose_dict(self.gt.pose.pose))
+        self.cancelTask()
+        deadline = time.monotonic() + 15
+        while not self.isTaskComplete() and time.monotonic() < deadline:
+            pass
+        if not self.isTaskComplete():
+            raise TimeoutError('Nav2 did not stop after localization was lost')
+        initial = PoseStamped()
+        initial.header.frame_id = 'map'
+        initial.header.stamp = self.get_clock().now().to_msg()
+        initial.pose = self.gt.pose.pose
+        self.setInitialPose(initial)
+        deadline = time.monotonic() + 10
+        while time.monotonic() < deadline:
+            rclpy.spin_once(self, timeout_sec=0.1)
+            new_stamp = stamp_s(self.amcl.header.stamp) if self.amcl else 0
+            new_error = self.localization_error()
+            if new_stamp >= stamp_s(initial.header.stamp) and new_error is not None and new_error < 0.5:
+                self.event('LOCALIZATION_RECOVERED', goal=goal,
+                           position_error_m=new_error)
+                return
+        raise TimeoutError('AMCL did not converge after pose reset')
+
     def wait_future(self, future, timeout):
         deadline = time.monotonic() + timeout
         while rclpy.ok() and not future.done() and time.monotonic() < deadline:
@@ -173,16 +210,31 @@ class RouteNavigator(BasicNavigator):
             wall_start = time.monotonic()
             sim_start = self.get_clock().now().nanoseconds * 1e-9
             self.event('GOAL_SENT', goal=index, target=goal)
-            accepted = self.goToPose(p)
-            if not accepted:
-                self.event('GOAL_REJECTED', goal=index)
-                raise RuntimeError(f'Goal {index} rejected')
-            while rclpy.ok() and not self.isTaskComplete():
-                if time.monotonic() - wall_start > self.config.get('goal_timeout_sec', 240):
-                    self.event('GOAL_TIMEOUT', goal=index)
-                    self.cancelTask()
-                    while not self.isTaskComplete():
-                        pass
+            relocalizations = 0
+            while True:
+                p.header.stamp = self.get_clock().now().to_msg()
+                accepted = self.goToPose(p)
+                if not accepted:
+                    self.event('GOAL_REJECTED', goal=index)
+                    raise RuntimeError(f'Goal {index} rejected')
+                retry = False
+                while rclpy.ok() and not self.isTaskComplete():
+                    error = self.localization_error()
+                    if error is not None and error > 1.0:
+                        if relocalizations >= 2:
+                            self.cancelTask()
+                            raise RuntimeError(f'Goal {index}: AMCL lost localization repeatedly')
+                        self.relocalize_from_gazebo(index, error)
+                        relocalizations += 1
+                        retry = True
+                        break
+                    if time.monotonic() - wall_start > self.config.get('goal_timeout_sec', 240):
+                        self.event('GOAL_TIMEOUT', goal=index)
+                        self.cancelTask()
+                        while not self.isTaskComplete():
+                            pass
+                        break
+                if not retry:
                     break
             result = self.getResult()
             self.spin_for(0.5)
@@ -194,6 +246,7 @@ class RouteNavigator(BasicNavigator):
                 'gt_stamp': stamp_s(self.gt.header.stamp),
                 'amcl_goal_distance_m': math.hypot(a['x']-goal['x'], a['y']-goal['y']),
                 'contact_count': self.contacts-before_contact, 'bump_events': self.bump_events-before_bump,
+                'relocalizations': relocalizations,
                 'contact_messages_received': self.contact_messages,
                 'hazard_messages_received': self.hazard_messages}
             results.append(record)
