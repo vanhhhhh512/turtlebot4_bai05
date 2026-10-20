@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<sdf version="1.8">
+  <model name="fire_extinguisher">
+    <static>true</static>
+    <link name="body">
+      <collision name="body_collision">
+        <pose>0 0 0.32 0 0 0</pose>
+        <geometry><cylinder><radius>0.11</radius><length>0.64</length></cylinder></geometry>
+      </collision>
+      <visual name="red_tank">
+        <pose>0 0 0.30 0 0 0</pose>
+        <geometry><cylinder><radius>0.10</radius><length>0.56</length></cylinder></geometry>
+        <material><ambient>0.72 0.02 0.02 1</ambient><diffuse>0.95 0.04 0.03 1</diffuse></material>
+      </visual>
+      <visual name="black_base">
+        <pose>0 0 0.04 0 0 0</pose>
+        <geometry><cylinder><radius>0.115</radius><length>0.08</length></cylinder></geometry>
+        <material><ambient>0.05 0.05 0.05 1</ambient><diffuse>0.09 0.09 0.09 1</diffuse></material>
+      </visual>
+      <visual name="white_label">
+        <pose>0 0 0.37 0 0 0</pose>
+        <geometry><cylinder><radius>0.103</radius><length>0.10</length></cylinder></geometry>
+        <material><ambient>0.9 0.9 0.85 1</ambient><diffuse>1 1 0.94 1</diffuse></material>
+      </visual>
+      <visual name="red_neck">
+        <pose>0 0 0.595 0 0 0</pose>
+        <geometry><cylinder><radius>0.045</radius><length>0.07</length></cylinder></geometry>
+        <material><ambient>0.72 0.02 0.02 1</ambient><diffuse>0.95 0.04 0.03 1</diffuse></material>
+      </visual>
+      <visual name="dark_handle">
+        <pose>0.06 0 0.65 0 0 0</pose>
+        <geometry><box><size>0.20 0.055 0.045</size></box></geometry>
+        <material><ambient>0.04 0.04 0.04 1</ambient><diffuse>0.08 0.08 0.08 1</diffuse></material>
+      </visual>
+      <visual name="hose">
+        <pose>-0.12 0 0.47 0 0 0</pose>
+        <geometry><box><size>0.025 0.025 0.27</size></box></geometry>
+        <material><ambient>0.03 0.03 0.03 1</ambient><diffuse>0.07 0.07 0.07 1</diffuse></material>
+      </visual>
+    </link>
+  </model>
+</sdf>

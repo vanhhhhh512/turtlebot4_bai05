@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, OpaqueFunction, SetEnvironmentVariable
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, OpaqueFunction, SetEnvironmentVariable, TimerAction
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
@@ -32,8 +32,9 @@ def generate_launch_description():
         return [ExecuteProcess(cmd=['ign', 'gazebo', '-s', str(world), '-r', '-v', '2'],
                                additional_env={'DISPLAY': LaunchConfiguration('server_display').perform(context)},
                                output='screen'),
-                ExecuteProcess(cmd=['ign', 'gazebo', '-g', '-v', '2', '--gui-config',
-                                    os.path.join(share, 'config', 'gazebo_gui.config')], output='screen')]
+                TimerAction(period=35.0, actions=[ExecuteProcess(
+                    cmd=['ign', 'gazebo', '-g', '-v', '2', '--gui-config',
+                         os.path.join(share, 'config', 'gazebo_gui.config')], output='screen')])]
 
     return LaunchDescription([
         DeclareLaunchArgument('output_dir', default_value=os.path.expanduser('~/bai05_run')),
@@ -60,20 +61,21 @@ def generate_launch_description():
         include(sim, 'turtlebot4_spawn.launch.py', {
             'world': 'maze', 'model': 'standard',
             'x': '0.0', 'y': '0.0', 'yaw': '0.0', 'rviz': 'false'}),
-        include(bai04, 'localization.launch.py', {
+        TimerAction(period=10.0, actions=[include(bai04, 'localization.launch.py', {
             'map': LaunchConfiguration('map'), 'use_sim_time': 'true'}),
-        include(nav, 'nav2.launch.py', {
-            'use_sim_time': 'true', 'params_file': os.path.join(share, 'config', 'nav2.yaml')}),
-        Node(package='rviz2', executable='rviz2', arguments=[
+        ]),
+        TimerAction(period=20.0, actions=[include(nav, 'nav2.launch.py', {
+            'use_sim_time': 'true', 'params_file': os.path.join(share, 'config', 'nav2.yaml')})]),
+        TimerAction(period=42.0, actions=[Node(package='rviz2', executable='rviz2', arguments=[
             '-d', os.path.join(share, 'rviz', 'navigation.rviz')],
             parameters=[{'use_sim_time': True}], condition=IfCondition(LaunchConfiguration('show_rviz'))),
         Node(package='bai05_turtlebot4', executable='yolo_detector.py', output='screen',
              parameters=[{'use_sim_time': True, 'output_dir': output,
                           'model': ParameterValue(LaunchConfiguration('yolo_model'), value_type=str),
                           'device': ParameterValue(LaunchConfiguration('device'), value_type=str)}],
-             condition=IfCondition(LaunchConfiguration('yolo'))),
-        Node(package='bai05_turtlebot4', executable='navigate_goals.py', output='screen',
+             condition=IfCondition(LaunchConfiguration('yolo')))]),
+        TimerAction(period=55.0, actions=[Node(package='bai05_turtlebot4', executable='navigate_goals.py', output='screen',
              parameters=[{'use_sim_time': True, 'output_dir': output,
                           'goals_file': os.path.join(share, 'config', 'goals.yaml')}],
-             condition=IfCondition(LaunchConfiguration('run_route'))),
+             condition=IfCondition(LaunchConfiguration('run_route')))]),
     ])

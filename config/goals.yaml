@@ -2,6 +2,6 @@ frame_id: map
 goal_timeout_sec: 240.0
 dwell_sec: 6.0
 goals:
-  - {name: Goal 1, x: 3.05, y: 2.99, yaw: 0.0}
-  - {name: Goal 2, x: -2.93, y: 2.91, yaw: 1.57079632679}
-  - {name: Goal 3, x: 3.57, y: -3.59, yaw: 0.0}
+  - {name: Goal 1 - northwest, x: -8.5, y: 8.5, yaw: -1.57079632679}
+  - {name: Goal 2 - southwest, x: -8.5, y: -8.5, yaw: 0.0}
+  - {name: Goal 3 - southeast, x: 9.0, y: -9.0, yaw: 1.57079632679}

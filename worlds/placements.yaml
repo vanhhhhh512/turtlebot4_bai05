@@ -24,3 +24,39 @@ objects:
   y: -3.6
   z: 0.0
   yaw: 3.14159
+- name: table_center
+  model: table
+  x: -2.5
+  y: -0.5
+  z: 0.0
+  yaw: 0.0
+- name: chair_center
+  model: chair
+  x: -2.5
+  y: -1.3
+  z: 0.0
+  yaw: 3.14159
+- name: table_southeast
+  model: table
+  x: 4.5
+  y: -8.5
+  z: 0.0
+  yaw: 0.0
+- name: chair_southeast
+  model: chair
+  x: 5.4
+  y: -8.5
+  z: 0.0
+  yaw: -1.5708
+- name: extinguisher_northwest
+  model: fire_extinguisher
+  x: -7.8
+  y: 6.2
+  z: 0.0
+  yaw: 0.0
+- name: extinguisher_southeast
+  model: fire_extinguisher
+  x: 5.2
+  y: -7.8
+  z: 0.0
+  yaw: 0.0

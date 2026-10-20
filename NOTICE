@@ -13,6 +13,9 @@ references in model.sdf are made relative for offline loading.
 https://fuel.gazebosim.org/1.0/OpenRobotics/models/MaleVisitorOnPhone/2
 https://fuel.gazebosim.org/1.0/OpenRobotics/models/Chair/3
 
+The simple table and fire extinguisher SDF models were authored for this
+student project; they use only Gazebo box and cylinder geometry.
+
 The Nav2 parameter file is derived from turtlebot4_navigation/config/nav2.yaml.
 The RViz configuration is derived from the student's week 4 package and Nav2.
 

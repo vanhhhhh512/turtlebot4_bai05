@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<sdf version="1.8">
+  <model name="table">
+    <static>true</static>
+    <link name="body">
+      <!-- A solid collision volume keeps the table visible to the 2D LiDAR. -->
+      <collision name="table_collision">
+        <pose>0 0 0.375 0 0 0</pose>
+        <geometry><box><size>1.10 0.70 0.75</size></box></geometry>
+      </collision>
+      <visual name="top">
+        <pose>0 0 0.72 0 0 0</pose>
+        <geometry><box><size>1.10 0.70 0.06</size></box></geometry>
+        <material><ambient>0.43 0.25 0.11 1</ambient><diffuse>0.60 0.35 0.15 1</diffuse></material>
+      </visual>
+      <visual name="leg_front_left">
+        <pose>0.48 0.28 0.35 0 0 0</pose>
+        <geometry><box><size>0.07 0.07 0.70</size></box></geometry>
+        <material><ambient>0.16 0.16 0.17 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material>
+      </visual>
+      <visual name="leg_front_right">
+        <pose>0.48 -0.28 0.35 0 0 0</pose>
+        <geometry><box><size>0.07 0.07 0.70</size></box></geometry>
+        <material><ambient>0.16 0.16 0.17 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material>
+      </visual>
+      <visual name="leg_back_left">
+        <pose>-0.48 0.28 0.35 0 0 0</pose>
+        <geometry><box><size>0.07 0.07 0.70</size></box></geometry>
+        <material><ambient>0.16 0.16 0.17 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material>
+      </visual>
+      <visual name="leg_back_right">
+        <pose>-0.48 -0.28 0.35 0 0 0</pose>
+        <geometry><box><size>0.07 0.07 0.70</size></box></geometry>
+        <material><ambient>0.16 0.16 0.17 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material>
+      </visual>
+    </link>
+  </model>
+</sdf>
