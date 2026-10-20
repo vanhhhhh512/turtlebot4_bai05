@@ -1043,6 +1043,6 @@
         </model>
     <include><uri>__BAI05_MODELS__/malevisitoronphone</uri><name>person_goal2</name><pose>-3.0 5.0 0.0 0 0 -1.5708</pose><static>true</static></include>
     <include><uri>__BAI05_MODELS__/fire_extinguisher</uri><name>extinguisher_goal1</name><pose>-7.8 6.2 0.0 0 0 0.0</pose><static>true</static></include>
-    <include><uri>__BAI05_MODELS__/fire_extinguisher</uri><name>extinguisher_goal3</name><pose>5.2 -7.8 0.0 0 0 0.0</pose><static>true</static></include>
+    <include><uri>__BAI05_MODELS__/fire_extinguisher</uri><name>extinguisher_goal3</name><pose>-1.8 -5.5 0.0 0 0 0.0</pose><static>true</static></include>
   </world>
 </sdf>

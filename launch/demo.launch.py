@@ -32,7 +32,7 @@ def generate_launch_description():
         return [ExecuteProcess(cmd=['ign', 'gazebo', '-s', str(world), '-r', '-v', '2'],
                                additional_env={'DISPLAY': LaunchConfiguration('server_display').perform(context)},
                                output='screen'),
-                TimerAction(period=35.0, actions=[ExecuteProcess(
+                TimerAction(period=5.0, actions=[ExecuteProcess(
                     cmd=['ign', 'gazebo', '-g', '-v', '2', '--gui-config',
                          os.path.join(share, 'config', 'gazebo_gui.config')], output='screen',
                     condition=IfCondition(LaunchConfiguration('show_gazebo_gui')))])]
@@ -77,7 +77,7 @@ def generate_launch_description():
         Node(package='bai05_turtlebot4', executable='yolo_detector.py', output='screen',
              parameters=[{'use_sim_time': True, 'output_dir': output,
                           'model': ParameterValue(LaunchConfiguration('yolo_model'), value_type=str),
-                          'confidence': 0.12, 'observation_confidence': 0.012,
+                          'confidence': 0.12,
                           'imgsz': 960,
                           'show_window': ParameterValue(LaunchConfiguration('show_yolo_window'), value_type=bool),
                           'device': ParameterValue(LaunchConfiguration('device'), value_type=str)}],

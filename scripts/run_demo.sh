@@ -17,9 +17,9 @@ if [[ "${BAI05_SKIP_BUILD:-0}" != 1 ]]; then
 fi
 source "$workspace_dir/install/setup.bash"
 
-export ROS_DOMAIN_ID="${BAI05_ROS_DOMAIN_ID:-75}"
+export ROS_DOMAIN_ID="${BAI05_ROS_DOMAIN_ID:-$((75 + $$ % 150))}"
 export ROS_LOCALHOST_ONLY=1
-export IGN_PARTITION="${BAI05_IGN_PARTITION:-bai05_isolated}"
+export IGN_PARTITION="${BAI05_IGN_PARTITION:-bai05_$(date +%Y%m%d_%H%M%S)_$$}"
 : "${DISPLAY:?An X11 desktop DISPLAY is required}"
 
 run_dir="${BAI05_OUTPUT_DIR:-$HOME/bai05_runs/$(date +%Y%m%d_%H%M%S)}"

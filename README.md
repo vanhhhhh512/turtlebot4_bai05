@@ -36,8 +36,7 @@ colcon build --symlink-install \
 source install/setup.bash
 ```
 
-YOLO-World hiển thị box cho bình chữa cháy và người. World demo giữ lại một người ở vị trí
-an toàn, không chạm tường; bàn, ghế và người bị lỗi vị trí đã được bỏ khỏi scene.
+YOLO-World nhận diện bình chữa cháy và người. Scene demo giữ một người ở vị trí an toàn để kiểm tra bbox human; bàn, ghế và người bị lỗi vị trí đã được bỏ khỏi scene.
 
 Model YOLO-World TorchScript trong `models/yolo_world_furniture.torchscript` đi kèm source,
 với các prompt `wooden table`, `chair`, `a red cylinder with a white stripe` (hiển thị là fire extinguisher), `person`; demo không
@@ -107,16 +106,15 @@ không phải quãng đường Nav2 đo được trong lượt chạy.
 
 Sửa `config/goals.yaml` trước lượt mới nếu thay goal. Launch mặc định nạp map
 từ package `bai04_turtlebot4`; bản sao trong `maps/` giữ nguyên từ Bài 04.
-`worlds/maze_yolo.sdf` giữ tường của maze và bổ sung mô hình
-hai bình chữa cháy gần Goal 1 và Goal 3; `worlds/placements.yaml` ghi vị trí.
-Chỉ giữ một model người ở vùng trống; người ở vùng vướng tường, bàn và ghế đã được bỏ.
-Bình chữa cháy là model SDF dựng bằng hình học đơn giản, có collision
-để LiDAR/costmap quan sát. Map `map.yaml`/`map.pgm` tuần 4 giữ nguyên; các vật
-thêm vào chỉ thuộc world mô phỏng. Trước Goal 3, node Nav2 ghé pose quan sát
-`(3.5, -7.3, -1.0)` và dừng 8 giây để camera nhìn về bình chữa cháy cạnh
-tuyến tới Goal 3. Bình đặt sát tuyến đi để dễ thấy; Nav2 phải lập kế hoạch tránh
-vật cản khi tiếp tục. Đây là điểm quan sát giữa Goal 2 và Goal 3; ba goal ở ba góc
-vẫn giữ nguyên. YOLO chỉ vẽ box khi vật thể thật sự vào ảnh và vượt ngưỡng
+`worlds/maze_yolo.sdf` giữ tường của maze và bổ sung hai bình chữa cháy;
+`worlds/placements.yaml` ghi vị trí một bình gần Goal 1 và một bình giữa tuyến Goal 2→3.
+Scene giữ một người ở vị trí trống `(-3, 5)`; không chứa bàn, ghế hoặc người ở vị trí lỗi. Hai bình chữa cháy nằm gần Goal 1 và trên giữa tuyến Goal 2→3 tại `(-1.8, -5.5)`.
+Bình chữa cháy là model SDF dựng bằng hình học đơn giản, có collision để LiDAR/costmap
+quan sát. Map `map.yaml`/`map.pgm` tuần 4 giữ nguyên; các vật thêm vào chỉ thuộc world
+mô phỏng. Bình thứ hai đặt ở `(-1.8, -5.5)`, trên quỹ đạo cũ giữa Goal 2
+đến Goal 3. Chương trình gửi trực tiếp Goal 3 sau Goal 2, không có goal quan sát trung gian;
+LiDAR đưa bình vào costmap cục bộ để bộ lập kế hoạch/bộ điều khiển tránh khi tới gần. YOLO
+chỉ nhận diện hình ảnh, không điều khiển Nav2; box xuất hiện khi bình vào ảnh và vượt
 confidence 0,12.
 
 ## Chạy riêng từng phần

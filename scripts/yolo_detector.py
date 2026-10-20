@@ -21,7 +21,7 @@ class YoloDetector(Node):
         super().__init__('bai05_yolo_detector')
         defaults = {'image_topic': '/oakd/rgb/preview/image_raw',
                     'output_dir': str(Path.home() / 'bai05_run'), 'model': 'yolo11n.pt',
-                    'device': '0', 'confidence': 0.12, 'observation_confidence': 0.012,
+                    'device': '0', 'confidence': 0.12,
                     'class_aliases': '{"a red cylinder with a white stripe": "fire extinguisher"}',
                     'imgsz': 960,
                     'inference_period': 0.25, 'show_window': True}
@@ -67,7 +67,6 @@ class YoloDetector(Node):
                     'device': self.device,
                     'image_topic': self.get_parameter('image_topic').value,
                     'confidence': self.get_parameter('confidence').value,
-                    'observation_confidence': self.get_parameter('observation_confidence').value,
                     'class_aliases': aliases, 'imgsz': self.get_parameter('imgsz').value,
                     'class_names': self.class_names, 'torch': torch.__version__,
                     'camera_source': 'ROS sensor_msgs/Image from Gazebo OAK-D RGB camera'}
@@ -84,8 +83,6 @@ class YoloDetector(Node):
         elif event == 'MISSION_COMPLETE': self.mission = 'MISSION COMPLETE - 3 goals'
         elif event == 'MISSION_ERROR': self.mission = 'MISSION ERROR - see navigation log'
         elif event == 'LOCALIZATION_READY': self.mission = 'AMCL / Nav2 ready'
-        elif event == 'OBSERVATION_SENT': self.mission = 'Looking at extinguisher before Goal 3'
-        elif event == 'OBSERVATION_RESULT': self.mission = 'Extinguisher view complete'
 
     def detect(self):
         msg = self.latest
@@ -100,8 +97,6 @@ class YoloDetector(Node):
             self.get_logger().error('cv_bridge conversion failed: ' + str(exc))
             return
         confidence = self.get_parameter('confidence').value
-        if self.mission == 'Looking at extinguisher before Goal 3':
-            confidence = self.get_parameter('observation_confidence').value
         result = self.model.predict(frame, conf=confidence,
                     imgsz=self.get_parameter('imgsz').value, device=self.device, verbose=False)[0]
         latency = (time.perf_counter()-start)*1000

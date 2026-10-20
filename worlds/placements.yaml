@@ -14,7 +14,7 @@ objects:
   yaw: 0.0
 - name: extinguisher_goal3
   model: fire_extinguisher
-  x: 5.2
-  y: -7.8
+  x: -1.8
+  y: -5.5
   z: 0.0
   yaw: 0.0
