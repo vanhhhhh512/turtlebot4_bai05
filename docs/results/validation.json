@@ -39,5 +39,13 @@
     "asset": "results/rviz_rgb_camera.png",
     "sha256": "76785c47b3998c424c34b7a3b6055e546651bedec5155f96549d0da0fc53d3e7",
     "rgb_panel_inside_rviz": true
+  },
+  "latex_zip_standalone_build": "passed: 16 pages, RGB RViz asset present, ZIP CRC passed",
+  "diagram_3_2": {
+    "labels_fit_boxes": "checked from renderer bounds",
+    "feedback_path": "Nav2 /cmd_vel routed between the pipelines without crossing RGB/YOLO boxes",
+    "direct_sensor_costmap_branch": true,
+    "rendered_report_page_reviewed": 4,
+    "system_flow_pdf_sha256": "883c5a66922f486996de42dba879e59a363bc29d3bf060f9a5a3f8cb0975517b"
   }
 }

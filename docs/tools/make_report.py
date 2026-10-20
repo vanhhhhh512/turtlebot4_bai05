@@ -8,7 +8,8 @@ from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyBboxPatch
+from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+from matplotlib.path import Path as MplPath
 from PIL import Image
 
 root=Path(__file__).resolve().parents[1]
@@ -19,34 +20,66 @@ run=Path(m['run_dir'])
 pub=json.loads((root/'publication.json').read_text()) if (root/'publication.json').exists() else {}
 
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
-fig,ax=plt.subplots(figsize=(12,4.2))
-ax.set_xlim(0,12);ax.set_ylim(0,4.2);ax.axis('off')
+fig,ax=plt.subplots(figsize=(10.5,4.7))
+ax.set_xlim(-.1,15.65);ax.set_ylim(.5,7.05);ax.axis('off')
+box_labels=[]
 
-def box(x,y,w,h,text):
-    ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=0.08',facecolor='#f5f7fa',
-                               edgecolor='#314456',linewidth=1.1))
-    ax.text(x+w/2,y+h/2,text,ha='center',va='center',fontsize=9)
+def box(x,y,w,h,text,fontsize=13.5):
+    ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=0.035',facecolor='#f5f7fa',
+                               edgecolor='#314456',linewidth=1.3,zorder=2))
+    artist=ax.text(x+w/2,y+h/2,text,ha='center',va='center',fontsize=fontsize,zorder=3)
+    box_labels.append((artist,x,y,w,h))
 
-def arrow(a,b,label=''):
-    ax.annotate('',xy=b,xytext=a,arrowprops={'arrowstyle':'->','color':'#314456','lw':1.2})
-    if label:ax.text((a[0]+b[0])/2,(a[1]+b[1])/2+.13,label,fontsize=8,ha='center')
+def arrow(*points):
+    path=MplPath(points,[MplPath.MOVETO]+[MplPath.LINETO]*(len(points)-1))
+    ax.add_patch(FancyArrowPatch(path=path,arrowstyle='-|>',mutation_scale=13,
+                                color='#314456',linewidth=1.4,zorder=1))
 
-box(.15,1.5,1.6,1.0,'Gazebo\nTurtleBot 4')
-box(2.4,2.5,2.0,.9,'LiDAR / odom / TF\nscan + pose')
-box(2.4,.55,2.0,.9,'OAK-D RGB\nImage 320 × 240')
-box(5.1,2.5,2.3,.9,'MapServer + AMCL\nmap → odom')
-box(5.1,.55,2.3,.9,'cv_bridge → YOLO-World\nclass / conf / box')
-box(8.1,2.5,2.0,.9,'Nav2\nplanner / controller')
-box(8.1,.55,3.4,.9,'OpenCV + Image / JSON\nTerminal + evidence')
-box(8.1,3.75,2.0,.32,'Node gửi Goal 1 → 2 → 3')
-arrow((1.75,2.1),(2.4,2.9));arrow((1.75,1.9),(2.4,1.0))
-arrow((4.4,2.95),(5.1,2.95));arrow((4.4,1),(5.1,1))
-arrow((7.4,2.95),(8.1,2.95),'pose')
-arrow((7.4,1),(8.1,1));arrow((9.1,3.75),(9.1,3.4),'action')
-ax.annotate('',xy=(.95,1.48),xytext=(9.1,2.45),
-            arrowprops={'arrowstyle':'->','connectionstyle':'angle,angleA=-90,angleB=0,rad=12',
-                        'color':'#687a89','lw':1.2})
-ax.text(6.2,1.72,'/cmd_vel → chuyển động → sensor cập nhật',fontsize=8,ha='center',color='#314456')
+def label(x,y,text,align='center'):
+    ax.text(x,y,text,fontsize=11,ha=align,va='center',color='#314456',zorder=3,
+            bbox={'facecolor':'white','edgecolor':'none','pad':1.2})
+
+box(.2,2.7,2.2,1.3,'Gazebo\nTurtleBot 4',fontsize=12.5)
+box(3.1,4.1,2.6,1.1,'LiDAR / odom\nTF',fontsize=12.5)
+box(6.65,4.1,3.2,1.1,'MapServer + AMCL\nmap → odom',fontsize=11.7)
+box(11.4,4.1,3.3,1.1,'Nav2\nplanner / controller',fontsize=12)
+box(11.4,5.9,3.3,.9,'Node điều hướng\nGoal 1 → 2 → 3',fontsize=12.5)
+box(3.1,.9,2.6,1.1,'OAK-D RGB\n320 × 240',fontsize=12.5)
+box(6.65,.9,3.2,1.1,'cv_bridge\nYOLO-World',fontsize=12.5)
+box(11.4,.9,3.3,1.1,'Hiển thị / lưu log\nImage + JSON',fontsize=12)
+
+# Sensor output and localization input, with a separate observation input to Nav2.
+arrow((2.44,3.75),(3.06,4.65))
+arrow((5.74,4.65),(6.61,4.65))
+arrow((9.89,4.55),(11.36,4.55))
+label(10.62,4.29,'pose/TF')
+arrow((4.4,5.24),(4.4,5.65),(10.65,5.65),(10.65,4.95),(11.36,4.95))
+label(7.45,5.91,'scan / odom → costmap')
+arrow((13.05,5.86),(13.05,5.24))
+label(13.25,5.54,'NavigateToPose',align='left')
+
+# Command feedback occupies the gap between the two pipelines.
+arrow((13.05,4.06),(13.05,3.35),(2.44,3.35))
+label(8.15,3.57,'/cmd_vel → chuyển động robot')
+
+# RGB inference and display stay independent of goal sending and motion control.
+arrow((2.44,2.95),(3.06,1.45))
+arrow((5.74,1.45),(6.61,1.45))
+arrow((9.89,1.45),(11.36,1.45))
+label(10.62,1.72,'box/JSON')
+
+# Keep labels inside their boxes even if font metrics differ on another machine.
+fig.canvas.draw()
+renderer=fig.canvas.get_renderer()
+for artist,x,y,w,h in box_labels:
+    low,high=ax.transData.transform([(x,y),(x+w,y+h)])
+    while artist.get_fontsize()>10:
+        bounds=artist.get_window_extent(renderer)
+        if bounds.width<.92*(high[0]-low[0]) and bounds.height<.85*(high[1]-low[1]):
+            break
+        artist.set_fontsize(artist.get_fontsize()-.25)
+    bounds=artist.get_window_extent(renderer)
+    assert bounds.width<.94*(high[0]-low[0]) and bounds.height<.9*(high[1]-low[1]), artist.get_text()
 fig.savefig(results/'system_flow.pdf',bbox_inches='tight')
 fig.savefig(results/'system_flow.png',bbox_inches='tight',dpi=200)
 plt.close(fig)
