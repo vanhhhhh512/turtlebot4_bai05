@@ -1,7 +1,7 @@
 # Báo cáo Bài thực hành 05 — Đỗ Việt Anh, 23020719
 
 - [Video demo](https://drive.google.com/drive/folders/1GKdy0U0tKGbxUAaGAmAffTPxJa5pT8wy?usp=drive_link)
-- [Báo cáo PDF — 19 trang](report/Bao_cao_23020719_Bai_thuc_hanh_05.pdf)
+- [Báo cáo PDF — 17 trang](report/Bao_cao_23020719_Bai_thuc_hanh_05.pdf)
 - [ZIP LaTeX mở/sửa trên Prism](report/Bao_cao_23020719_Bai05_LaTeX_Prism.zip)
 - [GitHub mã nguồn Bài 05](https://github.com/vanhhhhh512/turtlebot4_bai05)
 - [GitHub Bài 04 — map/localization](https://github.com/vanhhhhh512/turtlebot4_bai04)
@@ -18,7 +18,7 @@ Khoảng cách nhỏ nhất giữa tâm robot và tâm bình Goal 3 là 0.618 m 
 khoảng hở bề mặt). Chênh lệch AMCL/Gazebo lớn nhất ở các pose đã lưu là 0.194 m;
 hai timestamp có thể khác nhau, nên không coi đó là accuracy đồng bộ độc lập.
 
-Mục 3.1 giải thích từng file chính; mục 3.4 trình bày nguồn phát/nhận, nội dung dữ liệu, action, TF và clock.
+Mục 3.1 giải thích ngắn gọn công dụng từng nhóm file; mục 3.4 giới thiệu các topic/action, hệ tọa độ và đồng hồ bằng cách viết dễ hiểu.
 
 ## Nội dung
 

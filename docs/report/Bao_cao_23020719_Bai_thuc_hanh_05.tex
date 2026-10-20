@@ -129,95 +129,47 @@ bai05_turtlebot4/
 `-- package.xml, CMakeLists.txt, README.md, LICENSE, NOTICE
 \end{Verbatim}
 
-\textbf{File khởi chạy \code{launch/demo.launch.py}.}
-File này ghép các thành phần cần dùng vào một lệnh launch: Gazebo, robot TurtleBot 4,
-bridge clock, MapServer/AMCL, Nav2, RViz và hai node Python của bài tập. Các thành phần
-được gọi theo thời gian trễ để mô phỏng và cảm biến có thời gian khởi tạo trước khi
-chương trình gửi goal. Launch đọc các file trong \code{config/}, chọn world trong
-\code{worlds/} và truyền đường dẫn model YOLO cho node nhận diện. Các tham số như
-\code{run_route}, \code{output_dir}, \code{device} và \code{yolo_model} cho phép chọn
-cách chạy mà không cần sửa nội dung hai node.
+\textbf{Chạy chương trình.}
+\code{scripts/run_demo.sh} nạp môi trường ROS, build package và tạo thư mục lưu
+kết quả. Script gọi \code{launch/demo.launch.py} để mở Gazebo, robot, AMCL, Nav2,
+RViz và YOLO. \code{scripts/arrange_windows.py} căn ba cửa sổ để dễ quan sát và quay video.
 
-\textbf{Hai script hỗ trợ chạy demo.}
-\code{scripts/run_demo.sh} là file người dùng chạy từ terminal. Script nạp môi trường
-ROS 2, build các package cần thiết, tạo thư mục lưu kết quả rồi gọi
-\code{demo.launch.py}. Script cũng chọn ROS domain và Ignition partition riêng cho
-từng phiên. \code{scripts/arrange_windows.py} dùng xdotool để đặt RViz ở bên trái,
-Gazebo ở góc trên bên phải và cửa sổ YOLO ở góc dưới bên phải. File này chỉ căn
-cửa sổ để quan sát/quay video, không tham gia điều khiển robot.
+\textbf{Điều hướng robot.}
+\code{scripts/navigate_goals.py} đọc danh sách đích, cho robot rời dock rồi gửi
+lần lượt ba goal tới Nav2. Chương trình chờ kết quả và kiểm tra va chạm trước
+khi chuyển goal. File này cũng lưu kết quả vào \code{goal_results.json}, ghi
+quỹ đạo vào \code{trajectory.csv} và hiển thị tên các goal trên RViz.
 
-\textbf{Node điều hướng \code{scripts/navigate_goals.py}.}
-File định nghĩa lớp \code{RouteNavigator} kế thừa \code{BasicNavigator}. Node đọc
-danh sách đích từ \code{goals.yaml}, kiểm tra trạng thái dock, thực hiện Undock và
-khởi tạo AMCL trong mô phỏng. Với mỗi đích, node tạo \code{PoseStamped}, chuyển yaw
-thành quaternion, gọi \code{goToPose()} rồi chờ action kết thúc. Sau đó node kiểm tra
-kết quả và các bộ đếm va chạm trước khi gửi goal tiếp theo. Node đồng thời nhận
-pose AMCL, odometry, ground truth và hazard để lưu \code{trajectory.csv},
-\code{navigation_events.jsonl} và \code{goal_results.json}. Các marker tên Goal 1--3
-trên RViz cũng được phát từ file này.
+\textbf{Nhận diện từ camera.}
+\code{scripts/yolo_detector.py} nhận ảnh RGB, chuyển sang OpenCV và chạy YOLO.
+Khi nhận ra người hoặc bình chữa cháy, node vẽ khung cùng nhãn lên ảnh,
+hiển thị kết quả và lưu ảnh gốc/ảnh đã vẽ khung để đối chiếu.
 
-\textbf{Node nhận diện \code{scripts/yolo_detector.py}.}
-Node nhận ảnh trên \code{/oakd/rgb/preview/image_raw}, dùng \code{cv_bridge} chuyển
-ảnh ROS sang ảnh BGR của OpenCV rồi đưa vào YOLO. Bản demo truyền model YOLO-World
-TorchScript từ launch. Node lấy class, confidence và tọa độ box, giữ hai lớp
-\code{person}, \code{fire extinguisher} để vẽ lên ảnh. Kết quả được hiển thị, publish
-lại thành Image/JSON và lưu cùng ảnh gốc để đối chiếu. Node còn nhận trạng thái
-nhiệm vụ để ghi dòng chữ robot đang đi tới goal nào; kết quả YOLO không phát lệnh
-vận tốc hoặc gửi thêm navigation goal.
+\textbf{Các file trong \code{config/}.}
+\code{goals.yaml} lưu tọa độ, hướng dừng và thời gian chờ của ba goal.
+\code{localization.yaml} lưu cài đặt AMCL để xác định vị trí robot trên map.
+\code{nav2.yaml} chứa các cài đặt tìm đường, tránh vật cản, tốc độ và điều kiện
+xác nhận đã tới đích. \code{gazebo_gui.config} lưu góc nhìn/cách hiển thị Gazebo.
 
-\textbf{Cấu hình đích trong \code{config/goals.yaml}.}
-File lưu frame của đích, ba bộ tọa độ \(x,y,yaw\), timeout cho mỗi goal và thời gian
-dừng giữa hai goal. Bản hiện tại dùng frame \code{map}, timeout 600 giây và dừng
-6 giây. Muốn đổi điểm đến hoặc hướng robot khi dừng thì sửa file này; không cần
-thay vòng lặp điều hướng trong Python.
+\textbf{Bản đồ và môi trường.}
+Trong \code{maps/}, \code{map.pgm} là ảnh bản đồ, còn \code{map.yaml} lưu đường dẫn
+ảnh, độ phân giải và gốc tọa độ. Cả hai giữ nguyên từ tuần 4.
+\code{worlds/maze_yolo.sdf} tạo tường và đặt người, bình trong Gazebo;
+\code{placements.yaml} ghi lại vị trí để dễ kiểm tra. Khi đổi vị trí vật thể,
+cần sửa pose trong SDF và cập nhật YAML tương ứng.
 
-\textbf{Cấu hình định vị và điều hướng.}
-\code{config/localization.yaml} chứa tham số MapServer và AMCL: frame map/odom/thân
-robot, topic scan, mô hình chuyển động và số hạt. Ví dụ, AMCL hiện đặt số hạt trong
-khoảng 500--2.000. \code{config/nav2.yaml} cấu hình planner Navfn, controller DWB,
-costmap và các hành vi hỗ trợ. Những giá trị như tốc độ thẳng tối đa 0,26 m/s,
-bán kính inflation 0,45 m và sai số vị trí goal checker 0,25 m nằm trong file này.
-Hai file có vai trò khác nhau: AMCL ước lượng robot đang ở đâu, còn Nav2 dùng pose
-và costmap để tìm đường rồi tính vận tốc.
+\textbf{Model và hiển thị.}
+\code{models/malevisitoronphone/} và \code{models/fire_extinguisher/} chứa model 3D
+của người và bình. \code{yolo_world_furniture.torchscript} là model YOLO dùng để
+nhận diện ảnh. \code{rviz/navigation.rviz} lưu các lớp map, LiDAR, đường đi,
+marker goal và camera RGB để RViz mở sẵn đúng giao diện.
 
-\textbf{Bản đồ trong \code{maps/}.}
-\code{map.pgm} là ảnh occupancy grid lưu các ô tường, vùng trống và vùng chưa biết.
-\code{map.yaml} chỉ đến ảnh đó, đồng thời lưu độ phân giải 0,05 m/ô, origin và các
-ngưỡng chuyển mức xám thành occupied/free. Hai file phải đi cùng nhau để MapServer
-nạp đúng tọa độ. Đây là bản sao nguyên byte của map tuần 4; launch mặc định lấy map
-từ package \code{bai04_turtlebot4}. Những bình chữa cháy thêm vào mô phỏng không
-được vẽ lại trong cặp file map này.
-
-\textbf{World và vị trí vật thể trong \code{worlds/}.}
-\code{maze_yolo.sdf} mô tả tường maze và các model được đặt trong Gazebo. Các pose
-trong file SDF quyết định vị trí thực tế của một người và hai bình chữa cháy.
-\code{placements.yaml} ghi lại tên model, tọa độ và yaw để dễ kiểm tra bố trí;
-launch hiện nạp SDF, không tự sinh vị trí vật thể từ file YAML này. Vì vậy, khi đổi
-scene cần sửa pose trong SDF và cập nhật bảng vị trí tương ứng.
-
-\textbf{Tài nguyên trong \code{models/}.}
-\code{malevisitoronphone/} chứa hình học, vật liệu và thông tin nguồn của model người.
-\code{fire_extinguisher/} chứa \code{model.sdf} dựng bình màu đỏ, nhãn trắng, tay cầm,
-ống và phần collision để mô phỏng vật cản. File \code{model.config} mô tả tên model,
-phiên bản và file SDF cần nạp. \code{yolo_world_furniture.torchscript} là model
-nhận diện được nạp vào node YOLO; file này xử lý ảnh, khác với hai thư mục model
-3D dùng để dựng vật thể trong Gazebo.
-
-\textbf{Cấu hình hiển thị.}
-\code{rviz/navigation.rviz} lưu Fixed Frame, góc nhìn và các display Map, LaserScan,
-costmap, path, marker goal, camera OAK-D RGB. Nhờ đó RViz mở ra với đúng các lớp
-cần quan sát thay vì phải thêm lại từng display. \code{config/gazebo_gui.config}
-lưu cấu hình GUI/góc nhìn của Gazebo, không thay đổi bản đồ hay thuật toán Nav2.
-
-\textbf{Các file khai báo và tài liệu.}
-\code{package.xml} khai báo tên package và các phụ thuộc ROS như rclpy,
-nav2\_simple\_commander, cv\_bridge và ros\_gz\_bridge. \code{CMakeLists.txt} quy định
-cách cài đặt hai node vào thư mục executable của package và đưa launch, config,
-map, world, model vào thư mục share khi build. \code{README.md} ghi cách cài,
-build và chạy; \code{LICENSE}, \code{NOTICE} ghi giấy phép và nguồn tài nguyên.
-Thư mục \code{docs/} chứa PDF, LaTeX, hình, log run10 và script dựng báo cáo.
-Kết quả của một lần chạy mới được ghi vào thư mục \code{output_dir} do người dùng
-chọn, gồm log điều hướng, CSV quỹ đạo, JSON detection và ảnh camera.
+\textbf{Khai báo package và tài liệu.}
+\code{package.xml} khai báo các thư viện ROS cần dùng; \code{CMakeLists.txt}
+quy định các file được cài khi build. \code{README.md} hướng dẫn cài đặt và chạy,
+\code{LICENSE}/\code{NOTICE} ghi giấy phép và nguồn tài nguyên.
+\code{docs/} chứa báo cáo, LaTeX, hình và log run10. Kết quả của lượt chạy mới
+được ghi vào thư mục \code{output_dir} đã chọn.
 
 \subsection{Sơ đồ khối các thành phần}
 \fig{../results/system_flow.pdf}{1.0}{Luồng dữ liệu Localization, Navigation và YOLO. Hai node bài tập sử dụng chung dữ liệu mô phỏng nhưng chạy ở hai process.}
@@ -239,104 +191,54 @@ bai05\_yolo\_detector & Nhận Image, cv\_bridge, YOLO, publish ảnh/JSON detec
 \end{table}
 
 \subsection{Topic, action và hệ tọa độ}
-Topic được dùng để truyền dữ liệu liên tục như scan, ảnh, pose và vận tốc.
-Các yêu cầu kéo dài như đi đến một đích hoặc rời dock dùng action để bên gửi
-theo dõi tiến độ, nhận kết quả và có thể hủy yêu cầu đang thực hiện.
+Các node dùng topic để gửi dữ liệu như ảnh, scan và vị trí. Yêu cầu đi đến đích
+hoặc rời dock dùng action để chương trình có thể chờ và nhận kết quả.
 
-\textbf{Bản đồ và dữ liệu LiDAR.}
-\code{map_server} đọc cặp YAML/PGM rồi phát \code{/map}, kiểu
-\code{nav_msgs/msg/OccupancyGrid}. Message chứa kích thước lưới, độ phân giải,
-origin và giá trị từng ô; AMCL dùng nó để so khớp scan, static layer của costmap
-dùng nó để biết các tường đã có. \code{/scan}, kiểu \code{sensor_msgs/msg/LaserScan},
-mang dãy khoảng cách LiDAR theo từng góc quét. Dữ liệu scan từ mô phỏng được đưa
-sang ROS qua bridge, sau đó AMCL và các lớp quan sát vật cản của Nav2 cùng sử dụng.
-Vì vậy bình mới có thể được phát hiện bằng LiDAR dù chưa xuất hiện trong map tĩnh.
+\textbf{Bản đồ và vị trí robot.}
+\code{map_server} phát bản đồ qua \code{/map}; LiDAR gửi khoảng cách tới vật cản
+qua \code{/scan}. AMCL dùng hai nguồn này cùng chuyển động robot để tìm vị trí
+trên map, rồi phát \code{/amcl_pose}. \code{/odom} cung cấp chuyển động và vận tốc
+để Nav2 điều khiển robot. Node điều hướng lưu vị trí từ AMCL và vận tốc từ
+\code{/odom} vào log.
 
-\textbf{Odometry và pose sau định vị.}
-\code{/odom}, kiểu \code{nav_msgs/msg/Odometry}, mô tả chuyển động tương đối và vận
-tốc robot trong hệ odom. Nav2 dùng dữ liệu này khi điều khiển chuyển động; node
-điều hướng cũng lưu vận tốc để đối chiếu quỹ đạo. Sau khi kết hợp map, scan và
-chuyển động, AMCL phát \code{/amcl_pose}, kiểu
-\code{geometry_msgs/msg/PoseWithCovarianceStamped}. Message chứa vị trí, hướng,
-timestamp và covariance biểu diễn độ bất định của ước lượng. Node điều hướng
-đọc pose này để ghi CSV và tính khoảng cách từ vị trí ước lượng cuối tới goal.
+\textbf{Khởi tạo và gửi goal.}
+Trong mô phỏng, \code{/sim_ground_truth_pose} cung cấp vị trí robot từ Gazebo;
+node dùng nó để đặt vị trí ban đầu cho AMCL qua \code{/initialpose} và đối chiếu log.
+Node gửi từng đích qua action \code{/navigate_to_pose}, chờ kết thúc rồi mới gửi
+đích tiếp theo. Nếu \code{/dock_status} cho biết robot đang ở dock, chương trình
+thực hiện action \code{/undock} trước.
 
-\textbf{Pose khởi tạo và ground truth.}
-\code{/initialpose} có cùng kiểu PoseWithCovarianceStamped, là đầu vào đặt ước lượng
-ban đầu cho AMCL. Trong mô phỏng, node lấy pose từ \code{/sim_ground_truth_pose}
-(kiểu Odometry) rồi gọi \code{setInitialPose()} của BasicNavigator để publish
-ước lượng đó. Ground truth còn được ghi cùng pose AMCL để đối chiếu. Đây là thông
-tin tham chiếu có sẵn trong Gazebo; khi áp dụng cho robot thật cần có cách xác
-định pose ban đầu tương ứng. Run10 không ghi nhận lần đặt lại pose giữa tuyến.
+\textbf{Chuyển động và va chạm.}
+Nav2 đưa ra lệnh vận tốc qua \code{/cmd_vel}; \code{linear.x} là tốc độ đi thẳng,
+\code{angular.z} là tốc độ quay. \code{/hazard_detection} và \code{/bumper_contact}
+báo các va chạm để node ghi nhận, kiểm tra cùng kết quả mỗi goal trước khi đi tiếp.
 
-\textbf{Action đi đến goal và rời dock.}
-\code{/navigate_to_pose} dùng kiểu \code{nav2_msgs/action/NavigateToPose}.
-\code{bai05_route_navigator} là action client, còn bt\_navigator của Nav2 nhận yêu cầu.
-Goal chứa một PoseStamped trong frame map; Nav2 cung cấp feedback về quá trình
-di chuyển và trả trạng thái khi nhiệm vụ kết thúc. Chương trình chờ action hiện
-tại hoàn tất, ghi kết quả rồi mới gửi pose kế tiếp. Riêng thao tác ra khỏi dock
-dùng \code{/undock}, kiểu \code{irobot_create_msgs/action/Undock}. Node đọc
-\code{/dock_status} (DockStatus) trước; chỉ gửi Undock khi robot đang ở dock và
-chờ thành công trước khi bắt đầu khởi tạo/điều hướng.
+\textbf{Camera và YOLO.}
+\code{/oakd/rgb/preview/image_raw} đưa ảnh RGB từ camera tới RViz và node YOLO.
+Sau nhận diện, \code{/bai05/yolo/image} chứa ảnh đã vẽ khung;
+\code{/bai05/yolo/detections} chứa nhãn, confidence và tọa độ khung dạng JSON.
+Tọa độ khung tính theo pixel ảnh, chưa phải vị trí vật thể trên bản đồ.
+YOLO chỉ nhận diện; Nav2 tránh vật cản bằng LiDAR và costmap.
 
-\textbf{Lệnh vận tốc và tín hiệu va chạm.}
-\code{/cmd_vel} có kiểu \code{geometry_msgs/msg/Twist}; hai thành phần chính dùng
-cho robot vi sai là \code{linear.x} (m/s) và \code{angular.z} (rad/s). Controller
-Nav2 tính lệnh bám đường; trong launch đang dùng, lệnh qua \code{/cmd_vel_nav} tới
-velocity smoother trước khi ra \code{/cmd_vel} để điều khiển robot mô phỏng.
-\code{/hazard_detection} có kiểu \code{irobot_create_msgs/msg/HazardDetectionVector},
-còn \code{/bumper_contact} có kiểu \code{ros_gz_interfaces/msg/Contacts}.
-Node điều hướng đọc hai topic để đếm BUMP/contact và lưu event; các bộ đếm này
-được kiểm tra cùng action result trước khi cho phép chuyển sang goal tiếp theo.
+\textbf{Thông tin hiển thị.}
+Node điều hướng gửi trạng thái đang đi goal nào/đã xong qua
+\code{/bai05/mission_status} để YOLO ghi lên ảnh. \code{/waypoints} chứa các nhãn
+Goal 1--3 cho RViz; các nhãn này chỉ đánh dấu vị trí, không điều khiển robot.
 
-\textbf{Ảnh RGB và kết quả nhận diện.}
-\code{/oakd/rgb/preview/image_raw} là \code{sensor_msgs/msg/Image}, do camera mô
-phỏng cung cấp qua bridge. Ảnh trong run10 có kích thước 320$\times$240. RViz nhận
-topic này để hiển thị panel OAK-D RGB; node YOLO nhận cùng nguồn ảnh với QoS best
-effort, hàng đợi một message để ưu tiên khung mới. Sau suy luận, node publish
-\code{/bai05/yolo/image} dưới dạng Image đã vẽ box, đồng thời phát
-\code{/bai05/yolo/detections} dưới dạng \code{std_msgs/msg/String} chứa JSON.
-JSON ghi timestamp ảnh, class, confidence và box \code{[x1,y1,x2,y2]} theo pixel.
-Các tọa độ này thuộc ảnh camera, chưa phải tọa độ vật thể trên map và không được
-dùng để gửi goal hay thay đổi lệnh điều khiển Nav2.
-
-\textbf{Trạng thái nhiệm vụ và marker.}
-\code{/bai05/mission_status} là String chứa event JSON do node điều hướng phát,
-ví dụ GOAL\_SENT, GOAL\_RESULT và MISSION\_COMPLETE. Node YOLO đọc topic này để
-đổi dòng trạng thái trên ảnh. \code{/waypoints}, kiểu
-\code{visualization_msgs/msg/MarkerArray}, chứa các nhãn Goal 1--3 trong frame map
-để RViz vẽ tại vị trí đích. Marker chỉ phục vụ quan sát; action đi đến đích được
-gửi riêng qua NavigateToPose.
-
-\textbf{Quan hệ giữa các hệ tọa độ.}
-\code{/tf} và \code{/tf_static} có kiểu \code{tf2_msgs/msg/TFMessage}, mô tả các
-phép biến đổi động và các quan hệ cố định giữa những frame. Chuỗi chính là
+\textbf{Hệ tọa độ và thời gian.}
+\code{/tf}, \code{/tf_static} giúp liên hệ vị trí bản đồ, thân robot và cảm biến:
 \[
 \texttt{map}\longrightarrow\texttt{odom}\longrightarrow
 \texttt{base\_link}\longrightarrow\texttt{sensor}.
 \]
-Frame map gắn với bản đồ đã lưu; AMCL cập nhật biến đổi map--odom để hiệu chỉnh
-ước lượng theo scan/map. Biến đổi odom--base\_link mô tả chuyển động cục bộ của
-thân robot. Các biến đổi từ thân robot tới LiDAR/camera lấy từ mô hình robot,
-được robot\_state\_publisher phát để dữ liệu sensor có thể quy về frame chung.
-RViz chọn Fixed Frame = map, nhờ đó map, scan, robot và các goal được đặt đúng
-tương quan. Nếu thiếu TF hoặc dùng timestamp không tra được biến đổi, scan/path
-có thể không hiển thị đúng dù topic vẫn đang phát dữ liệu.
+\code{map} gắn với bản đồ; \code{odom} theo dõi chuyển động;
+\code{base_link} gắn với thân robot, còn các frame sensor gắn với LiDAR/camera.
+RViz chọn Fixed Frame = map để đặt các dữ liệu đúng vị trí. Ba goal cũng dùng
+frame map, với \(x,y\) là vị trí và yaw là hướng dừng.
 
-Mỗi goal trong bài có \code{header.frame_id=map}; \(x,y\) là tọa độ tính theo bản
-đồ và yaw là hướng cuối tính bằng radian. Với chuyển động trên mặt phẳng, node
-đặt quaternion \(q_x=q_y=0\), \(q_z=\sin(yaw/2)\), \(q_w=\cos(yaw/2)\).
-Timestamp của PoseStamped lấy từ clock ROS tại thời điểm gửi để Nav2 sử dụng
-cùng mốc thời gian với dữ liệu TF và cảm biến.
-
-\textbf{Clock mô phỏng và thời gian chờ.}
-Bridge phát \code{/clock}, kiểu \code{rosgraph_msgs/msg/Clock}, từ đồng hồ Gazebo.
-Các node đặt \code{use_sim_time=true} nên timestamp pose/ảnh và các timer ROS
-theo thời gian mô phỏng. Chương trình còn dùng đồng hồ thực để giới hạn thời
-gian chờ một goal và dừng giữa hai goal. Vì vậy khi Gazebo chậm hoặc tạm dừng,
-thời gian mô phỏng có thể tăng chậm/dừng trong khi timeout thực vẫn tiếp tục.
-CSV lưu cả timestamp AMCL và ground truth để biết hai pose đem so sánh có được
-ghi nhận ở cùng thời điểm hay không.
+\code{/clock} cung cấp thời gian mô phỏng. Các node dùng \code{use_sim_time=true}
+để ảnh, pose và TF cùng theo đồng hồ này; riêng timeout và khoảng dừng giữa
+các goal dùng thời gian thực. Log giữ timestamp từng nguồn để kiểm tra khi đối chiếu.
 
 \subsection{Luồng hoạt động khi chạy}
 

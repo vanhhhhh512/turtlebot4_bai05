@@ -1,7 +1,7 @@
 {
   "status": "REPORT_UPDATED_VIDEO_LINK_PROVIDED",
   "report_run": "direct_goal_route_run10",
-  "pdf_pages": 19,
+  "pdf_pages": 17,
   "reference_structure_11_sections": true,
   "all_3_goals_succeeded": true,
   "direct_goal_sequence": true,
@@ -30,7 +30,7 @@
   "drive_link_source": "Provided by user; label Video demo as requested",
   "drive_public_access_verified": false,
   "pdf_has_clickable_drive_and_github_links": true,
-  "pdf_layout": "19 A4 pages; 11 main sections; detailed sections 3.1/3.4; no Overfull/Missing character; rendered pages reviewed",
+  "pdf_layout": "17 A4 pages; 11 main sections; sections 3.1/3.4 shortened in plain language; rendered pages reviewed; no Overfull/Missing character",
   "rviz_illustration": "Section 7.2: corners_run04 screenshot, with OAK-D RGB panel inside RViz; run10 remains the source of updated numerical/camera evidence.",
   "archive_before_update": "archive/before_report_update_20261020_225756",
   "legacy_video": "Original run04 MP4/WebM preserved locally; updated dossier uses the supplied Drive link",
@@ -44,8 +44,8 @@
     "labels_fit_boxes": "checked from renderer bounds",
     "feedback_path": "Nav2 /cmd_vel routed between the pipelines without crossing RGB/YOLO boxes",
     "direct_sensor_costmap_branch": true,
-    "rendered_report_page_reviewed": 6,
-    "system_flow_pdf_sha256": "8338fce27e3b8fb5bbb3bfb01d06a19c8bd232260bf57f0a4b6924babf96cd7a"
+    "rendered_report_page_reviewed": 5,
+    "system_flow_pdf_sha256": "69ac675c4fb75f605a0f389c8da6984a263ed2ea4dbbb86ff0a9f96c72682f94"
   },
   "sections_3_1_and_3_4": {
     "file_descriptions_checked_against_source": true,
@@ -54,9 +54,8 @@
     "reviewed_report_pages": [
       4,
       5,
-      6,
-      7,
-      8
-    ]
+      6
+    ],
+    "style": "Concise, practical descriptions; unnecessary message-type, covariance and quaternion detail removed"
   }
 }

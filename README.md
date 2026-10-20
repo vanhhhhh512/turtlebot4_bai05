@@ -14,7 +14,7 @@ hồ sơ. Node gửi goal, node YOLO và world thêm vật thể là phần mở
 ## Video demo, báo cáo và kết quả mới
 
 - [Video demo (Google Drive)](https://drive.google.com/drive/folders/1GKdy0U0tKGbxUAaGAmAffTPxJa5pT8wy?usp=drive_link)
-- [Báo cáo PDF — 19 trang, cập nhật 21/10/2026](docs/report/Bao_cao_23020719_Bai_thuc_hanh_05.pdf)
+- [Báo cáo PDF — 17 trang, cập nhật 21/10/2026](docs/report/Bao_cao_23020719_Bai_thuc_hanh_05.pdf)
 - [GitHub mã nguồn](https://github.com/vanhhhhh512/turtlebot4_bai05)
 - [ZIP LaTeX để mở/sửa trên Prism](docs/report/Bao_cao_23020719_Bai05_LaTeX_Prism.zip)
 - [Nguồn LaTeX, biểu đồ, script dựng PDF và evidence run10](docs/README.md)
