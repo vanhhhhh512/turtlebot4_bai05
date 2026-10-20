@@ -1,0 +1,1332 @@
+[INFO] [launch]: All log files can be found below /home/admin1/.ros/log/2026-10-20-21-30-42-086575-admin1-Nitro-AN515-45-160181
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [ign-1]: process started with pid [160201]
+[INFO] [parameter_bridge-2]: process started with pid [160203]
+[INFO] [robot_state_publisher-3]: process started with pid [160205]
+[INFO] [joint_state_publisher-4]: process started with pid [160207]
+[INFO] [robot_state_publisher-5]: process started with pid [160209]
+[INFO] [static_transform_publisher-6]: process started with pid [160212]
+[INFO] [create-7]: process started with pid [160214]
+[INFO] [create-8]: process started with pid [160216]
+[INFO] [parameter_bridge-9]: process started with pid [160221]
+[INFO] [parameter_bridge-10]: process started with pid [160225]
+[INFO] [parameter_bridge-11]: process started with pid [160227]
+[INFO] [parameter_bridge-12]: process started with pid [160231]
+[INFO] [parameter_bridge-13]: process started with pid [160236]
+[INFO] [parameter_bridge-14]: process started with pid [160248]
+[INFO] [parameter_bridge-15]: process started with pid [160264]
+[INFO] [parameter_bridge-16]: process started with pid [160266]
+[INFO] [parameter_bridge-17]: process started with pid [160271]
+[INFO] [parameter_bridge-18]: process started with pid [160275]
+[INFO] [parameter_bridge-19]: process started with pid [160281]
+[INFO] [parameter_bridge-20]: process started with pid [160290]
+[INFO] [parameter_bridge-21]: process started with pid [160296]
+[INFO] [parameter_bridge-22]: process started with pid [160300]
+[INFO] [parameter_bridge-23]: process started with pid [160308]
+[INFO] [parameter_bridge-24]: process started with pid [160316]
+[INFO] [parameter_bridge-25]: process started with pid [160328]
+[INFO] [parameter_bridge-26]: process started with pid [160331]
+[INFO] [parameter_bridge-27]: process started with pid [160333]
+[INFO] [parameter_bridge-28]: process started with pid [160343]
+[INFO] [parameter_bridge-29]: process started with pid [160350]
+[INFO] [turtlebot4_node-30]: process started with pid [160354]
+[INFO] [turtlebot4_ignition_hmi_node-31]: process started with pid [160362]
+[INFO] [spawner-32]: process started with pid [160367]
+[INFO] [hazards_vector_publisher-33]: process started with pid [160386]
+[INFO] [ir_intensity_vector_publisher-34]: process started with pid [160393]
+[INFO] [motion_control-35]: process started with pid [160407]
+[INFO] [wheel_status_publisher-36]: process started with pid [160426]
+[INFO] [mock_publisher-37]: process started with pid [160434]
+[INFO] [robot_state-38]: process started with pid [160447]
+[INFO] [kidnap_estimator_publisher-39]: process started with pid [160461]
+[INFO] [ui_mgr-40]: process started with pid [160470]
+[INFO] [pose_republisher_node-41]: process started with pid [160476]
+[INFO] [sensors_node-42]: process started with pid [160478]
+[INFO] [interface_buttons_node-43]: process started with pid [160488]
+[INFO] [static_transform_publisher-44]: process started with pid [160512]
+[INFO] [static_transform_publisher-45]: process started with pid [160551]
+[parameter_bridge-2] [INFO] [1792506642.980361702] [bai05_clock_bridge]: Creating GZ->ROS Bridge: [/clock (ignition.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[robot_state_publisher-3] [WARN] [1792506642.915919699] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[robot_state_publisher-3] [INFO] [1792506642.916230301] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-3] [INFO] [1792506642.916571402] [robot_state_publisher]: got segment bump_front_center
+[robot_state_publisher-3] [INFO] [1792506642.916595448] [robot_state_publisher]: got segment bump_front_left
+[robot_state_publisher-3] [INFO] [1792506642.916605227] [robot_state_publisher]: got segment bump_front_right
+[robot_state_publisher-3] [INFO] [1792506642.916613753] [robot_state_publisher]: got segment bump_left
+[robot_state_publisher-3] [INFO] [1792506642.916621738] [robot_state_publisher]: got segment bump_right
+[robot_state_publisher-3] [INFO] [1792506642.916629854] [robot_state_publisher]: got segment bumper
+[robot_state_publisher-3] [INFO] [1792506642.916638220] [robot_state_publisher]: got segment button_1
+[robot_state_publisher-3] [INFO] [1792506642.916646315] [robot_state_publisher]: got segment button_2
+[robot_state_publisher-3] [INFO] [1792506642.916654491] [robot_state_publisher]: got segment button_power
+[robot_state_publisher-3] [INFO] [1792506642.916662636] [robot_state_publisher]: got segment cliff_front_left
+[robot_state_publisher-3] [INFO] [1792506642.916670040] [robot_state_publisher]: got segment cliff_front_right
+[robot_state_publisher-3] [INFO] [1792506642.916677384] [robot_state_publisher]: got segment cliff_side_left
+[robot_state_publisher-3] [INFO] [1792506642.916684278] [robot_state_publisher]: got segment cliff_side_right
+[robot_state_publisher-3] [INFO] [1792506642.916692022] [robot_state_publisher]: got segment front_caster_link
+[robot_state_publisher-3] [INFO] [1792506642.916699677] [robot_state_publisher]: got segment front_left_bottom_weight_block
+[robot_state_publisher-3] [INFO] [1792506642.916708704] [robot_state_publisher]: got segment front_left_top_weight_block
+[robot_state_publisher-3] [INFO] [1792506642.916716669] [robot_state_publisher]: got segment front_left_tower_standoff
+[robot_state_publisher-3] [INFO] [1792506642.916724524] [robot_state_publisher]: got segment front_right_bottom_weight_block
+[robot_state_publisher-3] [INFO] [1792506642.916732219] [robot_state_publisher]: got segment front_right_top_weight_block
+[robot_state_publisher-3] [INFO] [1792506642.916739413] [robot_state_publisher]: got segment front_right_tower_standoff
+[robot_state_publisher-3] [INFO] [1792506642.916747027] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-3] [INFO] [1792506642.916755754] [robot_state_publisher]: got segment ir_intensity_front_center_left
+[robot_state_publisher-3] [INFO] [1792506642.916764220] [robot_state_publisher]: got segment ir_intensity_front_center_right
+[robot_state_publisher-3] [INFO] [1792506642.916772616] [robot_state_publisher]: got segment ir_intensity_front_left
+[robot_state_publisher-3] [INFO] [1792506642.916781062] [robot_state_publisher]: got segment ir_intensity_front_right
+[robot_state_publisher-3] [INFO] [1792506642.916789498] [robot_state_publisher]: got segment ir_intensity_left
+[robot_state_publisher-3] [INFO] [1792506642.919914742] [robot_state_publisher]: got segment ir_intensity_right
+[robot_state_publisher-3] [INFO] [1792506642.920085438] [robot_state_publisher]: got segment ir_intensity_side_left
+[robot_state_publisher-3] [INFO] [1792506642.920099224] [robot_state_publisher]: got segment ir_omni
+[robot_state_publisher-3] [INFO] [1792506642.920107340] [robot_state_publisher]: got segment left_wheel
+[robot_state_publisher-3] [INFO] [1792506642.920114784] [robot_state_publisher]: got segment mouse
+[robot_state_publisher-3] [INFO] [1792506642.920123461] [robot_state_publisher]: got segment oakd_camera_bracket
+[robot_state_publisher-3] [INFO] [1792506642.920131516] [robot_state_publisher]: got segment oakd_imu_frame
+[robot_state_publisher-3] [INFO] [1792506642.920139311] [robot_state_publisher]: got segment oakd_left_camera_frame
+[robot_state_publisher-3] [INFO] [1792506642.920147436] [robot_state_publisher]: got segment oakd_left_camera_optical_frame
+[robot_state_publisher-3] [INFO] [1792506642.920156173] [robot_state_publisher]: got segment oakd_link
+[robot_state_publisher-3] [INFO] [1792506642.920164439] [robot_state_publisher]: got segment oakd_rgb_camera_frame
+[robot_state_publisher-3] [INFO] [1792506642.920173065] [robot_state_publisher]: got segment oakd_rgb_camera_optical_frame
+[robot_state_publisher-3] [INFO] [1792506642.920181652] [robot_state_publisher]: got segment oakd_right_camera_frame
+[robot_state_publisher-3] [INFO] [1792506642.920188875] [robot_state_publisher]: got segment oakd_right_camera_optical_frame
+[robot_state_publisher-3] [INFO] [1792506642.920196690] [robot_state_publisher]: got segment rear_left_tower_standoff
+[robot_state_publisher-3] [INFO] [1792506642.920204986] [robot_state_publisher]: got segment rear_right_tower_standoff
+[robot_state_publisher-3] [INFO] [1792506642.920213232] [robot_state_publisher]: got segment right_wheel
+[robot_state_publisher-3] [INFO] [1792506642.920220877] [robot_state_publisher]: got segment rplidar_link
+[robot_state_publisher-3] [INFO] [1792506642.920269028] [robot_state_publisher]: got segment shell_link
+[robot_state_publisher-3] [INFO] [1792506642.920281552] [robot_state_publisher]: got segment tower_sensor_plate
+[robot_state_publisher-3] [INFO] [1792506642.920289818] [robot_state_publisher]: got segment wheel_drop_left
+[robot_state_publisher-3] [INFO] [1792506642.920297543] [robot_state_publisher]: got segment wheel_drop_right
+[robot_state_publisher-5] [WARN] [1792506642.848307005] [kdl_parser]: The root link std_dock_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[robot_state_publisher-5] [INFO] [1792506642.848431532] [dock_state_publisher]: got segment green_buoy_link
+[robot_state_publisher-5] [INFO] [1792506642.848526253] [dock_state_publisher]: got segment halo_link
+[robot_state_publisher-5] [INFO] [1792506642.848536022] [dock_state_publisher]: got segment red_buoy_link
+[robot_state_publisher-5] [INFO] [1792506642.848543015] [dock_state_publisher]: got segment std_dock_link
+[robot_state_publisher-5] [INFO] [1792506642.848549868] [dock_state_publisher]: got segment yellow_buoy_link
+[static_transform_publisher-6] [WARN] [1792506642.739593589] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-6] [INFO] [1792506642.784614421] [tf_odom_std_dock_link_publisher]: Spinning until stopped - publishing transform
+[static_transform_publisher-6] translation: ('0.157000', '0.000000', '0.000000')
+[static_transform_publisher-6] rotation: ('0.000000', '0.000000', '1.000000', '0.000000')
+[static_transform_publisher-6] from 'odom' to 'std_dock_link'
+[create-7] [ros_ign_gazebo] is deprecated! Redirecting to use [ros_gz_sim] instead!
+[create-7] 
+[create-7] [INFO] [1792506642.842264373] [ros_gz_sim]: Requesting list of world names.
+[create-8] [ros_ign_gazebo] is deprecated! Redirecting to use [ros_gz_sim] instead!
+[create-8] 
+[create-8] [INFO] [1792506642.807997012] [ros_gz_sim]: Requesting list of world names.
+[parameter_bridge-12] [INFO] [1792506642.987144095] [bumper_contact_bridge]: Creating GZ->ROS Bridge: [/bumper_contact (ignition.msgs.Contacts) -> /bumper_contact (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[parameter_bridge-13] [INFO] [1792506642.876588874] [cliff_front_left_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/base_link/sensor/cliff_front_left/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/base_link/sensor/cliff_front_left/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1792506643.014689028] [cmd_vel_bridge]: Creating GZ->ROS Bridge: [/cmd_vel (ignition.msgs.Twist) -> /cmd_vel (geometry_msgs/msg/Twist)] (Lazy 0)
+[parameter_bridge-10] [INFO] [1792506643.023793812] [pose_bridge]: Creating GZ->ROS Bridge: [/model/turtlebot4/pose (ignition.msgs.Pose_V) -> /model/turtlebot4/pose (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[turtlebot4_node-30] [INFO] [1792506643.035909592] [turtlebot4_node]: Init Turtlebot4 Node Main
+[parameter_bridge-9] [INFO] [1792506643.037679659] [cmd_vel_bridge]: Creating ROS->GZ Bridge: [/model/turtlebot4/cmd_vel (geometry_msgs/msg/Twist) -> /model/turtlebot4/cmd_vel (ignition.msgs.Twist)] (Lazy 0)
+[static_transform_publisher-45] [WARN] [1792506643.051676378] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-44] [WARN] [1792506643.052446288] []: Old-style arguments are deprecated; see --help for new-style arguments
+[parameter_bridge-10] [INFO] [1792506643.081762300] [pose_bridge]: Creating GZ->ROS Bridge: [/model/standard_dock/pose (ignition.msgs.Pose_V) -> /model/standard_dock/pose (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[parameter_bridge-15] [INFO] [1792506643.085105830] [cliff_side_left_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/base_link/sensor/cliff_side_left/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/base_link/sensor/cliff_side_left/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-21] [INFO] [1792506643.086576106] [ir_intensity_left_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/ir_intensity_left/sensor/ir_intensity_left/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/ir_intensity_left/sensor/ir_intensity_left/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-14] [INFO] [1792506643.105575972] [cliff_front_right_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/base_link/sensor/cliff_front_right/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/base_link/sensor/cliff_front_right/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[ir_intensity_vector_publisher-34] [INFO] [1792506643.175581580] [ir_intensity_vector_publisher]: Advertised topic: ir_intensity
+[ir_intensity_vector_publisher-34] [INFO] [1792506643.176245276] [ir_intensity_vector_publisher]: Subscription to topic: _internal/ir_intensity_front_center_left
+[ir_intensity_vector_publisher-34] [INFO] [1792506643.176669265] [ir_intensity_vector_publisher]: Subscription to topic: _internal/ir_intensity_front_center_right
+[ir_intensity_vector_publisher-34] [INFO] [1792506643.177071873] [ir_intensity_vector_publisher]: Subscription to topic: _internal/ir_intensity_front_left
+[ir_intensity_vector_publisher-34] [INFO] [1792506643.177474592] [ir_intensity_vector_publisher]: Subscription to topic: _internal/ir_intensity_front_right
+[ir_intensity_vector_publisher-34] [INFO] [1792506643.177839528] [ir_intensity_vector_publisher]: Subscription to topic: _internal/ir_intensity_left
+[ir_intensity_vector_publisher-34] [INFO] [1792506643.178202361] [ir_intensity_vector_publisher]: Subscription to topic: _internal/ir_intensity_right
+[ir_intensity_vector_publisher-34] [INFO] [1792506643.214848160] [ir_intensity_vector_publisher]: Subscription to topic: _internal/ir_intensity_side_left
+[parameter_bridge-26] [INFO] [1792506643.278781300] [hmi_buttons_msg_bridge]: Creating GZ->ROS Bridge: [/hmi/buttons (ignition.msgs.Int32) -> /hmi/buttons (std_msgs/msg/Int32)] (Lazy 0)
+[parameter_bridge-28] [INFO] [1792506643.314385471] [lidar_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/rplidar_link/sensor/rplidar/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/rplidar_link/sensor/rplidar/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[mock_publisher-37] [INFO] [1792506643.314660396] [mock_publisher]: Advertised mocked topic: slip_status
+[parameter_bridge-19] [INFO] [1792506643.334361099] [ir_intensity_front_left_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/ir_intensity_front_left/sensor/ir_intensity_front_left/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/ir_intensity_front_left/sensor/ir_intensity_front_left/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-25] [INFO] [1792506643.361790041] [hmi_display_msg_bridge]: Creating ROS->GZ Bridge: [/hmi/display/raw (std_msgs/msg/String) -> /hmi/display/raw (ignition.msgs.StringMsg)] (Lazy 0)
+[parameter_bridge-27] [INFO] [1792506643.367930748] [hmi_led_msg_bridge]: Creating ROS->GZ Bridge: [/hmi/led/power (std_msgs/msg/Int32) -> /hmi/led/power (ignition.msgs.Int32)] (Lazy 0)
+[parameter_bridge-25] [INFO] [1792506643.374048843] [hmi_display_msg_bridge]: Creating ROS->GZ Bridge: [/hmi/display/selected (std_msgs/msg/Int32) -> /hmi/display/selected (ignition.msgs.Int32)] (Lazy 0)
+[parameter_bridge-27] [INFO] [1792506643.381475595] [hmi_led_msg_bridge]: Creating ROS->GZ Bridge: [/hmi/led/motors (std_msgs/msg/Int32) -> /hmi/led/motors (ignition.msgs.Int32)] (Lazy 0)
+[parameter_bridge-11] [INFO] [1792506643.414472421] [odom_base_tf_bridge]: Creating GZ->ROS Bridge: [/model/turtlebot4/tf (ignition.msgs.Pose_V) -> /model/turtlebot4/tf (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[parameter_bridge-27] [INFO] [1792506643.447557826] [hmi_led_msg_bridge]: Creating ROS->GZ Bridge: [/hmi/led/comms (std_msgs/msg/Int32) -> /hmi/led/comms (ignition.msgs.Int32)] (Lazy 0)
+[wheel_status_publisher-36] [INFO] [1792506643.454803232] [wheel_status_publisher]: Advertised topic: wheel_vels
+[wheel_status_publisher-36] [INFO] [1792506643.455711836] [wheel_status_publisher]: Advertised topic: wheel_ticks
+[parameter_bridge-17] [INFO] [1792506643.458875563] [ir_intensity_front_center_left_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/ir_intensity_front_center_left/sensor/ir_intensity_front_center_left/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/ir_intensity_front_center_left/sensor/ir_intensity_front_center_left/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[hazards_vector_publisher-33] [INFO] [1792506643.466182336] [hazards_vector_publisher]: Advertised topic: hazard_detection
+[robot_state-38] [INFO] [1792506643.510422247] [robot_state]: Advertised topic: battery_state
+[parameter_bridge-27] [INFO] [1792506643.512518777] [hmi_led_msg_bridge]: Creating ROS->GZ Bridge: [/hmi/led/wifi (std_msgs/msg/Int32) -> /hmi/led/wifi (ignition.msgs.Int32)] (Lazy 0)
+[robot_state-38] [INFO] [1792506643.518296323] [robot_state]: Subscription to topic: dock_status
+[robot_state-38] [INFO] [1792506643.524825722] [robot_state]: Advertised topic: stop_status
+[hazards_vector_publisher-33] [INFO] [1792506643.527135009] [hazards_vector_publisher]: Subscription to topic: _internal/bumper/event
+[hazards_vector_publisher-33] [INFO] [1792506643.533076497] [hazards_vector_publisher]: Subscription to topic: _internal/cliff_front_left/event
+[parameter_bridge-27] [INFO] [1792506643.528052660] [hmi_led_msg_bridge]: Creating ROS->GZ Bridge: [/hmi/led/battery (std_msgs/msg/Int32) -> /hmi/led/battery (ignition.msgs.Int32)] (Lazy 0)
+[parameter_bridge-27] [INFO] [1792506643.537803046] [hmi_led_msg_bridge]: Creating ROS->GZ Bridge: [/hmi/led/user1 (std_msgs/msg/Int32) -> /hmi/led/user1 (ignition.msgs.Int32)] (Lazy 0)
+[parameter_bridge-18] [INFO] [1792506643.530497886] [ir_intensity_front_center_right_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/ir_intensity_front_center_right/sensor/ir_intensity_front_center_right/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/ir_intensity_front_center_right/sensor/ir_intensity_front_center_right/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-23] [INFO] [1792506643.530676347] [ir_intensity_side_left_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/ir_intensity_side_left/sensor/ir_intensity_side_left/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/ir_intensity_side_left/sensor/ir_intensity_side_left/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[hazards_vector_publisher-33] [INFO] [1792506643.540213526] [hazards_vector_publisher]: Subscription to topic: _internal/cliff_front_right/event
+[robot_state-38] [INFO] [1792506643.540480575] [robot_state]: Subscription to topic: odom
+[parameter_bridge-20] [INFO] [1792506643.544259536] [ir_intensity_front_right_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/ir_intensity_front_right/sensor/ir_intensity_front_right/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/ir_intensity_front_right/sensor/ir_intensity_front_right/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[ui_mgr-40] [INFO] [1792506643.567801250] [ui_mgr]: Subscription to topic: cmd_lightring
+[ui_mgr-40] [INFO] [1792506643.580556139] [ui_mgr]: Subscription to topic: cmd_audio
+[hazards_vector_publisher-33] [INFO] [1792506643.576887689] [hazards_vector_publisher]: Subscription to topic: _internal/cliff_side_left/event
+[hazards_vector_publisher-33] [INFO] [1792506643.577536958] [hazards_vector_publisher]: Subscription to topic: _internal/cliff_side_right/event
+[hazards_vector_publisher-33] [INFO] [1792506643.578120291] [hazards_vector_publisher]: Subscription to topic: _internal/wheel_drop/left_wheel/event
+[hazards_vector_publisher-33] [INFO] [1792506643.578719775] [hazards_vector_publisher]: Subscription to topic: _internal/wheel_drop/right_wheel/event
+[hazards_vector_publisher-33] [INFO] [1792506643.579293770] [hazards_vector_publisher]: Subscription to topic: _internal/backup_limit
+[parameter_bridge-27] [INFO] [1792506643.585900097] [hmi_led_msg_bridge]: Creating ROS->GZ Bridge: [/hmi/led/user2 (std_msgs/msg/Int32) -> /hmi/led/user2 (ignition.msgs.Int32)] (Lazy 0)
+[static_transform_publisher-44] [INFO] [1792506643.613051909] [rplidar_stf]: Spinning until stopped - publishing transform
+[static_transform_publisher-44] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-44] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-44] from 'rplidar_link' to 'turtlebot4/rplidar_link/rplidar'
+[kidnap_estimator_publisher-39] [INFO] [1792506643.665775258] [kidnap_estimator_publisher]: Advertised topic: kidnap_status
+[parameter_bridge-16] [INFO] [1792506643.679868712] [cliff_side_right_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/base_link/sensor/cliff_side_right/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/base_link/sensor/cliff_side_right/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[kidnap_estimator_publisher-39] [INFO] [1792506643.689178747] [kidnap_estimator_publisher]: Subscription to topic: hazard_detection
+[parameter_bridge-29] [INFO] [1792506643.718267165] [camera_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image (ignition.msgs.Image) -> /world/maze/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/image (sensor_msgs/msg/Image)] (Lazy 0)
+[static_transform_publisher-45] [INFO] [1792506643.739689685] [camera_stf]: Spinning until stopped - publishing transform
+[static_transform_publisher-45] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-45] rotation: ('0.499952', '-0.500000', '0.500000', '0.500048')
+[static_transform_publisher-45] from 'oakd_rgb_camera_optical_frame' to 'turtlebot4/oakd_rgb_camera_frame/rgbd_camera'
+[parameter_bridge-29] [INFO] [1792506643.756764898] [camera_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/depth_image (ignition.msgs.Image) -> /world/maze/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/depth_image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-29] [INFO] [1792506643.782364228] [camera_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points (ignition.msgs.PointCloudPacked) -> /world/maze/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/points (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-29] [INFO] [1792506643.806142553] [camera_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info (ignition.msgs.CameraInfo) -> /world/maze/model/turtlebot4/link/oakd_rgb_camera_frame/sensor/rgbd_camera/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[parameter_bridge-24] [INFO] [1792506643.955996691] [buttons_msg_bridge]: Creating GZ->ROS Bridge: [/create3_buttons (ignition.msgs.Int32) -> /create3_buttons (std_msgs/msg/Int32)] (Lazy 0)
+[parameter_bridge-22] [INFO] [1792506643.988655903] [ir_intensity_right_bridge]: Creating GZ->ROS Bridge: [/world/maze/model/turtlebot4/link/ir_intensity_right/sensor/ir_intensity_right/scan (ignition.msgs.LaserScan) -> /world/maze/model/turtlebot4/link/ir_intensity_right/sensor/ir_intensity_right/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[joint_state_publisher-4] [INFO] [1792506644.148003761] [joint_state_publisher]: Waiting for robot_description to be published on the robot_description topic...
+[spawner-32] [INFO] [1792506645.072363025] [spawner_joint_state_broadcaster]: waiting for service /controller_manager/list_controllers to become available...
+[create-7] [INFO] [1792506645.194394832] [ros_gz_sim]: Waiting messages on topic [robot_description].
+[motion_control-35] [INFO] [1792506645.212819419] [motion_control]: Enabling REFLEX_BUMP
+[motion_control-35] [INFO] [1792506645.214727449] [motion_control]: Enabling REFLEX_CLIFF
+[motion_control-35] [INFO] [1792506645.215111422] [motion_control]: Enabling REFLEX_STUCK
+[motion_control-35] [INFO] [1792506645.215299130] [motion_control]: Enabling REFLEX_WHEEL_DROP
+[turtlebot4_node-30] [INFO] [1792506645.275103818] [turtlebot4_node]: Buttons Init
+[create-7] [INFO] [1792506645.277222771] [ros_gz_sim]: Requested creation of entity.
+[create-7] [INFO] [1792506645.277276233] [ros_gz_sim]: OK creation of entity.
+[create-8] [INFO] [1792506645.284390929] [ros_gz_sim]: Waiting messages on topic [standard_dock_description].
+[turtlebot4_node-30] [INFO] [1792506645.304413034] [turtlebot4_node]: Init Display
+[create-8] [INFO] [1792506645.309150645] [ros_gz_sim]: Requested creation of entity.
+[create-8] [INFO] [1792506645.309777451] [ros_gz_sim]: OK creation of entity.
+[turtlebot4_node-30] [INFO] [1792506645.322753531] [turtlebot4_node]: Leds Init
+[turtlebot4_node-30] [INFO] [1792506645.361492852] [turtlebot4_node]: Turtlebot4 standard running.
+[parameter_bridge-27] [INFO] [1792506645.412306934] [hmi_led_msg_bridge]: Passing message from ROS std_msgs/msg/Int32 to Gazebo gz.msgs.Int32 (showing msg only once per type)
+[parameter_bridge-25] [INFO] [1792506645.412807980] [hmi_display_msg_bridge]: Passing message from ROS std_msgs/msg/String to Gazebo gz.msgs.StringMsg (showing msg only once per type)
+[parameter_bridge-25] [INFO] [1792506645.412878054] [hmi_display_msg_bridge]: Passing message from ROS std_msgs/msg/Int32 to Gazebo gz.msgs.Int32 (showing msg only once per type)
+[INFO] [create-7]: process has finished cleanly [pid 160214]
+[INFO] [create-8]: process has finished cleanly [pid 160216]
+[ign-1] [INFO] [1792506645.579325763] [GazeboSimROS2ControlPlugin]: robot_param_node is robot_state_publisher
+[ign-1] [INFO] [1792506645.579372523] [GazeboSimROS2ControlPlugin]: robot_param_node is robot_description
+[ign-1] [INFO] [1792506645.771457152] [gz_ros2_control]: connected to service!! robot_state_publisher asking for robot_description
+[ign-1] [INFO] [1792506645.775485248] [gz_ros2_control]: Received URDF from param server
+[ign-1] [INFO] [1792506645.784660416] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['bumper_joint'] (Entity='237') is skipped.
+[ign-1] [INFO] [1792506645.784777048] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['front_caster_joint'] (Entity='238') is skipped.
+[ign-1] [INFO] [1792506645.784795934] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['front_left_bottom_weight_block_joint'] (Entity='239') is skipped.
+[ign-1] [INFO] [1792506645.784808298] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['front_left_top_weight_block_joint'] (Entity='240') is skipped.
+[ign-1] [INFO] [1792506645.784819239] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['front_right_bottom_weight_block_joint'] (Entity='241') is skipped.
+[ign-1] [INFO] [1792506645.784830030] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['front_right_top_weight_block_joint'] (Entity='242') is skipped.
+[ign-1] [INFO] [1792506645.784840459] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['imu_joint'] (Entity='243') is skipped.
+[ign-1] [INFO] [1792506645.784850398] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['ir_intensity_front_center_left_joint'] (Entity='244') is skipped.
+[ign-1] [INFO] [1792506645.784859957] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['ir_intensity_front_center_right_joint'] (Entity='245') is skipped.
+[ign-1] [INFO] [1792506645.784869755] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['ir_intensity_front_left_joint'] (Entity='246') is skipped.
+[ign-1] [INFO] [1792506645.784892789] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['ir_intensity_front_right_joint'] (Entity='247') is skipped.
+[ign-1] [INFO] [1792506645.784904973] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['ir_intensity_left_joint'] (Entity='248') is skipped.
+[ign-1] [INFO] [1792506645.784914942] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['ir_intensity_right_joint'] (Entity='249') is skipped.
+[ign-1] [INFO] [1792506645.784924891] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['ir_intensity_side_left_joint'] (Entity='250') is skipped.
+[ign-1] [INFO] [1792506645.784942464] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['ir_omni_joint'] (Entity='251') is skipped.
+[ign-1] [INFO] [1792506645.784956361] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['mouse_joint'] (Entity='252') is skipped.
+[ign-1] [INFO] [1792506645.784966330] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['front_left_tower_standoff_joint'] (Entity='253') is skipped.
+[ign-1] [INFO] [1792506645.784976549] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['front_right_tower_standoff_joint'] (Entity='254') is skipped.
+[ign-1] [INFO] [1792506645.784985636] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['oakd_camera_bracket_joint'] (Entity='255') is skipped.
+[ign-1] [INFO] [1792506645.784993461] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['oakd_joint'] (Entity='256') is skipped.
+[ign-1] [INFO] [1792506645.785002298] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['oakd_imu_joint'] (Entity='257') is skipped.
+[ign-1] [INFO] [1792506645.785011466] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['oakd_left_camera_joint'] (Entity='258') is skipped.
+[ign-1] [INFO] [1792506645.785020533] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['oakd_left_camera_optical_joint'] (Entity='259') is skipped.
+[ign-1] [INFO] [1792506645.785030362] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['oakd_rgb_camera_joint'] (Entity='260') is skipped.
+[ign-1] [INFO] [1792506645.785179346] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['oakd_rgb_camera_optical_joint'] (Entity='261') is skipped.
+[ign-1] [INFO] [1792506645.785197701] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['oakd_right_camera_joint'] (Entity='262') is skipped.
+[ign-1] [INFO] [1792506645.785208572] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['oakd_right_camera_optical_joint'] (Entity='263') is skipped.
+[ign-1] [INFO] [1792506645.785219342] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['rear_left_tower_standoff_joint'] (Entity='264') is skipped.
+[ign-1] [INFO] [1792506645.785229582] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['rear_right_tower_standoff_joint'] (Entity='265') is skipped.
+[ign-1] [INFO] [1792506645.785425526] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['rplidar_joint'] (Entity='266') is skipped.
+[ign-1] [INFO] [1792506645.785455283] [gz_ros2_control]: [gz_ros2_control] Fixed joint ['tower_sensor_plate_joint'] (Entity='267') is skipped.
+[ign-1] [INFO] [1792506645.803530513] [gz_ros2_control]: The position_proportional_gain has been set to: 0.1
+[ign-1] [INFO] [1792506645.803623050] [gz_ros2_control]: Loading joint: left_wheel_joint
+[ign-1] [INFO] [1792506645.803643749] [gz_ros2_control]: 	State:
+[ign-1] [INFO] [1792506645.803655101] [gz_ros2_control]: 		 velocity
+[ign-1] [INFO] [1792506645.803665741] [gz_ros2_control]: 		 position
+[ign-1] [INFO] [1792506645.803675931] [gz_ros2_control]: 	Command:
+[ign-1] [INFO] [1792506645.803685419] [gz_ros2_control]: 		 velocity
+[ign-1] [INFO] [1792506645.804147130] [gz_ros2_control]: Loading sensor: imu
+[ign-1] [INFO] [1792506645.804172318] [gz_ros2_control]: 	State:
+[ign-1] [WARN] [1792506645.804181065] [gz_ros2_control]: IMU sensor 'imu' not found in hardware_info, skipping.
+[ign-1] [INFO] [1792506645.804358323] [resource_manager]: Initialize hardware 'left_wheel_controller' 
+[ign-1] [WARN] [1792506645.804401225] [gz_ros2_control]: The ign_ros2_control plugin got renamed to gz_ros2_control.
+[ign-1] Update the <ros2_control> tag and gazebo plugin to
+[ign-1] <hardware>
+[ign-1]   <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+[ign-1] </hardware>
+[ign-1] <gazebo>
+[ign-1]   <plugin filename="gz_ros2_control-system"name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+[ign-1]     ...
+[ign-1]   </plugin>
+[ign-1] </gazebo>
+[ign-1] [INFO] [1792506645.804472451] [resource_manager]: Successful initialization of hardware 'left_wheel_controller'
+[ign-1] [INFO] [1792506645.804518008] [resource_manager]: 'configure' hardware 'left_wheel_controller' 
+[ign-1] [INFO] [1792506645.804524520] [gz_ros2_control]: System Successfully configured!
+[ign-1] [INFO] [1792506645.804538086] [resource_manager]: Successful 'configure' of hardware 'left_wheel_controller'
+[ign-1] [INFO] [1792506645.804545540] [resource_manager]: 'activate' hardware 'left_wheel_controller' 
+[ign-1] [INFO] [1792506645.804556862] [resource_manager]: Successful 'activate' of hardware 'left_wheel_controller'
+[ign-1] [INFO] [1792506645.804706006] [gz_ros2_control]: The position_proportional_gain has been set to: 0.1
+[ign-1] [INFO] [1792506645.804737486] [gz_ros2_control]: Loading joint: right_wheel_joint
+[ign-1] [INFO] [1792506645.804746634] [gz_ros2_control]: 	State:
+[ign-1] [INFO] [1792506645.804752605] [gz_ros2_control]: 		 velocity
+[ign-1] [INFO] [1792506645.804758035] [gz_ros2_control]: 		 position
+[ign-1] [INFO] [1792506645.804763566] [gz_ros2_control]: 	Command:
+[ign-1] [INFO] [1792506645.804768495] [gz_ros2_control]: 		 velocity
+[ign-1] [INFO] [1792506645.804976132] [gz_ros2_control]: Loading sensor: imu
+[ign-1] [INFO] [1792506645.805001189] [gz_ros2_control]: 	State:
+[ign-1] [WARN] [1792506645.805011810] [gz_ros2_control]: IMU sensor 'imu' not found in hardware_info, skipping.
+[ign-1] [INFO] [1792506645.805023191] [resource_manager]: Initialize hardware 'right_wheel_controller' 
+[ign-1] [WARN] [1792506645.805039923] [gz_ros2_control]: The ign_ros2_control plugin got renamed to gz_ros2_control.
+[ign-1] Update the <ros2_control> tag and gazebo plugin to
+[ign-1] <hardware>
+[ign-1]   <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+[ign-1] </hardware>
+[ign-1] <gazebo>
+[ign-1]   <plugin filename="gz_ros2_control-system"name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+[ign-1]     ...
+[ign-1]   </plugin>
+[ign-1] </gazebo>
+[ign-1] [INFO] [1792506645.805052026] [resource_manager]: Successful initialization of hardware 'right_wheel_controller'
+[ign-1] [INFO] [1792506645.805063659] [resource_manager]: 'configure' hardware 'right_wheel_controller' 
+[ign-1] [INFO] [1792506645.805068869] [gz_ros2_control]: System Successfully configured!
+[ign-1] [INFO] [1792506645.805078267] [resource_manager]: Successful 'configure' of hardware 'right_wheel_controller'
+[ign-1] [INFO] [1792506645.805084078] [resource_manager]: 'activate' hardware 'right_wheel_controller' 
+[ign-1] [INFO] [1792506645.805090620] [resource_manager]: Successful 'activate' of hardware 'right_wheel_controller'
+[ign-1] [INFO] [1792506645.805097002] [gz_ros2_control]: Loading controller_manager
+[ign-1] [INFO] [1792506646.079150499] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[spawner-32] [INFO] [1792506646.107296034] [spawner_joint_state_broadcaster]: [94mLoaded [1mjoint_state_broadcaster[0m
+[ign-1] [INFO] [1792506646.114115857] [controller_manager]: Configuring controller 'joint_state_broadcaster'
+[ign-1] [INFO] [1792506646.114417833] [joint_state_broadcaster]: 'joints' or 'interfaces' parameter is empty. All available state interfaces will be published
+[ign-1] [ERROR] [1792506646.231343753] [gz_ros2_control]: Desired controller update period (0.001 s) is faster than the gazebo simulation period (0.003 s).
+[spawner-32] [INFO] [1792506646.235042771] [spawner_joint_state_broadcaster]: [92mConfigured and activated [1mjoint_state_broadcaster[0m
+[INFO] [spawner-32]: process has finished cleanly [pid 160367]
+[INFO] [spawner-46]: process started with pid [161048]
+[spawner-46] [INFO] [1792506646.919415772] [spawner_diffdrive_controller]: waiting for service /controller_manager/list_controllers to become available...
+[ign-1] [INFO] [1792506647.684953308] [controller_manager]: Loading controller 'diffdrive_controller'
+[INFO] [ign-47]: process started with pid [161096]
+[ign-1] [1;33m[Wrn] [ColladaLoader.cc:2394] [0m[1;33mTriangle input semantic: '[0m[1;33mCOLOR[0m[1;33m' is currently[0m[1;33m not supported[0m[1;33m[0m
+[ign-1] [1;33m[Wrn] [ColladaLoader.cc:2394] [0m[1;33mTriangle input semantic: '[0m[1;33mCOLOR[0m[1;33m' is currently[0m[1;33m not supported[0m[1;33m[0m
+[ign-1] [1;33m[Wrn] [OgreGpuRays.cc:258] [0m[1;33mHorizontal FOV for GPU rays is capped at 180 degrees.[0m
+[spawner-46] [INFO] [1792506648.156260428] [spawner_diffdrive_controller]: [94mLoaded [1mdiffdrive_controller[0m
+[parameter_bridge-9] [INFO] [1792506648.170307080] [cmd_vel_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[turtlebot4_node-30] [INFO] [1792506648.194180502] [turtlebot4_node]: OAKD stopped
+[turtlebot4_node-30] [INFO] [1792506648.194240085] [turtlebot4_node]: RPLIDAR stopped
+[ign-1] [INFO] [1792506648.242434873] [controller_manager]: Configuring controller 'diffdrive_controller'
+[ign-1] [WARN] [1792506648.249886020] [diffdrive_controller]: Can't accept new commands. subscriber is inactive
+[ign-1] [WARN] [1792506648.271129845] [diffdrive_controller]: Can't accept new commands. subscriber is inactive
+[spawner-46] [INFO] [1792506648.277762630] [spawner_diffdrive_controller]: [92mConfigured and activated [1mdiffdrive_controller[0m
+[ign-47] [1;33m[GUI] [Wrn] [Application.cc:802] [0m[1;33m[QT] file::/Gazebo/GazeboDrawer.qml:242:3: QML Connections: Implicitly defined onFoo properties in Connections are deprecated. Use this syntax instead: function onFoo(<arguments>) { ... }[0m[1;33m[0m
+[INFO] [spawner-46]: process has finished cleanly [pid 161048]
+[ign-47] [1;33m[GUI] [Wrn] [Scene3D.cc:2941] [0m[1;33mThe GzScene3D plugin is deprecated on v6 and will be removed on [0m[1;33mv7. Use MinimalScene together with other plugins as needed.[0m[1;33m[0m
+[ign-47] [1;33m[GUI] [Wrn] [Application.cc:802] [0m[1;33m[QT] file::/GzScene3D/GzScene3D.qml:108:3: QML Connections: Implicitly defined onFoo properties in Connections are deprecated. Use this syntax instead: function onFoo(<arguments>) { ... }[0m[1;33m[0m
+[ign-47] [1;33m[GUI] [Wrn] [Application.cc:802] [0m[1;33m[QT] file::/GzScene3D/GzScene3D.qml:63:5: QML Connections: Implicitly defined onFoo properties in Connections are deprecated. Use this syntax instead: function onFoo(<arguments>) { ... }[0m[1;33m[0m
+[ign-1] [1;33m[Wrn] [Component.hh:127] [0m[1;33mTrying to serialize component with data type [[0m[1;33mSt10shared_ptrIN3sdf3v127ElementEE[0m[1;33m], which doesn't have [0m[1;33m`operator<<`. Component will not be serialized.[0m[1;33m[0m
+[ign-47] [1;33m[GUI] [Wrn] [Component.hh:172] [0m[1;33mTrying to deserialize component with data type [[0m[1;33mSt10shared_ptrIN3sdf3v127ElementEE[0m[1;33m], which doesn't have [0m[1;33m`operator>>`. Component will not be deserialized.[0m[1;33m[0m
+[ign-47] [1;33m[GUI] [Wrn] [Application.cc:802] [0m[1;33m[QT] file::/WorldStats/WorldStats.qml:53:3: QML RowLayout: Binding loop detected for property "x"[0m[1;33m[0m
+[ign-47] libEGL warning: egl: failed to create dri2 screen
+[ign-47] libEGL warning: egl: failed to create dri2 screen
+[ign-47] [1;33m[GUI] [Wrn] [Ogre2Camera.cc:390] [0m[1;33mOgre2Camera::SetVisibilityMask: Mask bits [0m[1;33mc0000000[0m[1;33m are set but will be ignored as they conflict with the [0m[1;33mreserved bits used internally by the ogre2 backend.[0m[1;33m[0m
+[ign-47] [1;33m[GUI] [Wrn] [ColladaLoader.cc:2394] [0m[1;33mTriangle input semantic: '[0m[1;33mCOLOR[0m[1;33m' is currently[0m[1;33m not supported[0m[1;33m[0m
+[ign-47] [1;33m[GUI] [Wrn] [ColladaLoader.cc:2394] [0m[1;33mTriangle input semantic: '[0m[1;33mCOLOR[0m[1;33m' is currently[0m[1;33m not supported[0m[1;33m[0m
+[INFO] [map_server-48]: process started with pid [161243]
+[INFO] [amcl-49]: process started with pid [161245]
+[INFO] [lifecycle_manager-50]: process started with pid [161247]
+[lifecycle_manager-50] [INFO] [1792506653.219928871] [lifecycle_manager_localization]: Creating
+[lifecycle_manager-50] [INFO] [1792506653.259553659] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[amcl-49] [INFO] [1792506653.278408281] [amcl]: 
+[amcl-49] 	amcl lifecycle node launched. 
+[amcl-49] 	Waiting on external lifecycle transitions to activate
+[amcl-49] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-49] [INFO] [1792506653.286108171] [amcl]: Creating
+[map_server-48] [INFO] [1792506653.288537536] [map_server]: 
+[map_server-48] 	map_server lifecycle node launched. 
+[map_server-48] 	Waiting on external lifecycle transitions to activate
+[map_server-48] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-48] [INFO] [1792506653.288699024] [map_server]: Creating
+[lifecycle_manager-50] [INFO] [1792506654.323221817] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-50] [INFO] [1792506654.323340824] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[map_server-48] [INFO] [1792506654.331611123] [map_server]: Configuring
+[map_server-48] [INFO] [1792506654.331712957] [map_io]: Loading yaml file: /home/admin1/turtlebot5_github_ws/install/bai04_turtlebot4/share/bai04_turtlebot4/maps/map.yaml
+[map_server-48] [INFO] [1792506654.332087902] [map_io]: resolution: 0.05
+[map_server-48] [INFO] [1792506654.333757377] [map_io]: origin[0]: -10
+[map_server-48] [INFO] [1792506654.333777315] [map_io]: origin[1]: -10
+[map_server-48] [INFO] [1792506654.333784459] [map_io]: origin[2]: 0
+[map_server-48] [INFO] [1792506654.333791943] [map_io]: free_thresh: 0.25
+[map_server-48] [INFO] [1792506654.333798646] [map_io]: occupied_thresh: 0.65
+[map_server-48] [INFO] [1792506654.333810188] [map_io]: mode: trinary
+[map_server-48] [INFO] [1792506654.333819816] [map_io]: negate: 0
+[map_server-48] [INFO] [1792506654.335442422] [map_io]: Loading image_file: /home/admin1/turtlebot5_github_ws/install/bai04_turtlebot4/share/bai04_turtlebot4/maps/map.pgm
+[map_server-48] [INFO] [1792506654.380962837] [map_io]: Read map /home/admin1/turtlebot5_github_ws/install/bai04_turtlebot4/share/bai04_turtlebot4/maps/map.pgm: 401 X 401 map @ 0.05 m/cell
+[lifecycle_manager-50] [INFO] [1792506654.428952964] [lifecycle_manager_localization]: [34m[1mConfiguring amcl[0m[0m
+[amcl-49] [INFO] [1792506654.431066987] [amcl]: Configuring
+[amcl-49] [INFO] [1792506654.431211312] [amcl]: initTransforms
+[amcl-49] [INFO] [1792506654.485986513] [amcl]: initPubSub
+[amcl-49] [INFO] [1792506654.509806117] [amcl]: Subscribed to map topic.
+[lifecycle_manager-50] [INFO] [1792506654.539867369] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[map_server-48] [INFO] [1792506654.540220703] [map_server]: Activating
+[amcl-49] [INFO] [1792506654.541887332] [amcl]: Received a 401 X 401 map @ 0.050 m/pix
+[map_server-48] [INFO] [1792506654.543824909] [map_server]: Creating bond (map_server) to lifecycle manager.
+[lifecycle_manager-50] [INFO] [1792506654.661727927] [lifecycle_manager_localization]: Server map_server connected with bond.
+[lifecycle_manager-50] [INFO] [1792506654.661797069] [lifecycle_manager_localization]: [34m[1mActivating amcl[0m[0m
+[amcl-49] [INFO] [1792506654.662721503] [amcl]: Activating
+[amcl-49] [INFO] [1792506654.663090126] [amcl]: Creating bond (amcl) to lifecycle manager.
+[lifecycle_manager-50] [INFO] [1792506654.794703491] [lifecycle_manager_localization]: Server amcl connected with bond.
+[lifecycle_manager-50] [INFO] [1792506654.794766511] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-50] [INFO] [1792506654.794778855] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[amcl-49] [INFO] [1792506655.180077940] [amcl]: createLaserObject
+[amcl-49] [WARN] [1792506656.783935957] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[amcl-49] [WARN] [1792506658.869156567] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[amcl-49] [WARN] [1792506660.935874771] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[amcl-49] [WARN] [1792506663.042013449] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[INFO] [controller_server-51]: process started with pid [161383]
+[INFO] [smoother_server-52]: process started with pid [161385]
+[INFO] [planner_server-53]: process started with pid [161387]
+[INFO] [behavior_server-54]: process started with pid [161389]
+[INFO] [bt_navigator-55]: process started with pid [161391]
+[INFO] [waypoint_follower-56]: process started with pid [161393]
+[INFO] [velocity_smoother-57]: process started with pid [161395]
+[INFO] [lifecycle_manager-58]: process started with pid [161397]
+[lifecycle_manager-58] [INFO] [1792506663.495493856] [lifecycle_manager_navigation]: Creating
+[planner_server-53] [INFO] [1792506663.502029713] [planner_server]: 
+[planner_server-53] 	planner_server lifecycle node launched. 
+[planner_server-53] 	Waiting on external lifecycle transitions to activate
+[planner_server-53] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-51] [INFO] [1792506663.509723138] [controller_server]: 
+[controller_server-51] 	controller_server lifecycle node launched. 
+[controller_server-51] 	Waiting on external lifecycle transitions to activate
+[controller_server-51] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-53] [INFO] [1792506663.529411764] [planner_server]: Creating
+[controller_server-51] [INFO] [1792506663.534906535] [controller_server]: Creating controller server
+[lifecycle_manager-58] [INFO] [1792506663.537883664] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[waypoint_follower-56] [INFO] [1792506663.540863608] [waypoint_follower]: 
+[waypoint_follower-56] 	waypoint_follower lifecycle node launched. 
+[waypoint_follower-56] 	Waiting on external lifecycle transitions to activate
+[waypoint_follower-56] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-56] [INFO] [1792506663.551223339] [waypoint_follower]: Creating
+[bt_navigator-55] [INFO] [1792506663.584222024] [bt_navigator]: 
+[bt_navigator-55] 	bt_navigator lifecycle node launched. 
+[bt_navigator-55] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-55] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-55] [INFO] [1792506663.584391166] [bt_navigator]: Creating
+[behavior_server-54] [INFO] [1792506663.613181323] [behavior_server]: 
+[behavior_server-54] 	behavior_server lifecycle node launched. 
+[behavior_server-54] 	Waiting on external lifecycle transitions to activate
+[behavior_server-54] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[velocity_smoother-57] [INFO] [1792506663.655067380] [velocity_smoother]: 
+[velocity_smoother-57] 	velocity_smoother lifecycle node launched. 
+[velocity_smoother-57] 	Waiting on external lifecycle transitions to activate
+[velocity_smoother-57] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-52] [INFO] [1792506663.675879269] [smoother_server]: 
+[smoother_server-52] 	smoother_server lifecycle node launched. 
+[smoother_server-52] 	Waiting on external lifecycle transitions to activate
+[smoother_server-52] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-52] [INFO] [1792506663.700066616] [smoother_server]: Creating smoother server
+[lifecycle_manager-58] [INFO] [1792506665.602123350] [lifecycle_manager_navigation]: Waiting for service controller_server/get_state...
+[planner_server-53] [INFO] [1792506666.490913280] [global_costmap.global_costmap]: 
+[planner_server-53] 	global_costmap lifecycle node launched. 
+[planner_server-53] 	Waiting on external lifecycle transitions to activate
+[planner_server-53] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-53] [INFO] [1792506666.494189659] [global_costmap.global_costmap]: Creating Costmap
+[controller_server-51] [INFO] [1792506666.562177698] [local_costmap.local_costmap]: 
+[controller_server-51] 	local_costmap lifecycle node launched. 
+[controller_server-51] 	Waiting on external lifecycle transitions to activate
+[controller_server-51] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-51] [INFO] [1792506666.562982152] [local_costmap.local_costmap]: Creating Costmap
+[lifecycle_manager-58] [INFO] [1792506667.437148799] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-58] [INFO] [1792506667.437207351] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[controller_server-51] [INFO] [1792506667.437846951] [controller_server]: Configuring controller interface
+[controller_server-51] [INFO] [1792506667.440518887] [controller_server]: getting goal checker plugins..
+[controller_server-51] [INFO] [1792506667.443463784] [controller_server]: Controller frequency set to 20.0000Hz
+[controller_server-51] [INFO] [1792506667.443556231] [local_costmap.local_costmap]: Configuring
+[controller_server-51] [INFO] [1792506667.472428400] [local_costmap.local_costmap]: Using plugin "static_layer"
+[controller_server-51] [INFO] [1792506667.480632047] [local_costmap.local_costmap]: Subscribing to the map topic (/map) with transient local durability
+[controller_server-51] [INFO] [1792506667.486102050] [local_costmap.local_costmap]: Initialized plugin "static_layer"
+[controller_server-51] [INFO] [1792506667.486163717] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+[controller_server-51] [INFO] [1792506667.487207829] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[controller_server-51] [INFO] [1792506667.524769842] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[controller_server-51] [INFO] [1792506667.524829867] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-51] [INFO] [1792506667.532341624] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[controller_server-51] [INFO] [1792506667.600817321] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-51] [INFO] [1792506667.601304199] [local_costmap.local_costmap]: StaticLayer: Resizing static layer to 401 X 401 at 0.050000 m/pix
+[controller_server-51] [INFO] [1792506667.611711419] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-51] [INFO] [1792506667.618470782] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[controller_server-51] [INFO] [1792506667.621086821] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[controller_server-51] [INFO] [1792506667.627226682] [controller_server]: Setting transform_tolerance to 0.200000
+[controller_server-51] [INFO] [1792506667.677995075] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[controller_server-51] [INFO] [1792506667.684265785] [controller_server]: Critic plugin initialized
+[controller_server-51] [INFO] [1792506667.685639876] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[controller_server-51] [INFO] [1792506667.691466549] [controller_server]: Critic plugin initialized
+[controller_server-51] [INFO] [1792506667.692597426] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[controller_server-51] [INFO] [1792506667.693847761] [controller_server]: Critic plugin initialized
+[controller_server-51] [INFO] [1792506667.694073902] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[controller_server-51] [INFO] [1792506667.700023140] [controller_server]: Critic plugin initialized
+[controller_server-51] [INFO] [1792506667.701284315] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[controller_server-51] [INFO] [1792506667.704602153] [controller_server]: Critic plugin initialized
+[controller_server-51] [INFO] [1792506667.704970296] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[controller_server-51] [INFO] [1792506667.705432367] [controller_server]: Critic plugin initialized
+[controller_server-51] [INFO] [1792506667.705625235] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[controller_server-51] [INFO] [1792506667.705961015] [controller_server]: Critic plugin initialized
+[controller_server-51] [INFO] [1792506667.705987165] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-58] [INFO] [1792506667.746059436] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[smoother_server-52] [INFO] [1792506667.747300724] [smoother_server]: Configuring smoother server
+[smoother_server-52] [INFO] [1792506667.802399897] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[smoother_server-52] [INFO] [1792506667.804879917] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[lifecycle_manager-58] [INFO] [1792506667.854545165] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-53] [INFO] [1792506667.855523842] [planner_server]: Configuring
+[planner_server-53] [INFO] [1792506667.855579348] [global_costmap.global_costmap]: Configuring
+[planner_server-53] [INFO] [1792506667.892921532] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-53] [INFO] [1792506667.898430389] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-53] [INFO] [1792506667.905316303] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-53] [INFO] [1792506667.905394933] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-53] [INFO] [1792506667.913710954] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-53] [INFO] [1792506667.930885552] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-53] [INFO] [1792506667.931026331] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-53] [INFO] [1792506667.932815844] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-53] [INFO] [1792506667.993964595] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 401 X 401 at 0.050000 m/pix
+[planner_server-53] [INFO] [1792506667.996304308] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner/NavfnPlanner
+[planner_server-53] [INFO] [1792506667.996360094] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-53] [INFO] [1792506668.003722807] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-58] [INFO] [1792506668.076413741] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[behavior_server-54] [INFO] [1792506668.077062057] [behavior_server]: Configuring
+[behavior_server-54] [INFO] [1792506668.116129691] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[behavior_server-54] [INFO] [1792506668.118634509] [behavior_server]: Configuring spin
+[behavior_server-54] [INFO] [1792506668.169762635] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[behavior_server-54] [INFO] [1792506668.170996669] [behavior_server]: Configuring backup
+[behavior_server-54] [INFO] [1792506668.196222162] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[behavior_server-54] [INFO] [1792506668.198408602] [behavior_server]: Configuring drive_on_heading
+[amcl-49] [WARN] [1792506668.204292364] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[behavior_server-54] [INFO] [1792506668.246372143] [behavior_server]: Creating behavior plugin assisted_teleop of type nav2_behaviors/AssistedTeleop
+[behavior_server-54] [INFO] [1792506668.248595654] [behavior_server]: Configuring assisted_teleop
+[behavior_server-54] [INFO] [1792506668.295664198] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[behavior_server-54] [INFO] [1792506668.297504578] [behavior_server]: Configuring wait
+[lifecycle_manager-58] [INFO] [1792506668.347115120] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-55] [INFO] [1792506668.347592991] [bt_navigator]: Configuring
+[lifecycle_manager-58] [INFO] [1792506668.647066848] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[waypoint_follower-56] [INFO] [1792506668.648026048] [waypoint_follower]: Configuring
+[waypoint_follower-56] [INFO] [1792506668.713585730] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[lifecycle_manager-58] [INFO] [1792506668.717240911] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[velocity_smoother-57] [INFO] [1792506668.718181485] [velocity_smoother]: Configuring velocity smoother
+[lifecycle_manager-58] [INFO] [1792506668.748167978] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[controller_server-51] [INFO] [1792506668.748710994] [controller_server]: Activating
+[controller_server-51] [INFO] [1792506668.748770117] [local_costmap.local_costmap]: Activating
+[controller_server-51] [INFO] [1792506668.748788141] [local_costmap.local_costmap]: Checking transform
+[controller_server-51] [INFO] [1792506668.749015956] [local_costmap.local_costmap]: start
+[controller_server-51] [ERROR] [1792506669.277784356] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [INFO] [1792506669.301927984] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[lifecycle_manager-58] [INFO] [1792506669.422284917] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-58] [INFO] [1792506669.422372824] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[smoother_server-52] [INFO] [1792506669.423000371] [smoother_server]: Activating
+[smoother_server-52] [INFO] [1792506669.423047942] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[lifecycle_manager-58] [INFO] [1792506669.534294028] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[lifecycle_manager-58] [INFO] [1792506669.534978022] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-53] [INFO] [1792506669.535810380] [planner_server]: Activating
+[planner_server-53] [INFO] [1792506669.535914849] [global_costmap.global_costmap]: Activating
+[planner_server-53] [INFO] [1792506669.535949034] [global_costmap.global_costmap]: Checking transform
+[planner_server-53] [INFO] [1792506669.535994200] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506669.627631928] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506669.926149049] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506670.036041361] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506670.352743675] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[amcl-49] [WARN] [1792506670.473096154] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[planner_server-53] [INFO] [1792506670.536032638] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506670.670358348] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506670.977187401] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506671.036044744] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506671.410228294] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506671.536081419] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506671.726893264] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506672.031577684] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506672.036030597] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506672.466827904] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506672.536047406] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-49] [WARN] [1792506672.582605960] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506672.774359694] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506673.036032584] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506673.090576706] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506673.524642280] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506673.536052110] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506673.831910677] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506674.036591947] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506674.147894801] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506674.536035808] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506674.548286631] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[amcl-49] [WARN] [1792506674.701585585] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506674.853630717] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506675.036030096] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506675.179388958] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506675.536043735] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506675.580666864] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506675.887768130] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506676.036054087] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506676.205474813] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506676.536106962] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506676.604978741] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[amcl-49] [WARN] [1792506676.801439213] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506676.920887502] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506677.036043284] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506677.237424783] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506677.536669384] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506677.649559793] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506677.976496753] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506678.036197430] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[turtlebot4_node-30] [ERROR] [1792506678.205419205] [turtlebot4_node]: Service oakd/stop_camera unavailable.
+[turtlebot4_node-30] [ERROR] [1792506678.215801183] [turtlebot4_node]: Service stop_motor unavailable.
+[controller_server-51] [ERROR] [1792506678.281770091] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506678.536031672] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506678.706159205] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[amcl-49] [WARN] [1792506678.921472914] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506679.021499578] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506679.036045155] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506679.326661241] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506679.538712372] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506679.767538150] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506680.036036909] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506680.093269694] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506680.400831614] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506680.536039667] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506680.822040672] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[amcl-49] [WARN] [1792506681.027126332] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[planner_server-53] [INFO] [1792506681.036048315] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506681.139344673] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506681.466079821] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506681.536052868] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506681.876981511] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506682.036077869] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506682.184138791] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506682.502582217] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506682.536069971] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506682.913199970] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506683.036233238] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-49] [WARN] [1792506683.144991604] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506683.210544617] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506683.527604884] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506683.536039277] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506683.938027781] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506684.036106152] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506684.242671184] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506684.536030689] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506684.564059342] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506684.960653607] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [rviz2-59]: process started with pid [161703]
+[INFO] [yolo_detector.py-60]: process started with pid [161705]
+[planner_server-53] [INFO] [1792506685.036034877] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-49] [WARN] [1792506685.439288886] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506685.504989617] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506685.536069727] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-53] [INFO] [1792506686.036045162] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506686.195984089] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506686.538353458] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-59] [INFO] [1792506686.643845405] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-59] [INFO] [1792506686.643973499] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-59] [INFO] [1792506686.689248994] [rviz2]: Stereo is NOT SUPPORTED
+[controller_server-51] [ERROR] [1792506686.752345366] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506687.036041164] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506687.316888732] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[amcl-49] [WARN] [1792506687.419675567] [amcl]: New subscription discovered on topic '/particle_cloud', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
+[planner_server-53] [INFO] [1792506687.536040601] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506687.769523172] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506688.036034716] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506688.461475072] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506688.536075454] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506688.905778112] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506688.916304200] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-59] [INFO] [1792506688.927110734] [rviz2]: Trying to create a map of size 401 x 401 using 1 swatches
+[planner_server-53] [INFO] [1792506689.036043251] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-49] [WARN] [1792506689.150316168] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506689.341412672] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506689.505400141] [rviz]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 32.769 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506689.536037633] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506689.706506279] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506690.037301293] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506690.107947561] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506690.468583126] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506690.536050434] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506690.808473711] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506691.036098939] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506691.231364488] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[yolo_detector.py-60] Loading /home/admin1/turtlebot5_github_ws/src/bai05_turtlebot4/models/yolo_world_furniture.torchscript for TorchScript inference...
+[planner_server-53] [INFO] [1792506691.536044192] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-49] [WARN] [1792506691.722371521] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506691.731047691] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506692.036036975] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[yolo_detector.py-60] Loading /home/admin1/turtlebot5_github_ws/src/bai05_turtlebot4/models/yolo_world_furniture.torchscript for TorchScript inference...
+[planner_server-53] [INFO] [1792506692.536075908] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506692.687558651] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[yolo_detector.py-60] Loading /home/admin1/turtlebot5_github_ws/src/bai05_turtlebot4/models/yolo_world_furniture.torchscript for TorchScript inference...
+[planner_server-53] [INFO] [1792506693.036032735] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506693.134833479] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506693.154027971] [rviz]: Message Filter dropping message: frame 'odom' at time 32.262 for reason 'discarding message because the queue is full'
+[rviz2-59] [INFO] [1792506693.345879207] [rviz]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 35.313 for reason 'discarding message because the queue is full'
+[controller_server-51] [ERROR] [1792506693.520195705] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506693.536072022] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506694.024804543] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506694.037111314] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-53] [INFO] [1792506694.536041379] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506694.597924230] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506694.952647865] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506695.036032465] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-49] [WARN] [1792506695.200374827] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506695.442412281] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506695.536419741] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[yolo_detector.py-60] [INFO] [1792506695.560697082] [bai05_yolo_detector]: YOLO ready, subscribing to /oakd/rgb/preview/image_raw
+[yolo_detector.py-60] [INFO] [1792506695.641320757] [bai05_yolo_detector]: RGB frame 37.323: []; 75.3 ms
+[controller_server-51] [ERROR] [1792506695.849963791] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506696.036045283] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506696.249856351] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506696.536751980] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506696.612408003] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506696.673429308] [rviz]: Message Filter dropping message: frame 'odom' at time 34.764 for reason 'discarding message because the queue is full'
+[rviz2-59] [INFO] [1792506696.864822521] [rviz]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 37.761 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506697.036066241] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506697.044018030] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506697.496369732] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506697.536041647] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[yolo_detector.py-60] [INFO] [1792506697.789101486] [bai05_yolo_detector]: RGB frame 38.973: []; 87.9 ms
+[amcl-49] [WARN] [1792506697.852519307] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506697.874385640] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506697.889177087] [rviz]: Message Filter dropping message: frame 'odom' at time 32.880 for reason 'discarding message because the queue is full'
+[INFO] [navigate_goals.py-61]: process started with pid [161874]
+[planner_server-53] [INFO] [1792506698.036669114] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506698.340278434] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506698.536047434] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506698.731424157] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506699.036351548] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506699.410376352] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506699.536035774] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506699.792318519] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506700.036346212] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[yolo_detector.py-60] [INFO] [1792506700.211070695] [bai05_yolo_detector]: RGB frame 40.458: []; 92.0 ms
+[controller_server-51] [ERROR] [1792506700.526334168] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506700.536067602] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-59] [INFO] [1792506700.901760591] [rviz]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 40.464 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506701.036226183] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506701.170240662] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506701.223061635] [rviz]: Message Filter dropping message: frame 'odom' at time 37.554 for reason 'discarding message because the queue is full'
+[amcl-49] [WARN] [1792506701.508920519] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[planner_server-53] [INFO] [1792506701.536042577] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506701.817245114] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506702.036033692] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[yolo_detector.py-60] [INFO] [1792506702.465050617] [bai05_yolo_detector]: RGB frame 41.481: []; 113.2 ms
+[planner_server-53] [INFO] [1792506702.536061170] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506702.553175451] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506703.036018414] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506703.251278041] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506703.536035725] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506703.646002128] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506703.651210936] [rviz]: Message Filter dropping message: frame 'odom' at time 35.988 for reason 'discarding message because the queue is full'
+[motion_control-35] [INFO] [1792506703.936162891] [motion_control]: Received new undock goal
+[planner_server-53] [INFO] [1792506704.036057424] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506704.065905606] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[turtlebot4_node-30] [INFO] [1792506704.284122562] [turtlebot4_node]: OAKD started
+[turtlebot4_node-30] [INFO] [1792506704.284217213] [turtlebot4_node]: RPLIDAR started
+[yolo_detector.py-60] [INFO] [1792506704.469343057] [bai05_yolo_detector]: RGB frame 42.735: []; 71.3 ms
+[controller_server-51] [ERROR] [1792506704.488343051] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506704.536045413] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506704.983127693] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[amcl-49] [WARN] [1792506704.997289516] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[planner_server-53] [INFO] [1792506705.035993355] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-49] Reallocing temp weights 2000 - 120
+[rviz2-59] [INFO] [1792506705.314291137] [rviz]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 42.849 for reason 'discarding message because the queue is full'
+[controller_server-51] [ERROR] [1792506705.347614451] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506705.536044427] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506705.790579107] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506705.828205913] [rviz]: Message Filter dropping message: frame 'odom' at time 40.359 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506706.036048969] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506706.194369992] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[yolo_detector.py-60] [INFO] [1792506706.491398254] [bai05_yolo_detector]: RGB frame 44.220: []; 73.5 ms
+[planner_server-53] [INFO] [1792506706.536461182] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506706.575477455] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506706.967229828] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506707.036039735] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506707.326192904] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506707.536068771] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-49] [WARN] [1792506707.588448162] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506707.810451964] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506707.873946710] [rviz]: Message Filter dropping message: frame 'odom' at time 39.114 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506708.036034064] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506708.178131025] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506708.536031302] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506708.570259117] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506708.583331221] [rviz]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 45.330 for reason 'discarding message because the queue is full'
+[yolo_detector.py-60] [INFO] [1792506708.747784650] [bai05_yolo_detector]: RGB frame 45.969: []; 73.4 ms
+[controller_server-51] [ERROR] [1792506708.964342014] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506709.025434228] [rviz]: Message Filter dropping message: frame 'odom' at time 42.795 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506709.036034040] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506709.354561847] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506709.536057071] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506709.775635552] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506710.036047538] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506710.147273765] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[amcl-49] [WARN] [1792506710.161904468] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[planner_server-53] [INFO] [1792506710.536044932] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506710.545378140] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506710.943537550] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[yolo_detector.py-60] [INFO] [1792506710.992561210] [bai05_yolo_detector]: RGB frame 47.718: []; 72.0 ms
+[planner_server-53] [INFO] [1792506711.036040943] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506711.341692289] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506711.536043451] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506711.722712662] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506711.782124048] [rviz]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 47.841 for reason 'discarding message because the queue is full'
+[rviz2-59] [INFO] [1792506711.782306455] [rviz]: Message Filter dropping message: frame 'odom' at time 42.183 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506712.036101202] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506712.115745034] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506712.476370496] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506712.482775953] [rviz]: Message Filter dropping message: frame 'odom' at time 45.618 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506712.536037116] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-49] [WARN] [1792506712.741908766] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[controller_server-51] [ERROR] [1792506712.979861094] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506713.036046779] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[yolo_detector.py-60] [INFO] [1792506713.268179489] [bai05_yolo_detector]: RGB frame 49.467: []; 81.2 ms
+[controller_server-51] [ERROR] [1792506713.378822162] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506713.536031279] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506713.790274675] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506714.036042798] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506714.183562284] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506714.536033793] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506714.601926614] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[controller_server-51] [ERROR] [1792506714.993164119] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506715.036040968] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-59] [INFO] [1792506715.106179818] [rviz]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 50.370 for reason 'discarding message because the queue is full'
+[controller_server-51] [ERROR] [1792506715.371815236] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[amcl-49] [WARN] [1792506715.420348664] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[planner_server-53] [INFO] [1792506715.536033479] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[yolo_detector.py-60] [INFO] [1792506715.553854490] [bai05_yolo_detector]: RGB frame 51.216: []; 75.8 ms
+[controller_server-51] [ERROR] [1792506715.739223508] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[rviz2-59] [INFO] [1792506715.745962150] [rviz]: Message Filter dropping message: frame 'odom' at time 45.291 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506716.036006111] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506716.129814614] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[motion_control-35] [INFO] [1792506716.146762811] [motion_control]: Undock Goal Succeeded
+[navigate_goals.py-61] [INFO] [1792506716.181444291] [bai05_route_navigator]: {"event": "UNDOCK_RESULT", "sim_time": 51.774, "wall_monotonic": 13158.647508036, "status": 4}
+[rviz2-59] [INFO] [1792506716.196363060] [rviz]: Message Filter dropping message: frame 'odom' at time 48.375 for reason 'discarding message because the queue is full'
+[controller_server-51] [ERROR] [1792506716.522299721] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506716.536033782] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506716.886047986] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506717.036075379] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506717.264555046] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[planner_server-53] [INFO] [1792506717.536039112] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506717.645436608] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[yolo_detector.py-60] [INFO] [1792506717.743925988] [bai05_yolo_detector]: RGB frame 52.965: []; 82.8 ms
+[amcl-49] [WARN] [1792506717.928145714] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[planner_server-53] [INFO] [1792506718.036509740] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[controller_server-51] [ERROR] [1792506718.076999996] [local_costmap.local_costmap]: StaticLayer: "map" passed to lookupTransform argument target_frame does not exist. 
+[navigate_goals.py-61] [INFO] [1792506718.185356555] [bai05_route_navigator]: Publishing Initial Pose
+[amcl-49] [INFO] [1792506718.185737681] [amcl]: initialPoseReceived
+[amcl-49] [WARN] [1792506718.185887567] [amcl]: Failed to transform initial pose in time (Lookup would require extrapolation into the future.  Requested time 53.382000 but the latest data is at time 53.376000, when looking up transform from frame [base_link] to frame [odom])
+[amcl-49] [INFO] [1792506718.185920770] [amcl]: Setting pose (53.382000): -0.353 -0.000 3.136
+[navigate_goals.py-61] [INFO] [1792506718.186258233] [bai05_route_navigator]: {"event": "INITIAL_POSE_FROM_GAZEBO", "sim_time": 53.382000000000005, "wall_monotonic": 13160.685317245, "pose": {"x": -0.3527196736691338, "y": -1.1582094129924321e-06, "yaw": 3.135601345772594}}
+[rviz2-59] [INFO] [1792506718.305709944] [rviz]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 52.929 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506718.536111015] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 53.667000 but the earliest data is at time 54.379000, when looking up transform from frame [base_link] to frame [map]
+[rviz2-59] [INFO] [1792506718.882005845] [rviz]: Message Filter dropping message: frame 'odom' at time 47.772 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506719.036043320] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 54.054000 but the earliest data is at time 54.379000, when looking up transform from frame [base_link] to frame [map]
+[rviz2-59] [INFO] [1792506719.462326210] [rviz]: Message Filter dropping message: frame 'odom' at time 52.053 for reason 'discarding message because the queue is full'
+[planner_server-53] [INFO] [1792506719.536911193] [global_costmap.global_costmap]: start
+[rviz2-59] [INFO] [1792506719.664760401] [rviz2]: Trying to create a map of size 50 x 50 using 1 swatches
+[yolo_detector.py-60] [INFO] [1792506719.940156624] [bai05_yolo_detector]: RGB frame 54.714: []; 76.6 ms
+[navigate_goals.py-61] [INFO] [1792506720.219445546] [bai05_route_navigator]: Setting initial pose
+[navigate_goals.py-61] [INFO] [1792506720.220690639] [bai05_route_navigator]: Publishing Initial Pose
+[navigate_goals.py-61] [INFO] [1792506720.221382146] [bai05_route_navigator]: Waiting for amcl_pose to be received
+[amcl-49] [INFO] [1792506720.220966915] [amcl]: initialPoseReceived
+[amcl-49] [WARN] [1792506720.221130747] [amcl]: Failed to transform initial pose in time (Lookup would require extrapolation into the future.  Requested time 55.026000 but the latest data is at time 55.020000, when looking up transform from frame [base_link] to frame [odom])
+[amcl-49] [INFO] [1792506720.221168980] [amcl]: Setting pose (55.026000): -0.353 -0.000 3.136
+[navigate_goals.py-61] [INFO] [1792506720.222687113] [bai05_route_navigator]: Setting initial pose
+[navigate_goals.py-61] [INFO] [1792506720.223385454] [bai05_route_navigator]: Publishing Initial Pose
+[amcl-49] [INFO] [1792506720.223653645] [amcl]: initialPoseReceived
+[amcl-49] [WARN] [1792506720.223741652] [amcl]: Failed to transform initial pose in time (Lookup would require extrapolation into the future.  Requested time 55.026000 but the latest data is at time 55.020000, when looking up transform from frame [base_link] to frame [odom])
+[amcl-49] [INFO] [1792506720.223758464] [amcl]: Setting pose (55.026000): -0.353 -0.000 3.136
+[navigate_goals.py-61] [INFO] [1792506720.224221747] [bai05_route_navigator]: Waiting for amcl_pose to be received
+[navigate_goals.py-61] [INFO] [1792506720.225246379] [bai05_route_navigator]: Setting initial pose
+[navigate_goals.py-61] [INFO] [1792506720.226377365] [bai05_route_navigator]: Publishing Initial Pose
+[navigate_goals.py-61] [INFO] [1792506720.227407047] [bai05_route_navigator]: Waiting for amcl_pose to be received
+[amcl-49] [INFO] [1792506720.227501947] [amcl]: initialPoseReceived
+[amcl-49] [WARN] [1792506720.227595816] [amcl]: Failed to transform initial pose in time (Lookup would require extrapolation into the future.  Requested time 55.026000 but the latest data is at time 55.020000, when looking up transform from frame [base_link] to frame [odom])
+[amcl-49] [INFO] [1792506720.227615784] [amcl]: Setting pose (55.026000): -0.353 -0.000 3.136
+[navigate_goals.py-61] [INFO] [1792506720.229271409] [bai05_route_navigator]: Setting initial pose
+[navigate_goals.py-61] [INFO] [1792506720.230003975] [bai05_route_navigator]: Publishing Initial Pose
+[amcl-49] [INFO] [1792506720.230251066] [amcl]: initialPoseReceived
+[amcl-49] [WARN] [1792506720.230354273] [amcl]: Failed to transform initial pose in time (Lookup would require extrapolation into the future.  Requested time 55.026000 but the latest data is at time 55.020000, when looking up transform from frame [base_link] to frame [odom])
+[amcl-49] [INFO] [1792506720.230382276] [amcl]: Setting pose (55.026000): -0.353 -0.000 3.136
+[navigate_goals.py-61] [INFO] [1792506720.231518932] [bai05_route_navigator]: Waiting for amcl_pose to be received
+[navigate_goals.py-61] [INFO] [1792506720.232184410] [bai05_route_navigator]: Setting initial pose
+[navigate_goals.py-61] [INFO] [1792506720.233227978] [bai05_route_navigator]: Publishing Initial Pose
+[amcl-49] [INFO] [1792506720.234183239] [amcl]: initialPoseReceived
+[amcl-49] [WARN] [1792506720.234303648] [amcl]: Failed to transform initial pose in time (Lookup would require extrapolation into the future.  Requested time 55.026000 but the latest data is at time 55.020000, when looking up transform from frame [base_link] to frame [odom])
+[amcl-49] [INFO] [1792506720.234335899] [amcl]: Setting pose (55.026000): -0.353 -0.000 3.136
+[navigate_goals.py-61] [INFO] [1792506720.236222835] [bai05_route_navigator]: Waiting for amcl_pose to be received
+[planner_server-53] [INFO] [1792506720.545898928] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[planner_server-53] [INFO] [1792506720.556666435] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[rviz2-59] [INFO] [1792506720.631288997] [rviz2]: Trying to create a map of size 401 x 401 using 1 swatches
+[lifecycle_manager-58] [INFO] [1792506720.677906937] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-58] [INFO] [1792506720.677981068] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[behavior_server-54] [INFO] [1792506720.678885953] [behavior_server]: Activating
+[behavior_server-54] [INFO] [1792506720.679001663] [behavior_server]: Activating spin
+[behavior_server-54] [INFO] [1792506720.679134466] [behavior_server]: Activating backup
+[behavior_server-54] [INFO] [1792506720.679148403] [behavior_server]: Activating drive_on_heading
+[behavior_server-54] [INFO] [1792506720.679160776] [behavior_server]: Activating assisted_teleop
+[behavior_server-54] [INFO] [1792506720.679172769] [behavior_server]: Activating wait
+[behavior_server-54] [INFO] [1792506720.679190353] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[lifecycle_manager-58] [INFO] [1792506720.800275087] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-58] [INFO] [1792506720.800385478] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-55] [INFO] [1792506720.801279181] [bt_navigator]: Activating
+[bt_navigator-55] [INFO] [1792506721.283066179] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-58] [INFO] [1792506721.406400627] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-58] [INFO] [1792506721.406462344] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[waypoint_follower-56] [INFO] [1792506721.407225248] [waypoint_follower]: Activating
+[waypoint_follower-56] [INFO] [1792506721.407282818] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[lifecycle_manager-58] [INFO] [1792506721.527968669] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[lifecycle_manager-58] [INFO] [1792506721.528615241] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[velocity_smoother-57] [INFO] [1792506721.529575019] [velocity_smoother]: Activating
+[velocity_smoother-57] [INFO] [1792506721.529673006] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[lifecycle_manager-58] [INFO] [1792506721.657795667] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[lifecycle_manager-58] [INFO] [1792506721.657895337] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-58] [INFO] [1792506721.657913522] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[yolo_detector.py-60] [INFO] [1792506722.035387669] [bai05_yolo_detector]: RGB frame 56.232: []; 76.1 ms
+[rviz2-59] [INFO] [1792506724.168842047] [rviz]: Message Filter dropping message: frame 'odom' at time 48.990 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[yolo_detector.py-60] [INFO] [1792506724.229700855] [bai05_yolo_detector]: RGB frame 57.981: []; 72.7 ms
+[navigate_goals.py-61] [INFO] [1792506724.265933911] [bai05_route_navigator]: Nav2 is ready for use!
+[yolo_detector.py-60] [INFO] [1792506726.525953977] [bai05_yolo_detector]: RGB frame 59.730: []; 81.7 ms
+[navigate_goals.py-61] [INFO] [1792506727.267950975] [bai05_route_navigator]: {"event": "LOCALIZATION_READY", "sim_time": 60.37200000000001, "wall_monotonic": 13169.766303481, "amcl": {"x": -0.35271967366914353, "y": -1.1582094129925412e-06, "yaw": 3.1356013457725944}, "gt": {"x": -0.3527196736691338, "y": -1.1582094129924321e-06, "yaw": 3.135601345772594}}
+[navigate_goals.py-61] [INFO] [1792506727.269359709] [bai05_route_navigator]: {"event": "GOAL_SENT", "sim_time": 60.37200000000001, "wall_monotonic": 13169.768274376, "goal": 1, "target": {"name": "Goal 1 - northwest", "x": -8.5, "y": 8.5, "yaw": -1.57079632679}}
+[navigate_goals.py-61] [INFO] [1792506727.274510793] [bai05_route_navigator]: Navigating to goal: -8.5 8.5...
+[bt_navigator-55] [INFO] [1792506727.278637976] [bt_navigator]: Begin navigating from current location (-0.35, -0.00) to (-8.50, 8.50)
+[controller_server-51] [INFO] [1792506727.312294200] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-51] [WARN] [1792506727.312378871] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[rviz2-59] [INFO] [1792506728.209268927] [rviz]: Message Filter dropping message: frame 'odom' at time 52.068 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-51] [INFO] [1792506728.362753078] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506728.862164136] [bai05_yolo_detector]: RGB frame 61.479: []; 77.7 ms
+[rviz2-59] [INFO] [1792506729.059451911] [rviz]: Message Filter dropping message: frame 'odom' at time 52.683 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-51] [INFO] [1792506729.413355494] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506730.462724253] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506730.960213798] [bai05_yolo_detector]: RGB frame 62.964: [{"class_id": 3, "class_name": "person", "confidence": 0.9366933703422546, "xyxy": [278.06524658203125, 46.80997848510742, 305.2508544921875, 133.31039428710938]}]; 81.9 ms
+[controller_server-51] [INFO] [1792506731.462808514] [controller_server]: Passing new path to controller.
+[rviz2-59] [INFO] [1792506732.166623092] [rviz]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 53.937 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-51] [INFO] [1792506732.513637385] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506733.031462498] [bai05_yolo_detector]: RGB frame 64.482: [{"class_id": 3, "class_name": "person", "confidence": 0.9142090678215027, "xyxy": [254.1831512451172, 44.70642852783203, 281.2748718261719, 133.2291717529297]}]; 77.7 ms
+[controller_server-51] [INFO] [1792506733.563231970] [controller_server]: Passing new path to controller.
+[turtlebot4_node-30] [ERROR] [1792506734.295686418] [turtlebot4_node]: Service oakd/start_camera unavailable.
+[turtlebot4_node-30] [ERROR] [1792506734.306176201] [turtlebot4_node]: Service start_motor unavailable.
+[controller_server-51] [INFO] [1792506734.562700647] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506735.121660496] [bai05_yolo_detector]: RGB frame 65.967: [{"class_id": 3, "class_name": "person", "confidence": 0.9318915605545044, "xyxy": [218.6982421875, 42.84202194213867, 245.12973022460938, 133.51101684570312]}]; 82.7 ms
+[controller_server-51] [INFO] [1792506735.613021095] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506736.662697981] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506737.323503128] [bai05_yolo_detector]: RGB frame 67.716: [{"class_id": 3, "class_name": "person", "confidence": 0.9129787087440491, "xyxy": [195.47640991210938, 36.63279342651367, 223.4957275390625, 134.92758178710938]}]; 63.5 ms
+[controller_server-51] [INFO] [1792506737.663139101] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506738.713170413] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506739.331788696] [bai05_yolo_detector]: RGB frame 69.465: [{"class_id": 3, "class_name": "person", "confidence": 0.9312724471092224, "xyxy": [191.99681091308594, 26.56844139099121, 223.36810302734375, 136.967041015625]}]; 62.4 ms
+[controller_server-51] [INFO] [1792506739.712752791] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506740.762702590] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506741.585103857] [bai05_yolo_detector]: RGB frame 71.478: [{"class_id": 3, "class_name": "person", "confidence": 0.9367746114730835, "xyxy": [198.67843627929688, 11.002116203308105, 236.26022338867188, 139.17633056640625]}]; 61.8 ms
+[controller_server-51] [INFO] [1792506741.763333630] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506742.812699908] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506743.821614141] [bai05_yolo_detector]: RGB frame 73.458: [{"class_id": 3, "class_name": "person", "confidence": 0.94651859998703, "xyxy": [210.5327606201172, 0.1768392026424408, 257.1058044433594, 143.4780731201172]}]; 61.0 ms
+[controller_server-51] [INFO] [1792506743.862708434] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506744.862732931] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506745.912703166] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506746.100831206] [bai05_yolo_detector]: RGB frame 75.471: [{"class_id": 3, "class_name": "person", "confidence": 0.8738368153572083, "xyxy": [222.51666259765625, 0.089599609375, 283.31561279296875, 148.62692260742188]}]; 58.3 ms
+[controller_server-51] [INFO] [1792506746.912693363] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506747.963701998] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506748.366723807] [bai05_yolo_detector]: RGB frame 77.484: [{"class_id": 3, "class_name": "person", "confidence": 0.2236241102218628, "xyxy": [263.42095947265625, 1.0735677480697632, 319.9464111328125, 158.25531005859375]}]; 59.4 ms
+[controller_server-51] [INFO] [1792506748.962695101] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506749.963042192] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506750.630052445] [bai05_yolo_detector]: RGB frame 79.464: []; 58.6 ms
+[controller_server-51] [INFO] [1792506751.012674144] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506752.012775743] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506752.644649527] [bai05_yolo_detector]: RGB frame 81.213: []; 60.8 ms
+[controller_server-51] [INFO] [1792506753.062701476] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506754.112692129] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506754.895710433] [bai05_yolo_detector]: RGB frame 83.226: []; 60.1 ms
+[controller_server-51] [INFO] [1792506755.113321967] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506756.162696590] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506757.068738501] [bai05_yolo_detector]: RGB frame 84.975: []; 58.8 ms
+[controller_server-51] [INFO] [1792506757.163206887] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506758.212697004] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506759.262692168] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506759.340794113] [bai05_yolo_detector]: RGB frame 86.955: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.28059202432632446, "xyxy": [6.172845840454102, 89.96993255615234, 25.760616302490234, 133.88424682617188]}]; 62.6 ms
+[controller_server-51] [INFO] [1792506760.262707447] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506761.312696864] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506761.624177949] [bai05_yolo_detector]: RGB frame 88.968: []; 57.5 ms
+[controller_server-51] [INFO] [1792506762.313433664] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506763.362705488] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506763.857423338] [bai05_yolo_detector]: RGB frame 90.981: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.3110167384147644, "xyxy": [16.20467185974121, 81.46978759765625, 40.840431213378906, 137.56748962402344]}]; 58.3 ms
+[controller_server-51] [INFO] [1792506764.362715692] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506765.413413487] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506765.862805503] [bai05_yolo_detector]: RGB frame 92.730: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.20660871267318726, "xyxy": [0.0, 68.28753662109375, 13.829591751098633, 150.68978881835938]}]; 60.2 ms
+[controller_server-51] [INFO] [1792506766.412697906] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506767.462693157] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506768.104150515] [bai05_yolo_detector]: RGB frame 94.710: []; 60.4 ms
+[controller_server-51] [INFO] [1792506768.462808657] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506769.512700456] [controller_server]: Passing new path to controller.
+[amcl-49] [INFO] [1792506769.648171203] [amcl]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 95.154 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[yolo_detector.py-60] [INFO] [1792506770.344949422] [bai05_yolo_detector]: RGB frame 96.723: []; 55.4 ms
+[controller_server-51] [INFO] [1792506770.512802087] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506771.562728909] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506772.562712073] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506772.589794012] [bai05_yolo_detector]: RGB frame 98.703: []; 63.9 ms
+[controller_server-51] [INFO] [1792506773.612729853] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506774.613039857] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506774.822954199] [bai05_yolo_detector]: RGB frame 100.716: []; 56.2 ms
+[controller_server-51] [INFO] [1792506775.662738215] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506776.662701619] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506776.832908666] [bai05_yolo_detector]: RGB frame 102.465: []; 62.3 ms
+[controller_server-51] [INFO] [1792506777.712694954] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506778.712723942] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506779.061455928] [bai05_yolo_detector]: RGB frame 104.478: []; 58.9 ms
+[controller_server-51] [INFO] [1792506779.762705391] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506780.812694933] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506781.326102077] [bai05_yolo_detector]: RGB frame 106.458: []; 58.2 ms
+[controller_server-51] [INFO] [1792506781.813112949] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506782.812699473] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506783.539144549] [bai05_yolo_detector]: RGB frame 108.471: []; 57.4 ms
+[controller_server-51] [INFO] [1792506783.862700453] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506784.912722951] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506785.803508035] [bai05_yolo_detector]: RGB frame 110.484: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.2976720631122589, "xyxy": [16.863012313842773, 76.11116790771484, 47.07048797607422, 149.503662109375]}]; 59.8 ms
+[controller_server-51] [INFO] [1792506785.816744139] [controller_server]: Reached the goal!
+[bt_navigator-55] [INFO] [1792506785.849019584] [bt_navigator]: Goal succeeded
+[navigate_goals.py-61] [INFO] [1792506786.358517391] [bai05_route_navigator]: {"event": "GOAL_RESULT", "sim_time": 111.021, "wall_monotonic": 13228.856765922, "goal": 1, "target": {"name": "Goal 1 - northwest", "x": -8.5, "y": 8.5, "yaw": -1.57079632679}, "result": "SUCCEEDED", "sim_duration_s": 50.648999999999994, "wall_duration_s": 59.088018144999296, "final_amcl": {"x": -8.325794177959589, "y": 8.355183990292854, "yaw": -1.8739884848385993}, "final_gt": {"x": -8.333238350062677, "y": 8.357720927781475, "yaw": -1.8487580838106783}, "amcl_stamp": 110.385, "gt_stamp": 111.006, "amcl_goal_distance_m": 0.22653773438497096, "contact_count": 0, "bump_events": 0, "relocalizations": 0, "contact_messages_received": 0, "hazard_messages_received": 3972}
+[yolo_detector.py-60] [INFO] [1792506788.055155338] [bai05_yolo_detector]: RGB frame 112.464: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.20187479257583618, "xyxy": [21.7598876953125, 76.86125183105469, 51.27460479736328, 149.3622283935547]}]; 61.7 ms
+[yolo_detector.py-60] [INFO] [1792506790.333547604] [bai05_yolo_detector]: RGB frame 114.477: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.20187479257583618, "xyxy": [21.7598876953125, 76.86125183105469, 51.27460479736328, 149.3622283935547]}]; 59.7 ms
+[yolo_detector.py-60] [INFO] [1792506792.343920082] [bai05_yolo_detector]: RGB frame 116.226: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.20187479257583618, "xyxy": [21.7598876953125, 76.86125183105469, 51.27460479736328, 149.3622283935547]}]; 58.8 ms
+[navigate_goals.py-61] [INFO] [1792506792.361471236] [bai05_route_navigator]: {"event": "GOAL_SENT", "sim_time": 116.301, "wall_monotonic": 13234.859287534, "goal": 2, "target": {"name": "Goal 2 - southwest", "x": -8.5, "y": -8.5, "yaw": 0.0}}
+[navigate_goals.py-61] [INFO] [1792506792.364522053] [bai05_route_navigator]: Navigating to goal: -8.5 -8.5...
+[bt_navigator-55] [INFO] [1792506792.365629340] [bt_navigator]: Begin navigating from current location (-8.33, 8.36) to (-8.50, -8.50)
+[controller_server-51] [INFO] [1792506792.387437396] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-51] [INFO] [1792506793.439431266] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506794.423925047] [bai05_yolo_detector]: RGB frame 117.975: [{"class_id": 3, "class_name": "person", "confidence": 0.8781516551971436, "xyxy": [70.85921478271484, 63.11918258666992, 89.46578216552734, 130.19992065429688]}, {"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.6185498833656311, "xyxy": [246.0894012451172, 71.42185974121094, 277.70977783203125, 153.03013610839844]}]; 63.7 ms
+[controller_server-51] [INFO] [1792506794.488398884] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506795.487791220] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506796.501758496] [bai05_yolo_detector]: RGB frame 119.724: [{"class_id": 3, "class_name": "person", "confidence": 0.8555700778961182, "xyxy": [136.55747985839844, 61.91892623901367, 154.19924926757812, 130.52903747558594]}]; 61.9 ms
+[controller_server-51] [INFO] [1792506796.537716118] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506797.537829839] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506798.538704249] [bai05_yolo_detector]: RGB frame 121.473: [{"class_id": 3, "class_name": "person", "confidence": 0.881345272064209, "xyxy": [126.51415252685547, 56.786460876464844, 145.4830322265625, 129.074462890625]}]; 62.0 ms
+[controller_server-51] [INFO] [1792506798.588232065] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506799.637737301] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506800.595251686] [bai05_yolo_detector]: RGB frame 123.222: [{"class_id": 3, "class_name": "person", "confidence": 0.9008166193962097, "xyxy": [129.547607421875, 50.93253707885742, 150.71490478515625, 131.73797607421875]}]; 59.9 ms
+[controller_server-51] [INFO] [1792506800.637712630] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506801.687696547] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506802.661931024] [bai05_yolo_detector]: RGB frame 124.971: [{"class_id": 3, "class_name": "person", "confidence": 0.8944830894470215, "xyxy": [125.8181381225586, 43.79179000854492, 148.93536376953125, 130.5201416015625]}]; 61.0 ms
+[controller_server-51] [INFO] [1792506802.687710331] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506803.737725637] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506804.737715928] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506804.772307072] [bai05_yolo_detector]: RGB frame 126.720: [{"class_id": 3, "class_name": "person", "confidence": 0.9028205871582031, "xyxy": [119.54209899902344, 34.842529296875, 144.04568481445312, 134.45726013183594]}]; 62.7 ms
+[controller_server-51] [INFO] [1792506805.787710023] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506806.837707002] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506806.871241243] [bai05_yolo_detector]: RGB frame 128.469: [{"class_id": 3, "class_name": "person", "confidence": 0.9165686964988708, "xyxy": [111.28462219238281, 22.85317039489746, 140.2557373046875, 137.0275115966797]}]; 60.6 ms
+[controller_server-51] [INFO] [1792506807.837706955] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506808.887721497] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506808.974391333] [bai05_yolo_detector]: RGB frame 130.218: [{"class_id": 3, "class_name": "person", "confidence": 0.9172492623329163, "xyxy": [103.35778045654297, 7.47216796875, 136.3189239501953, 139.1932373046875]}]; 59.2 ms
+[controller_server-51] [INFO] [1792506809.888163133] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506810.937711438] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506811.034090001] [bai05_yolo_detector]: RGB frame 131.967: [{"class_id": 3, "class_name": "person", "confidence": 0.9064347743988037, "xyxy": [92.72354125976562, 0.3302205502986908, 131.12042236328125, 142.44509887695312]}]; 62.8 ms
+[amcl-49] [INFO] [1792506811.276661676] [amcl]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 131.250 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-51] [INFO] [1792506811.987746539] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506812.988522174] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506813.085081124] [bai05_yolo_detector]: RGB frame 133.716: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.37736818194389343, "xyxy": [316.51983642578125, 111.32391357421875, 320.0, 126.4101791381836]}, {"class_id": 3, "class_name": "person", "confidence": 0.25907421112060547, "xyxy": [70.35962677001953, 0.5525767207145691, 120.13798522949219, 146.790283203125]}]; 60.3 ms
+[controller_server-51] [INFO] [1792506814.037705744] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506815.037747026] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506815.127734907] [bai05_yolo_detector]: RGB frame 135.465: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.23707711696624756, "xyxy": [250.66268920898438, 111.89693450927734, 256.3189392089844, 126.19710540771484]}]; 60.2 ms
+[controller_server-51] [INFO] [1792506816.087715078] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506817.089369362] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506817.246413787] [bai05_yolo_detector]: RGB frame 137.214: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.3190225660800934, "xyxy": [154.56253051757812, 112.72664642333984, 159.78297424316406, 126.11605072021484]}]; 61.2 ms
+[controller_server-51] [INFO] [1792506818.138664645] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506819.137708646] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506819.281077645] [bai05_yolo_detector]: RGB frame 138.963: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.4555366337299347, "xyxy": [103.61589813232422, 111.79827880859375, 109.34982299804688, 126.3028793334961]}]; 65.1 ms
+[controller_server-51] [INFO] [1792506820.187777513] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506821.239204333] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506821.330826319] [bai05_yolo_detector]: RGB frame 140.712: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.5718975067138672, "xyxy": [91.58885955810547, 111.64483642578125, 97.36921691894531, 126.5482406616211]}]; 63.0 ms
+[controller_server-51] [INFO] [1792506822.237815987] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506823.287707708] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506823.398025165] [bai05_yolo_detector]: RGB frame 142.461: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.231771320104599, "xyxy": [89.5707015991211, 111.02610778808594, 96.09539794921875, 126.82747650146484]}]; 63.5 ms
+[controller_server-51] [INFO] [1792506824.293161663] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506825.337708948] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506825.446741545] [bai05_yolo_detector]: RGB frame 144.210: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.19988659024238586, "xyxy": [89.59944152832031, 110.7500228881836, 96.38335418701172, 127.04180908203125]}]; 60.6 ms
+[controller_server-51] [INFO] [1792506826.337714372] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506827.388385189] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506827.542540255] [bai05_yolo_detector]: RGB frame 145.959: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.36809033155441284, "xyxy": [86.6181640625, 110.33152770996094, 93.36580657958984, 127.45445251464844]}]; 64.7 ms
+[controller_server-51] [INFO] [1792506828.387743246] [controller_server]: Passing new path to controller.
+[planner_server-53] [INFO] [1792506829.259795433] [global_costmap.global_costmap]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 147.186 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-51] [INFO] [1792506829.437716228] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506829.634198572] [bai05_yolo_detector]: RGB frame 147.708: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.1423831731081009, "xyxy": [83.58870697021484, 109.1641845703125, 91.4632797241211, 127.7391586303711]}]; 65.2 ms
+[controller_server-51] [INFO] [1792506830.487753432] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506831.487992873] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506831.687795932] [bai05_yolo_detector]: RGB frame 149.457: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.262978196144104, "xyxy": [80.60507202148438, 108.52081298828125, 88.35625457763672, 128.24697875976562]}]; 60.3 ms
+[controller_server-51] [INFO] [1792506832.487801157] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506833.537736502] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506833.725389029] [bai05_yolo_detector]: RGB frame 151.206: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.2081022411584854, "xyxy": [70.61465454101562, 107.94246673583984, 79.35491180419922, 128.3829803466797]}]; 62.1 ms
+[controller_server-51] [INFO] [1792506834.587707275] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506835.590581327] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506835.762832861] [bai05_yolo_detector]: RGB frame 152.955: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.21189548075199127, "xyxy": [65.5562973022461, 106.4636459350586, 74.50982666015625, 129.33677673339844]}]; 59.3 ms
+[controller_server-51] [INFO] [1792506836.638178028] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506837.637805872] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506838.063658517] [bai05_yolo_detector]: RGB frame 154.968: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.1789674609899521, "xyxy": [47.5015869140625, 105.73274993896484, 57.55710983276367, 130.3171844482422]}]; 54.9 ms
+[controller_server-51] [INFO] [1792506838.687905185] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506839.687844538] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506840.236516093] [bai05_yolo_detector]: RGB frame 156.717: []; 66.6 ms
+[controller_server-51] [INFO] [1792506840.348357567] [local_costmap.local_costmap]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 156.561 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-51] [INFO] [1792506840.738301274] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506841.737897561] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506842.272911440] [bai05_yolo_detector]: RGB frame 158.466: []; 59.6 ms
+[controller_server-51] [INFO] [1792506842.787707882] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506843.839141040] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506844.273866869] [bai05_yolo_detector]: RGB frame 160.215: []; 57.2 ms
+[controller_server-51] [INFO] [1792506844.837757432] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506845.888526301] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506846.543815127] [bai05_yolo_detector]: RGB frame 162.228: []; 59.2 ms
+[controller_server-51] [INFO] [1792506846.887716390] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506847.937706693] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506848.784075335] [bai05_yolo_detector]: RGB frame 164.208: []; 58.9 ms
+[controller_server-51] [INFO] [1792506848.992133384] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506849.987691266] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506851.018704516] [bai05_yolo_detector]: RGB frame 166.221: []; 58.8 ms
+[controller_server-51] [INFO] [1792506851.037710499] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506852.037710034] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506853.088326166] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506853.273041450] [bai05_yolo_detector]: RGB frame 168.234: []; 57.8 ms
+[controller_server-51] [INFO] [1792506854.087735868] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506855.137708742] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506855.498699853] [bai05_yolo_detector]: RGB frame 170.214: []; 62.9 ms
+[controller_server-51] [INFO] [1792506856.190124674] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506857.188478729] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506857.752613227] [bai05_yolo_detector]: RGB frame 172.227: []; 57.5 ms
+[controller_server-51] [INFO] [1792506858.238858754] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506859.238131384] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506860.002613073] [bai05_yolo_detector]: RGB frame 174.240: []; 57.4 ms
+[controller_server-51] [INFO] [1792506860.288074865] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506861.287965358] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506862.251244293] [bai05_yolo_detector]: RGB frame 176.220: []; 59.0 ms
+[controller_server-51] [INFO] [1792506862.337762667] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506863.387729560] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506864.387711970] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506864.518591193] [bai05_yolo_detector]: RGB frame 178.233: []; 57.8 ms
+[controller_server-51] [INFO] [1792506865.437716541] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506866.437708438] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506866.735666445] [bai05_yolo_detector]: RGB frame 180.213: []; 61.0 ms
+[controller_server-51] [INFO] [1792506867.487798357] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506868.487871257] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506868.754389195] [bai05_yolo_detector]: RGB frame 181.962: []; 59.1 ms
+[controller_server-51] [INFO] [1792506869.537710817] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506870.587712939] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506871.028782115] [bai05_yolo_detector]: RGB frame 183.975: []; 57.7 ms
+[controller_server-51] [INFO] [1792506871.587715859] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506872.637863062] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506873.287369324] [bai05_yolo_detector]: RGB frame 185.955: []; 60.6 ms
+[controller_server-51] [INFO] [1792506873.637751573] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506874.687709676] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506875.337581970] [bai05_yolo_detector]: RGB frame 187.737: []; 57.8 ms
+[controller_server-51] [INFO] [1792506875.687984541] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506876.738112964] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506877.556725239] [bai05_yolo_detector]: RGB frame 189.717: []; 53.4 ms
+[controller_server-51] [INFO] [1792506877.789040790] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506878.787805389] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506879.795899989] [bai05_yolo_detector]: RGB frame 191.730: []; 54.3 ms
+[controller_server-51] [INFO] [1792506879.837708314] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506880.837727879] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506881.887719059] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506882.049797553] [bai05_yolo_detector]: RGB frame 193.743: []; 58.5 ms
+[controller_server-51] [INFO] [1792506882.887748864] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506883.937709585] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506884.289359031] [bai05_yolo_detector]: RGB frame 195.723: []; 57.4 ms
+[controller_server-51] [INFO] [1792506884.937710835] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506885.987705358] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506886.539850935] [bai05_yolo_detector]: RGB frame 197.736: []; 59.5 ms
+[controller_server-51] [INFO] [1792506886.987904535] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506888.037715197] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506888.778482806] [bai05_yolo_detector]: RGB frame 199.716: []; 59.0 ms
+[controller_server-51] [INFO] [1792506889.087736642] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506889.292644602] [controller_server]: Reached the goal!
+[bt_navigator-55] [INFO] [1792506889.325996304] [bt_navigator]: Goal succeeded
+[navigate_goals.py-61] [INFO] [1792506889.838614771] [bai05_route_navigator]: {"event": "GOAL_RESULT", "sim_time": 200.76000000000002, "wall_monotonic": 13332.337527608, "goal": 2, "target": {"name": "Goal 2 - southwest", "x": -8.5, "y": -8.5, "yaw": 0.0}, "result": "SUCCEEDED", "sim_duration_s": 84.45900000000002, "wall_duration_s": 97.47775301900037, "final_amcl": {"x": -8.327590729318116, "y": -8.349990686981368, "yaw": -0.3486307419138261}, "final_gt": {"x": -8.360148797369243, "y": -8.398749918295914, "yaw": -0.2613122094312508}, "amcl_stamp": 199.728, "gt_stamp": 200.754, "amcl_goal_distance_m": 0.2285339156654459, "contact_count": 0, "bump_events": 0, "relocalizations": 0, "contact_messages_received": 0, "hazard_messages_received": 9535}
+[yolo_detector.py-60] [INFO] [1792506891.008302140] [bai05_yolo_detector]: RGB frame 201.729: []; 58.6 ms
+[yolo_detector.py-60] [INFO] [1792506893.252814075] [bai05_yolo_detector]: RGB frame 203.709: []; 62.2 ms
+[yolo_detector.py-60] [INFO] [1792506895.487110869] [bai05_yolo_detector]: RGB frame 205.722: []; 56.7 ms
+[navigate_goals.py-61] [INFO] [1792506895.842562457] [bai05_route_navigator]: {"event": "GOAL_SENT", "sim_time": 206.115, "wall_monotonic": 13338.341561418, "goal": 3, "target": {"name": "Goal 3 - southeast", "x": 9.0, "y": -9.0, "yaw": 1.57079632679}}
+[navigate_goals.py-61] [INFO] [1792506895.843910980] [bai05_route_navigator]: Navigating to goal: 9.0 -9.0...
+[bt_navigator-55] [INFO] [1792506895.845122813] [bt_navigator]: Begin navigating from current location (-8.33, -8.35) to (9.00, -9.00)
+[controller_server-51] [INFO] [1792506895.866743294] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-51] [INFO] [1792506896.917320492] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506897.751821588] [bai05_yolo_detector]: RGB frame 207.702: []; 62.7 ms
+[controller_server-51] [INFO] [1792506897.967335606] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506898.967036322] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506899.766073008] [bai05_yolo_detector]: RGB frame 209.484: []; 59.8 ms
+[controller_server-51] [INFO] [1792506900.017032579] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506901.067105605] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506901.777260210] [bai05_yolo_detector]: RGB frame 211.233: []; 61.7 ms
+[controller_server-51] [INFO] [1792506902.067020125] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506903.117224711] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506903.779510884] [bai05_yolo_detector]: RGB frame 212.982: []; 59.6 ms
+[controller_server-51] [INFO] [1792506904.117334253] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506905.167033910] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506905.780585792] [bai05_yolo_detector]: RGB frame 214.731: []; 56.4 ms
+[controller_server-51] [INFO] [1792506906.167036812] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506907.217035388] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506907.790668895] [bai05_yolo_detector]: RGB frame 216.480: []; 60.1 ms
+[controller_server-51] [INFO] [1792506908.217036059] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506909.267036558] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506909.911069104] [bai05_yolo_detector]: RGB frame 218.229: []; 59.7 ms
+[controller_server-51] [INFO] [1792506910.317183591] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506911.317033704] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506911.923265822] [bai05_yolo_detector]: RGB frame 219.978: []; 57.3 ms
+[controller_server-51] [INFO] [1792506912.367072181] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506913.367225123] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506913.929795330] [bai05_yolo_detector]: RGB frame 221.727: []; 62.3 ms
+[controller_server-51] [INFO] [1792506914.417051278] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506915.467037201] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506915.952662258] [bai05_yolo_detector]: RGB frame 223.476: []; 60.1 ms
+[controller_server-51] [INFO] [1792506916.467103619] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506917.517032004] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506917.983182296] [bai05_yolo_detector]: RGB frame 225.225: []; 59.8 ms
+[controller_server-51] [INFO] [1792506918.519329745] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506919.567079111] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506919.992173385] [bai05_yolo_detector]: RGB frame 226.974: []; 60.7 ms
+[controller_server-51] [INFO] [1792506920.617037149] [controller_server]: Passing new path to controller.
+[amcl-49] [INFO] [1792506921.252446965] [amcl]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 227.139 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-51] [INFO] [1792506921.617034800] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506922.266519262] [bai05_yolo_detector]: RGB frame 228.987: []; 59.1 ms
+[controller_server-51] [INFO] [1792506922.667037144] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506923.667033747] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506924.276264161] [bai05_yolo_detector]: RGB frame 230.736: []; 56.8 ms
+[controller_server-51] [INFO] [1792506924.717350340] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506925.767034317] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506926.283047222] [bai05_yolo_detector]: RGB frame 232.452: []; 60.2 ms
+[controller_server-51] [INFO] [1792506926.767037664] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506927.817072980] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506928.293219412] [bai05_yolo_detector]: RGB frame 234.234: []; 57.9 ms
+[controller_server-51] [INFO] [1792506928.817030264] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506929.867052528] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506930.533707199] [bai05_yolo_detector]: RGB frame 236.214: []; 60.5 ms
+[controller_server-51] [INFO] [1792506930.917039501] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506931.917044147] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506932.571613088] [bai05_yolo_detector]: RGB frame 237.963: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.45686182379722595, "xyxy": [263.226318359375, 75.18096923828125, 292.92376708984375, 150.1835174560547]}]; 61.9 ms
+[controller_server-51] [INFO] [1792506932.967034489] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506933.967031384] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506934.844589023] [bai05_yolo_detector]: RGB frame 239.976: [{"class_id": 2, "class_name": "fire extinguisher", "confidence": 0.6967033743858337, "xyxy": [117.94518280029297, 70.62516784667969, 148.00778198242188, 155.19003295898438]}]; 64.3 ms
+[controller_server-51] [INFO] [1792506935.017036447] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506936.017037576] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506937.067035808] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506937.102712389] [bai05_yolo_detector]: RGB frame 241.956: []; 60.1 ms
+[controller_server-51] [INFO] [1792506938.067041210] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506939.117037893] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506939.368951240] [bai05_yolo_detector]: RGB frame 243.969: []; 59.8 ms
+[controller_server-51] [INFO] [1792506940.167032387] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506941.167033895] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506941.631353753] [bai05_yolo_detector]: RGB frame 245.982: []; 56.0 ms
+[controller_server-51] [INFO] [1792506942.217521690] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506943.217346178] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506943.638204060] [bai05_yolo_detector]: RGB frame 247.731: []; 65.0 ms
+[controller_server-51] [INFO] [1792506944.267046791] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506945.317039907] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506945.652282460] [bai05_yolo_detector]: RGB frame 249.480: []; 62.3 ms
+[controller_server-51] [INFO] [1792506946.317029752] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506947.367032250] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506947.913658561] [bai05_yolo_detector]: RGB frame 251.460: []; 60.6 ms
+[controller_server-51] [INFO] [1792506948.367101442] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506949.417213652] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506950.155359450] [bai05_yolo_detector]: RGB frame 253.473: []; 58.5 ms
+[controller_server-51] [INFO] [1792506950.417033417] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506951.467038939] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506952.408115710] [bai05_yolo_detector]: RGB frame 255.453: []; 58.7 ms
+[controller_server-51] [INFO] [1792506952.467209296] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506953.517032486] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506954.567043640] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506954.666630701] [bai05_yolo_detector]: RGB frame 257.466: []; 60.7 ms
+[controller_server-51] [INFO] [1792506955.567033900] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506956.617031824] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506956.925603416] [bai05_yolo_detector]: RGB frame 259.479: []; 55.5 ms
+[controller_server-51] [INFO] [1792506957.617030948] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506958.667034758] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506959.000849999] [bai05_yolo_detector]: RGB frame 261.228: []; 61.1 ms
+[controller_server-51] [INFO] [1792506959.717039377] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506960.717089152] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506961.267089366] [bai05_yolo_detector]: RGB frame 263.208: []; 57.1 ms
+[controller_server-51] [INFO] [1792506961.767039654] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506962.767030975] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506963.533437184] [bai05_yolo_detector]: RGB frame 265.221: []; 59.6 ms
+[controller_server-51] [INFO] [1792506963.817031437] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506964.867356182] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506965.799910936] [bai05_yolo_detector]: RGB frame 267.234: []; 63.1 ms
+[controller_server-51] [INFO] [1792506965.867037631] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506966.917031985] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506967.917154079] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506968.072722689] [bai05_yolo_detector]: RGB frame 269.214: []; 60.5 ms
+[controller_server-51] [INFO] [1792506968.967031516] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506969.967036235] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506970.326793897] [bai05_yolo_detector]: RGB frame 271.227: []; 65.4 ms
+[controller_server-51] [INFO] [1792506971.017032845] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506972.067031284] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506972.590768418] [bai05_yolo_detector]: RGB frame 273.207: []; 58.5 ms
+[controller_server-51] [INFO] [1792506973.067032534] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506974.117037723] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506975.008757524] [bai05_yolo_detector]: RGB frame 275.220: []; 64.9 ms
+[controller_server-51] [INFO] [1792506975.117167455] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506976.168361418] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506977.167031497] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506977.170084694] [bai05_yolo_detector]: RGB frame 276.969: []; 67.9 ms
+[controller_server-51] [INFO] [1792506978.217263981] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506979.267499308] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506979.276632519] [bai05_yolo_detector]: RGB frame 278.454: []; 71.1 ms
+[controller_server-51] [INFO] [1792506980.267382589] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506981.317037050] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506981.351134150] [bai05_yolo_detector]: RGB frame 279.972: []; 75.8 ms
+[controller_server-51] [INFO] [1792506982.367037777] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506983.367569056] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506983.532016976] [bai05_yolo_detector]: RGB frame 281.457: []; 75.3 ms
+[controller_server-51] [INFO] [1792506984.417681852] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506985.417193074] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506985.631151921] [bai05_yolo_detector]: RGB frame 282.975: []; 75.6 ms
+[controller_server-51] [INFO] [1792506986.470386387] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506987.467052046] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506987.692239422] [bai05_yolo_detector]: RGB frame 284.460: []; 78.3 ms
+[controller_server-51] [INFO] [1792506988.517250701] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506989.567036971] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506989.697398768] [bai05_yolo_detector]: RGB frame 285.978: []; 82.3 ms
+[controller_server-51] [INFO] [1792506990.567230357] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506991.567033592] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506991.718105442] [bai05_yolo_detector]: RGB frame 287.463: []; 71.0 ms
+[controller_server-51] [INFO] [1792506992.617040809] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506993.025582397] [local_costmap.local_costmap]: Message Filter dropping message: frame 'turtlebot4/rplidar_link/rplidar' at time 288.225 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-51] [INFO] [1792506993.617421260] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506994.047965661] [bai05_yolo_detector]: RGB frame 289.212: []; 80.6 ms
+[controller_server-51] [INFO] [1792506994.667442923] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506995.666998087] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506996.068798794] [bai05_yolo_detector]: RGB frame 290.730: []; 70.1 ms
+[controller_server-51] [INFO] [1792506996.717819126] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506997.717032562] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792506998.104729698] [bai05_yolo_detector]: RGB frame 292.215: []; 76.0 ms
+[controller_server-51] [INFO] [1792506998.767033913] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792506999.767050574] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792507000.125590985] [bai05_yolo_detector]: RGB frame 293.733: []; 82.5 ms
+[controller_server-51] [INFO] [1792507000.817724390] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792507001.817163055] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792507002.409745180] [bai05_yolo_detector]: RGB frame 295.482: []; 76.5 ms
+[controller_server-51] [INFO] [1792507002.867037883] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792507003.867239337] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792507004.440843533] [bai05_yolo_detector]: RGB frame 296.967: []; 73.1 ms
+[controller_server-51] [INFO] [1792507004.917457165] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792507005.917806380] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792507006.529510024] [bai05_yolo_detector]: RGB frame 298.452: []; 72.8 ms
+[controller_server-51] [INFO] [1792507006.967328546] [controller_server]: Passing new path to controller.
+[controller_server-51] [INFO] [1792507007.968234018] [controller_server]: Passing new path to controller.
+[yolo_detector.py-60] [INFO] [1792507008.545568951] [bai05_yolo_detector]: RGB frame 299.970: []; 71.0 ms
+[controller_server-51] [INFO] [1792507008.727469299] [controller_server]: Reached the goal!
+[bt_navigator-55] [INFO] [1792507008.765445775] [bt_navigator]: Goal succeeded
+[navigate_goals.py-61] [INFO] [1792507009.345874643] [bai05_route_navigator]: {"event": "GOAL_RESULT", "sim_time": 300.63, "wall_monotonic": 13451.84489681, "goal": 3, "target": {"name": "Goal 3 - southeast", "x": 9.0, "y": -9.0, "yaw": 1.57079632679}, "result": "SUCCEEDED", "sim_duration_s": 94.51499999999999, "wall_duration_s": 113.50274612400062, "final_amcl": {"x": 8.90192228007659, "y": -8.78254840319067, "yaw": 1.2980903641840342}, "final_gt": {"x": 8.90986916043823, "y": -8.824304186157425, "yaw": 1.2967883241083251}, "amcl_stamp": 300.21, "gt_stamp": 300.618, "amcl_goal_distance_m": 0.23854650720625115, "contact_count": 0, "bump_events": 0, "relocalizations": 0, "contact_messages_received": 0, "hazard_messages_received": 15727}
+[yolo_detector.py-60] [INFO] [1792507010.846670079] [bai05_yolo_detector]: RGB frame 301.719: []; 71.5 ms
+[yolo_detector.py-60] [INFO] [1792507013.141964336] [bai05_yolo_detector]: RGB frame 303.468: []; 76.3 ms
+[navigate_goals.py-61] [INFO] [1792507015.348125363] [bai05_route_navigator]: {"event": "MISSION_COMPLETE", "sim_time": 305.24100000000004, "wall_monotonic": 13457.847113525, "goals": 3, "contact_count": 0, "bump_events": 0}
+[yolo_detector.py-60] [INFO] [1792507015.440770898] [bai05_yolo_detector]: RGB frame 305.217: []; 79.8 ms
+[INFO] [navigate_goals.py-61]: process has finished cleanly [pid 161874]
+[yolo_detector.py-60] [INFO] [1792507017.539420655] [bai05_yolo_detector]: RGB frame 306.735: []; 74.3 ms
+[yolo_detector.py-60] [INFO] [1792507019.783210832] [bai05_yolo_detector]: RGB frame 308.451: []; 79.9 ms
+[yolo_detector.py-60] [INFO] [1792507021.988737095] [bai05_yolo_detector]: RGB frame 310.200: []; 75.8 ms
+[yolo_detector.py-60] [INFO] [1792507024.254798174] [bai05_yolo_detector]: RGB frame 311.982: []; 74.4 ms
+[yolo_detector.py-60] [INFO] [1792507026.453139517] [bai05_yolo_detector]: RGB frame 313.731: []; 73.0 ms
+[yolo_detector.py-60] [INFO] [1792507028.689804505] [bai05_yolo_detector]: RGB frame 315.480: []; 70.0 ms
+[yolo_detector.py-60] [INFO] [1792507030.852430954] [bai05_yolo_detector]: RGB frame 317.229: []; 72.5 ms
+[yolo_detector.py-60] [INFO] [1792507033.104448498] [bai05_yolo_detector]: RGB frame 318.978: []; 86.4 ms
+[yolo_detector.py-60] [INFO] [1792507035.307719844] [bai05_yolo_detector]: RGB frame 320.727: []; 72.7 ms
+[yolo_detector.py-60] [INFO] [1792507037.509851051] [bai05_yolo_detector]: RGB frame 322.476: []; 74.8 ms
+[yolo_detector.py-60] [INFO] [1792507039.746511644] [bai05_yolo_detector]: RGB frame 324.225: []; 80.7 ms
+[yolo_detector.py-60] [INFO] [1792507041.945109814] [bai05_yolo_detector]: RGB frame 325.974: []; 74.0 ms
+[yolo_detector.py-60] [INFO] [1792507044.177002874] [bai05_yolo_detector]: RGB frame 327.723: []; 75.8 ms
+[yolo_detector.py-60] [INFO] [1792507046.429067580] [bai05_yolo_detector]: RGB frame 329.472: []; 71.2 ms

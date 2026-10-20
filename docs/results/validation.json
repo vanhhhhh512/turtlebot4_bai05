@@ -1,0 +1,37 @@
+{
+  "status": "REPORT_UPDATED_VIDEO_LINK_PROVIDED",
+  "report_run": "direct_goal_route_run10",
+  "pdf_pages": 16,
+  "reference_structure_11_sections": true,
+  "all_3_goals_succeeded": true,
+  "direct_goal_sequence": true,
+  "bump_events": 0,
+  "contact_count": 0,
+  "goal_distance_m": [
+    0.22653773438497096,
+    0.2285339156654459,
+    0.23854650720625115
+  ],
+  "sampled_amcl_gt_xy_max_m": 0.19391336187503827,
+  "localization_note": "XY differences use poses stored in one telemetry row; AMCL and Gazebo timestamps may differ. This is not a synchronized independent localization accuracy estimate.",
+  "goal3_minimum_center_distance_m": 0.6180659259101206,
+  "yolo_box_counts": {
+    "person": 132,
+    "fire extinguisher": 160
+  },
+  "processed_image_frames": 1176,
+  "map_matches_week4_bytes": {
+    "map.yaml": "64c481605424dcf67ae9bd42e8fdbdfcfa880c68d096c42af53be0d760f1b581",
+    "map.pgm": "37dae8d694062218cbcf3588183729142d5008b9ac93827832af1a52dd5ba053"
+  },
+  "github_public": "https://github.com/vanhhhhh512/turtlebot4_bai05",
+  "github_code_commit": "c87263fffbc0a95c0ece749d6219b8cf7de5ad4a",
+  "drive_url": "https://drive.google.com/drive/folders/1GKdy0U0tKGbxUAaGAmAffTPxJa5pT8wy?usp=drive_link",
+  "drive_link_source": "Provided by user; label Video demo as requested",
+  "drive_public_access_verified": false,
+  "pdf_has_clickable_drive_and_github_links": true,
+  "pdf_layout": "16 A4 pages; 11 main sections; no Overfull or Missing character errors; rendered pages reviewed",
+  "rviz_illustration": "Historical run04 screenshot is explicitly labeled; updated numerical and camera evidence is from run10",
+  "archive_before_update": "archive/before_report_update_20261020_225756",
+  "legacy_video": "Original run04 MP4/WebM preserved locally; updated dossier uses the supplied Drive link"
+}

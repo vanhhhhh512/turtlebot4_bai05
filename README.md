@@ -11,6 +11,19 @@ package `bai04_turtlebot4` cung cấp bản đồ và launch localization đư�
 gọi trực tiếp. Hai file map trong repository này là bản sao nguyên byte để nộp
 hồ sơ. Node gửi goal, node YOLO và world thêm vật thể là phần mở rộng Bài 05.
 
+## Video demo, báo cáo và kết quả mới
+
+- [Video demo (Google Drive)](https://drive.google.com/drive/folders/1GKdy0U0tKGbxUAaGAmAffTPxJa5pT8wy?usp=drive_link)
+- [Báo cáo PDF — 16 trang, cập nhật 20/10/2026](docs/report/Bao_cao_23020719_Bai_thuc_hanh_05.pdf)
+- [GitHub mã nguồn](https://github.com/vanhhhhh512/turtlebot4_bai05)
+- [Nguồn LaTeX, biểu đồ, script dựng PDF và evidence run10](docs/README.md)
+
+Lượt `direct_goal_route_run10` đạt **3/3 SUCCEEDED, 0 contact, 0 bump**. Goal 3
+được gửi trực tiếp sau Goal 2. Bình tại `(-1.8, -5.5)` nằm trên quỹ đạo cũ;
+quỹ đạo robot mới cách tâm bình gần nhất 0.618 m. Camera YOLO ghi 132 box person
+và 160 box fire extinguisher qua nhiều frame. Chi tiết và giới hạn phép đo nằm
+trong báo cáo cùng `docs/results/metrics.json`.
+
 ## Cài đặt
 
 Cần ROS 2 Humble và TurtleBot 4 Simulator đã cấu hình repository apt theo
@@ -108,10 +121,10 @@ Sửa `config/goals.yaml` trước lượt mới nếu thay goal. Launch mặc �
 từ package `bai04_turtlebot4`; bản sao trong `maps/` giữ nguyên từ Bài 04.
 `worlds/maze_yolo.sdf` giữ tường của maze và bổ sung hai bình chữa cháy;
 `worlds/placements.yaml` ghi vị trí một bình gần Goal 1 và một bình giữa tuyến Goal 2→3.
-Scene giữ một người ở vị trí trống `(-3, 5)`; không chứa bàn, ghế hoặc người ở vị trí lỗi. Hai bình chữa cháy nằm gần Goal 1 và trên giữa tuyến Goal 2→3 tại `(-1.8, -5.5)`.
+Scene giữ một người ở vị trí trống `(-3, 5)`; không chứa bàn, ghế hoặc người ở vị trí lỗi. Hai bình chữa cháy nằm gần Goal 1 và trên tuyến Goal 2→3 tại `(-1.8, -5.5)`.
 Bình chữa cháy là model SDF dựng bằng hình học đơn giản, có collision để LiDAR/costmap
 quan sát. Map `map.yaml`/`map.pgm` tuần 4 giữ nguyên; các vật thêm vào chỉ thuộc world
-mô phỏng. Bình thứ hai đặt ở `(-1.8, -5.5)`, trên quỹ đạo cũ giữa Goal 2
+mô phỏng. Bình thứ hai đặt ở `(-1.8, -5.5)`, trên quỹ đạo cũ từ Goal 2
 đến Goal 3. Chương trình gửi trực tiếp Goal 3 sau Goal 2, không có goal quan sát trung gian;
 LiDAR đưa bình vào costmap cục bộ để bộ lập kế hoạch/bộ điều khiển tránh khi tới gần. YOLO
 chỉ nhận diện hình ảnh, không điều khiển Nav2; box xuất hiện khi bình vào ảnh và vượt

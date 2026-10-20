@@ -1,0 +1,20 @@
+{
+  "repo_url": "https://github.com/vanhhhhh512/turtlebot4_bai05",
+  "visibility": "public",
+  "default_branch": "main",
+  "verified_anonymous": true,
+  "map.yaml_sha256": "64c481605424dcf67ae9bd42e8fdbdfcfa880c68d096c42af53be0d760f1b581",
+  "map.pgm_sha256": "37dae8d694062218cbcf3588183729142d5008b9ac93827832af1a52dd5ba053",
+  "commit": "c87263fffbc0a95c0ece749d6219b8cf7de5ad4a",
+  "week4_repo_url": "https://github.com/vanhhhhh512/turtlebot4_bai04",
+  "week4_commit": "9f2e4143fcf0caddd72a630accf6f99a6bf37cc5",
+  "video_file": "Demo_23020719_Bai_thuc_hanh_05.webm",
+  "video_format": "WebM/VP9",
+  "drive_url": "https://drive.google.com/drive/folders/1GKdy0U0tKGbxUAaGAmAffTPxJa5pT8wy?usp=drive_link",
+  "drive_link_label": "Video demo",
+  "drive_url_source": "provided by user on 2026-10-20",
+  "drive_public_access_verified": false,
+  "code_commit": "c87263fffbc0a95c0ece749d6219b8cf7de5ad4a",
+  "report_run": "direct_goal_route_run10",
+  "local_legacy_video_run": "run04"
+}

@@ -1,0 +1,428 @@
+{
+  "run_dir": "/home/admin1/xla/wk4/week5/runs/direct_goal_route_run10",
+  "run_id": "direct_goal_route_run10",
+  "goals": [
+    {
+      "goal": 1,
+      "target": {
+        "name": "Goal 1 - northwest",
+        "x": -8.5,
+        "y": 8.5,
+        "yaw": -1.57079632679
+      },
+      "result": "SUCCEEDED",
+      "sim_duration_s": 50.648999999999994,
+      "wall_duration_s": 59.088018144999296,
+      "final_amcl": {
+        "x": -8.325794177959589,
+        "y": 8.355183990292854,
+        "yaw": -1.8739884848385993
+      },
+      "final_gt": {
+        "x": -8.333238350062677,
+        "y": 8.357720927781475,
+        "yaw": -1.8487580838106783
+      },
+      "amcl_stamp": 110.385,
+      "gt_stamp": 111.006,
+      "amcl_goal_distance_m": 0.22653773438497096,
+      "contact_count": 0,
+      "bump_events": 0,
+      "relocalizations": 0,
+      "contact_messages_received": 0,
+      "hazard_messages_received": 3972,
+      "amcl_path_m": 11.794037120892014,
+      "amcl_samples": 111,
+      "localization_end_xy_m": 0.007864588363136023,
+      "pose_stamp_gap_s": 0.6209999999999951
+    },
+    {
+      "goal": 2,
+      "target": {
+        "name": "Goal 2 - southwest",
+        "x": -8.5,
+        "y": -8.5,
+        "yaw": 0.0
+      },
+      "result": "SUCCEEDED",
+      "sim_duration_s": 84.45900000000002,
+      "wall_duration_s": 97.47775301900037,
+      "final_amcl": {
+        "x": -8.327590729318116,
+        "y": -8.349990686981368,
+        "yaw": -0.3486307419138261
+      },
+      "final_gt": {
+        "x": -8.360148797369243,
+        "y": -8.398749918295914,
+        "yaw": -0.2613122094312508
+      },
+      "amcl_stamp": 199.728,
+      "gt_stamp": 200.754,
+      "amcl_goal_distance_m": 0.2285339156654459,
+      "contact_count": 0,
+      "bump_events": 0,
+      "relocalizations": 0,
+      "contact_messages_received": 0,
+      "hazard_messages_received": 9535,
+      "amcl_path_m": 20.298729661463042,
+      "amcl_samples": 217,
+      "localization_end_xy_m": 0.05863011541526503,
+      "pose_stamp_gap_s": 1.025999999999982
+    },
+    {
+      "goal": 3,
+      "target": {
+        "name": "Goal 3 - southeast",
+        "x": 9.0,
+        "y": -9.0,
+        "yaw": 1.57079632679
+      },
+      "result": "SUCCEEDED",
+      "sim_duration_s": 94.51499999999999,
+      "wall_duration_s": 113.50274612400062,
+      "final_amcl": {
+        "x": 8.90192228007659,
+        "y": -8.78254840319067,
+        "yaw": 1.2980903641840342
+      },
+      "final_gt": {
+        "x": 8.90986916043823,
+        "y": -8.824304186157425,
+        "yaw": 1.2967883241083251
+      },
+      "amcl_stamp": 300.21,
+      "gt_stamp": 300.618,
+      "amcl_goal_distance_m": 0.23854650720625115,
+      "contact_count": 0,
+      "bump_events": 0,
+      "relocalizations": 0,
+      "contact_messages_received": 0,
+      "hazard_messages_received": 15727,
+      "amcl_path_m": 22.78319995471727,
+      "amcl_samples": 242,
+      "localization_end_xy_m": 0.042505274009809024,
+      "pose_stamp_gap_s": 0.40800000000001546
+    }
+  ],
+  "yolo": {
+    "frames": 1176,
+    "positive_frames": 282,
+    "box_counts_by_class": {
+      "person": 132,
+      "fire extinguisher": 160
+    },
+    "pipeline_ms_median": 60.86415999925521,
+    "pipeline_ms_p95": 81.74984000061158,
+    "first_image_stamp": 37.323,
+    "last_image_stamp": 330.957,
+    "note": "Counts are boxes across processed frames, not unique object counts or detection accuracy."
+  },
+  "best_detections": {
+    "person": {
+      "frame": {
+        "frame_index": 143,
+        "image_stamp": 72.963,
+        "frame_id": "oakd_rgb_camera_optical_frame",
+        "width": 320,
+        "height": 240,
+        "pipeline_ms": 59.81912000061129,
+        "mission": "Navigating to Goal 1",
+        "detections": [
+          {
+            "class_id": 3,
+            "class_name": "person",
+            "confidence": 0.9513970613479614,
+            "xyxy": [
+              207.95260620117188,
+              0.4002482295036316,
+              252.1877899169922,
+              141.94985961914062
+            ]
+          }
+        ],
+        "saved_stem": "frame_00143_72.963"
+      },
+      "detection": {
+        "class_id": 3,
+        "class_name": "person",
+        "confidence": 0.9513970613479614,
+        "xyxy": [
+          207.95260620117188,
+          0.4002482295036316,
+          252.1877899169922,
+          141.94985961914062
+        ]
+      }
+    },
+    "fire extinguisher": {
+      "frame": {
+        "frame_index": 223,
+        "image_stamp": 92.961,
+        "frame_id": "oakd_rgb_camera_optical_frame",
+        "width": 320,
+        "height": 240,
+        "pipeline_ms": 59.76487400039332,
+        "mission": "Navigating to Goal 1",
+        "detections": [
+          {
+            "class_id": 2,
+            "class_name": "fire extinguisher",
+            "confidence": 0.8428953886032104,
+            "xyxy": [
+              0.00048573812819086015,
+              76.55029296875,
+              9.945185661315918,
+              151.66470336914062
+            ]
+          }
+        ],
+        "saved_stem": "frame_00223_92.961"
+      },
+      "detection": {
+        "class_id": 2,
+        "class_name": "fire extinguisher",
+        "confidence": 0.8428953886032104,
+        "xyxy": [
+          0.00048573812819086015,
+          76.55029296875,
+          9.945185661315918,
+          151.66470336914062
+        ]
+      }
+    }
+  },
+  "events": [
+    {
+      "event": "UNDOCK_RESULT",
+      "sim_time": 51.774,
+      "wall_monotonic": 13158.647508036,
+      "status": 4
+    },
+    {
+      "event": "INITIAL_POSE_FROM_GAZEBO",
+      "sim_time": 53.382000000000005,
+      "wall_monotonic": 13160.685317245,
+      "pose": {
+        "x": -0.3527196736691338,
+        "y": -1.1582094129924321e-06,
+        "yaw": 3.135601345772594
+      }
+    },
+    {
+      "event": "LOCALIZATION_READY",
+      "sim_time": 60.37200000000001,
+      "wall_monotonic": 13169.766303481,
+      "amcl": {
+        "x": -0.35271967366914353,
+        "y": -1.1582094129925412e-06,
+        "yaw": 3.1356013457725944
+      },
+      "gt": {
+        "x": -0.3527196736691338,
+        "y": -1.1582094129924321e-06,
+        "yaw": 3.135601345772594
+      }
+    },
+    {
+      "event": "GOAL_SENT",
+      "sim_time": 60.37200000000001,
+      "wall_monotonic": 13169.768274376,
+      "goal": 1,
+      "target": {
+        "name": "Goal 1 - northwest",
+        "x": -8.5,
+        "y": 8.5,
+        "yaw": -1.57079632679
+      }
+    },
+    {
+      "event": "GOAL_RESULT",
+      "sim_time": 111.021,
+      "wall_monotonic": 13228.856765922,
+      "goal": 1,
+      "target": {
+        "name": "Goal 1 - northwest",
+        "x": -8.5,
+        "y": 8.5,
+        "yaw": -1.57079632679
+      },
+      "result": "SUCCEEDED",
+      "sim_duration_s": 50.648999999999994,
+      "wall_duration_s": 59.088018144999296,
+      "final_amcl": {
+        "x": -8.325794177959589,
+        "y": 8.355183990292854,
+        "yaw": -1.8739884848385993
+      },
+      "final_gt": {
+        "x": -8.333238350062677,
+        "y": 8.357720927781475,
+        "yaw": -1.8487580838106783
+      },
+      "amcl_stamp": 110.385,
+      "gt_stamp": 111.006,
+      "amcl_goal_distance_m": 0.22653773438497096,
+      "contact_count": 0,
+      "bump_events": 0,
+      "relocalizations": 0,
+      "contact_messages_received": 0,
+      "hazard_messages_received": 3972
+    },
+    {
+      "event": "GOAL_SENT",
+      "sim_time": 116.301,
+      "wall_monotonic": 13234.859287534,
+      "goal": 2,
+      "target": {
+        "name": "Goal 2 - southwest",
+        "x": -8.5,
+        "y": -8.5,
+        "yaw": 0.0
+      }
+    },
+    {
+      "event": "GOAL_RESULT",
+      "sim_time": 200.76000000000002,
+      "wall_monotonic": 13332.337527608,
+      "goal": 2,
+      "target": {
+        "name": "Goal 2 - southwest",
+        "x": -8.5,
+        "y": -8.5,
+        "yaw": 0.0
+      },
+      "result": "SUCCEEDED",
+      "sim_duration_s": 84.45900000000002,
+      "wall_duration_s": 97.47775301900037,
+      "final_amcl": {
+        "x": -8.327590729318116,
+        "y": -8.349990686981368,
+        "yaw": -0.3486307419138261
+      },
+      "final_gt": {
+        "x": -8.360148797369243,
+        "y": -8.398749918295914,
+        "yaw": -0.2613122094312508
+      },
+      "amcl_stamp": 199.728,
+      "gt_stamp": 200.754,
+      "amcl_goal_distance_m": 0.2285339156654459,
+      "contact_count": 0,
+      "bump_events": 0,
+      "relocalizations": 0,
+      "contact_messages_received": 0,
+      "hazard_messages_received": 9535
+    },
+    {
+      "event": "GOAL_SENT",
+      "sim_time": 206.115,
+      "wall_monotonic": 13338.341561418,
+      "goal": 3,
+      "target": {
+        "name": "Goal 3 - southeast",
+        "x": 9.0,
+        "y": -9.0,
+        "yaw": 1.57079632679
+      }
+    },
+    {
+      "event": "GOAL_RESULT",
+      "sim_time": 300.63,
+      "wall_monotonic": 13451.84489681,
+      "goal": 3,
+      "target": {
+        "name": "Goal 3 - southeast",
+        "x": 9.0,
+        "y": -9.0,
+        "yaw": 1.57079632679
+      },
+      "result": "SUCCEEDED",
+      "sim_duration_s": 94.51499999999999,
+      "wall_duration_s": 113.50274612400062,
+      "final_amcl": {
+        "x": 8.90192228007659,
+        "y": -8.78254840319067,
+        "yaw": 1.2980903641840342
+      },
+      "final_gt": {
+        "x": 8.90986916043823,
+        "y": -8.824304186157425,
+        "yaw": 1.2967883241083251
+      },
+      "amcl_stamp": 300.21,
+      "gt_stamp": 300.618,
+      "amcl_goal_distance_m": 0.23854650720625115,
+      "contact_count": 0,
+      "bump_events": 0,
+      "relocalizations": 0,
+      "contact_messages_received": 0,
+      "hazard_messages_received": 15727
+    },
+    {
+      "event": "MISSION_COMPLETE",
+      "sim_time": 305.24100000000004,
+      "wall_monotonic": 13457.847113525,
+      "goals": 3,
+      "contact_count": 0,
+      "bump_events": 0
+    }
+  ],
+  "map_sha256": "37dae8d694062218cbcf3588183729142d5008b9ac93827832af1a52dd5ba053",
+  "scene": [
+    {
+      "name": "person_goal2",
+      "x": -3.0,
+      "y": 5.0
+    },
+    {
+      "name": "extinguisher_goal1",
+      "x": -7.8,
+      "y": 6.2
+    },
+    {
+      "name": "extinguisher_goal3",
+      "x": -1.8,
+      "y": -5.5
+    }
+  ],
+  "sampled_amcl_gt_xy_max_m": 0.19391336187503827,
+  "amcl_gt_comparison_note": "XY differences use poses stored in one telemetry row; AMCL and Gazebo timestamps may differ. This is not a synchronized independent localization accuracy estimate.",
+  "goal3_obstacle": {
+    "position": {
+      "name": "extinguisher_goal3",
+      "x": -1.8,
+      "y": -5.5
+    },
+    "minimum_center_distance_m": 0.6180659259101206,
+    "sim_time": 246.60000000000002,
+    "gt_x": -2.3869381419059295,
+    "gt_y": -5.693672678370362,
+    "note": "Distance between robot pose center and extinguisher center, not surface clearance.",
+    "camera_evidence": {
+      "frame_index": 809,
+      "image_stamp": 239.481,
+      "frame_id": "oakd_rgb_camera_optical_frame",
+      "width": 320,
+      "height": 240,
+      "pipeline_ms": 57.45925399969565,
+      "mission": "Navigating to Goal 3",
+      "detections": [
+        {
+          "class_id": 2,
+          "class_name": "fire extinguisher",
+          "confidence": 0.8236140608787537,
+          "xyxy": [
+            155.12777709960938,
+            73.8077392578125,
+            182.9796600341797,
+            152.06057739257812
+          ]
+        }
+      ],
+      "saved_stem": "frame_00809_239.481"
+    }
+  },
+  "direct_goal_sequence": true,
+  "measurement_note": "AMCL sampled every 0.2 simulation seconds; duration includes 0.5 wall-second settling after action result. Final AMCL and GT have the timestamp gap reported for each goal."
+}

@@ -1,0 +1,18 @@
+{
+  "model": "/home/admin1/turtlebot5_github_ws/src/bai05_turtlebot4/models/yolo_world_furniture.torchscript",
+  "device": "0",
+  "image_topic": "/oakd/rgb/preview/image_raw",
+  "confidence": 0.12,
+  "class_aliases": {
+    "a red cylinder with a white stripe": "fire extinguisher"
+  },
+  "imgsz": 960,
+  "class_names": {
+    "0": "wooden table",
+    "1": "chair",
+    "2": "fire extinguisher",
+    "3": "person"
+  },
+  "torch": "2.11.0+cu130",
+  "camera_source": "ROS sensor_msgs/Image from Gazebo OAK-D RGB camera"
+}

@@ -1,0 +1,15 @@
+{
+  "run_dir": "/home/admin1/xla/wk4/week5/runs/direct_goal_route_run10",
+  "metrics_source": "/home/admin1/xla/wk4/week5/results/metrics.json",
+  "reference_pdf": "/home/admin1/23020719_Đỗ_Việt_Anh_week_4.pdf",
+  "chapter_count": 11,
+  "navigation_screenshot": "results/rviz_reference_run04.png (historical interface illustration only)",
+  "current_results_run": "direct_goal_route_run10",
+  "repo_url": "https://github.com/vanhhhhh512/turtlebot4_bai05",
+  "drive_url": "https://drive.google.com/drive/folders/1GKdy0U0tKGbxUAaGAmAffTPxJa5pT8wy?usp=drive_link",
+  "video_file": "Demo_23020719_Bai_thuc_hanh_05.webm",
+  "week4_repo_url": "https://github.com/vanhhhhh512/turtlebot4_bai04",
+  "week4_commit": "9f2e4143fcf0caddd72a630accf6f99a6bf37cc5",
+  "week5_code_commit": "c87263fffbc0a95c0ece749d6219b8cf7de5ad4a",
+  "camera_goal3_evidence": "frame_00809_239.481"
+}
