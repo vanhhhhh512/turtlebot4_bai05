@@ -21,6 +21,8 @@ Gói có đủ hình trong figures/, logo và hỗ trợ tiếng Việt; mọi �
 nằm trong ZIP. Không cần ROS hoặc thư mục results bên ngoài để biên dịch.
 
 Bản cập nhật dùng số liệu run10, đã có link Video demo và GitHub.
+Mục 3.1 giải thích từng file; mục 3.4 giải thích topic/action, TF và clock.
+Sơ đồ 3.2 đã sửa các nhãn và mũi tên.
 Mục 7.2 có ảnh camera OAK-D RGB hiển thị ngay trong RViz.
 '''
 with ZipFile(output, 'w', ZIP_DEFLATED, compresslevel=6) as archive:

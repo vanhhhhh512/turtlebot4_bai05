@@ -1,12 +1,12 @@
 # Báo cáo Bài thực hành 05 — Đỗ Việt Anh, 23020719
 
 - [Video demo](https://drive.google.com/drive/folders/1GKdy0U0tKGbxUAaGAmAffTPxJa5pT8wy?usp=drive_link)
-- [Báo cáo PDF — 16 trang](report/Bao_cao_23020719_Bai_thuc_hanh_05.pdf)
+- [Báo cáo PDF — 19 trang](report/Bao_cao_23020719_Bai_thuc_hanh_05.pdf)
 - [ZIP LaTeX mở/sửa trên Prism](report/Bao_cao_23020719_Bai05_LaTeX_Prism.zip)
 - [GitHub mã nguồn Bài 05](https://github.com/vanhhhhh512/turtlebot4_bai05)
 - [GitHub Bài 04 — map/localization](https://github.com/vanhhhhh512/turtlebot4_bai04)
 
-Báo cáo cập nhật ngày 20/10/2026 giữ 11 mục chính. Số liệu và ảnh camera lấy từ
+Báo cáo cập nhật ngày 21/10/2026 giữ 11 mục chính. Số liệu và ảnh camera lấy từ
 `direct_goal_route_run10`, chạy source điều hướng commit `c87263f`. Cả ba goal
 đều SUCCEEDED, MISSION_COMPLETE ghi 0 contact và 0 bump. Goal 3 được gửi trực tiếp
 sau Goal 2, có thời gian dừng giữa goal nhưng không có pose quan sát trung gian.
@@ -17,6 +17,8 @@ log ghi 132 box person và 160 box fire extinguisher qua 1.176 frame đã xử l
 Khoảng cách nhỏ nhất giữa tâm robot và tâm bình Goal 3 là 0.618 m (không phải
 khoảng hở bề mặt). Chênh lệch AMCL/Gazebo lớn nhất ở các pose đã lưu là 0.194 m;
 hai timestamp có thể khác nhau, nên không coi đó là accuracy đồng bộ độc lập.
+
+Mục 3.1 giải thích từng file chính; mục 3.4 trình bày nguồn phát/nhận, nội dung dữ liệu, action, TF và clock.
 
 ## Nội dung
 
