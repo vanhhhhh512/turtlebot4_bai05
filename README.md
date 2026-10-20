@@ -98,7 +98,7 @@ YOLO publish `/bai05/yolo/image` (`sensor_msgs/msg/Image`) và
 `/bai05/yolo/detections` (`std_msgs/msg/String` chứa JSON với timestamp, class,
 confidence, box xyxy). Mission state ở `/bai05/mission_status`.
 
-## Tài liệu và nguồn mô hình
+## Tài liệu tham khảo
 
 - [TurtleBot 4 Navigator](https://turtlebot.github.io/turtlebot4-user-manual/tutorials/turtlebot4_navigator.html)
 - [Nav2 Simple Commander](https://docs.nav2.org/commander_api/index.html)
