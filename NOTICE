@@ -21,3 +21,8 @@ The RViz configuration is derived from the student's week 4 package and Nav2.
 
 Ultralytics YOLO and model weights are external dependencies and are subject to
 their respective upstream licensing: https://www.ultralytics.com/license
+The bundled yolo_world_furniture.torchscript is an exported YOLOv8s-Worldv2
+model from https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8s-worldv2.pt,
+with text prompts wooden table, chair, a red cylinder with a white stripe, and person. The cylinder prompt is displayed as fire extinguisher in the demo. It is
+distributed as a separate third-party model artifact, not as original student
+code. Consult the upstream Ultralytics license for weight usage.

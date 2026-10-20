@@ -1041,15 +1041,8 @@
                 </visual>
             </link>
         </model>
-    <include><uri>__BAI05_MODELS__/malevisitoronphone</uri><name>person_goal1</name><pose>5.0 3.0 0.0 0 0 3.14159</pose><static>true</static></include>
-    <include><uri>__BAI05_MODELS__/chair</uri><name>chair_goal1</name><pose>4.6 3.8 0.0 0 0 0.0</pose><static>true</static></include>
     <include><uri>__BAI05_MODELS__/malevisitoronphone</uri><name>person_goal2</name><pose>-3.0 5.0 0.0 0 0 -1.5708</pose><static>true</static></include>
-    <include><uri>__BAI05_MODELS__/malevisitoronphone</uri><name>person_goal3</name><pose>5.5 -3.6 0.0 0 0 3.14159</pose><static>true</static></include>
-    <include><uri>__BAI05_MODELS__/table</uri><name>table_center</name><pose>-2.5 -0.5 0.0 0 0 0.0</pose><static>true</static></include>
-    <include><uri>__BAI05_MODELS__/chair</uri><name>chair_center</name><pose>-2.5 -1.3 0.0 0 0 3.14159</pose><static>true</static></include>
-    <include><uri>__BAI05_MODELS__/table</uri><name>table_southeast</name><pose>4.5 -8.5 0.0 0 0 0.0</pose><static>true</static></include>
-    <include><uri>__BAI05_MODELS__/chair</uri><name>chair_southeast</name><pose>5.4 -8.5 0.0 0 0 -1.5708</pose><static>true</static></include>
-    <include><uri>__BAI05_MODELS__/fire_extinguisher</uri><name>extinguisher_northwest</name><pose>-7.8 6.2 0.0 0 0 0.0</pose><static>true</static></include>
-    <include><uri>__BAI05_MODELS__/fire_extinguisher</uri><name>extinguisher_southeast</name><pose>5.2 -7.8 0.0 0 0 0.0</pose><static>true</static></include>
+    <include><uri>__BAI05_MODELS__/fire_extinguisher</uri><name>extinguisher_goal1</name><pose>-7.8 6.2 0.0 0 0 0.0</pose><static>true</static></include>
+    <include><uri>__BAI05_MODELS__/fire_extinguisher</uri><name>extinguisher_goal3</name><pose>5.2 -7.8 0.0 0 0 0.0</pose><static>true</static></include>
   </world>
 </sdf>

@@ -21,7 +21,9 @@ class YoloDetector(Node):
         super().__init__('bai05_yolo_detector')
         defaults = {'image_topic': '/oakd/rgb/preview/image_raw',
                     'output_dir': str(Path.home() / 'bai05_run'), 'model': 'yolo11n.pt',
-                    'device': '0', 'confidence': 0.35, 'imgsz': 640,
+                    'device': '0', 'confidence': 0.12, 'observation_confidence': 0.012,
+                    'class_aliases': '{"a red cylinder with a white stripe": "fire extinguisher"}',
+                    'imgsz': 960,
                     'inference_period': 0.25, 'show_window': True}
         for name, value in defaults.items(): self.declare_parameter(name, value)
         self.out = Path(self.get_parameter('output_dir').value)
@@ -34,7 +36,16 @@ class YoloDetector(Node):
         self.counter = 0
         self.mission = 'Loading map / AMCL'
         torch.set_num_threads(2)
-        self.model = YOLO(self.get_parameter('model').value)
+        self.model = YOLO(self.get_parameter('model').value, task='detect')
+        aliases = json.loads(self.get_parameter('class_aliases').value)
+        # TorchScript models expose names as a read-only property. Keep display
+        # aliases on the node and use them for JSON/overlay labels instead.
+        if isinstance(self.model.names, dict):
+            self.class_names = {int(key): aliases.get(value, value)
+                                for key, value in self.model.names.items()}
+        else:
+            self.class_names = {index: aliases.get(value, value)
+                                for index, value in enumerate(self.model.names)}
         self.device = self.get_parameter('device').value
         if self.device != 'cpu' and not torch.cuda.is_available():
             self.get_logger().warning('CUDA unavailable, using CPU')
@@ -52,11 +63,13 @@ class YoloDetector(Node):
         if self.show_window:
             cv2.namedWindow('Bai05 - TurtleBot4 RGB + YOLO', cv2.WINDOW_NORMAL)
             cv2.resizeWindow('Bai05 - TurtleBot4 RGB + YOLO', 800, 600)
-        metadata = {'model': self.get_parameter('model').value, 'device': self.device,
+        metadata = {'model': self.get_parameter('model').value,
+                    'device': self.device,
                     'image_topic': self.get_parameter('image_topic').value,
                     'confidence': self.get_parameter('confidence').value,
-                    'imgsz': self.get_parameter('imgsz').value,
-                    'class_names': self.model.names, 'torch': torch.__version__,
+                    'observation_confidence': self.get_parameter('observation_confidence').value,
+                    'class_aliases': aliases, 'imgsz': self.get_parameter('imgsz').value,
+                    'class_names': self.class_names, 'torch': torch.__version__,
                     'camera_source': 'ROS sensor_msgs/Image from Gazebo OAK-D RGB camera'}
         (self.out / 'yolo_metadata.json').write_text(json.dumps(metadata, indent=2))
         self.get_logger().info('YOLO ready, subscribing to ' + metadata['image_topic'])
@@ -71,6 +84,8 @@ class YoloDetector(Node):
         elif event == 'MISSION_COMPLETE': self.mission = 'MISSION COMPLETE - 3 goals'
         elif event == 'MISSION_ERROR': self.mission = 'MISSION ERROR - see navigation log'
         elif event == 'LOCALIZATION_READY': self.mission = 'AMCL / Nav2 ready'
+        elif event == 'OBSERVATION_SENT': self.mission = 'Looking at extinguisher before Goal 3'
+        elif event == 'OBSERVATION_RESULT': self.mission = 'Extinguisher view complete'
 
     def detect(self):
         msg = self.latest
@@ -84,21 +99,26 @@ class YoloDetector(Node):
         except Exception as exc:
             self.get_logger().error('cv_bridge conversion failed: ' + str(exc))
             return
-        result = self.model.predict(frame, conf=self.get_parameter('confidence').value,
+        confidence = self.get_parameter('confidence').value
+        if self.mission == 'Looking at extinguisher before Goal 3':
+            confidence = self.get_parameter('observation_confidence').value
+        result = self.model.predict(frame, conf=confidence,
                     imgsz=self.get_parameter('imgsz').value, device=self.device, verbose=False)[0]
         latency = (time.perf_counter()-start)*1000
         detections = [{'class_id': int(box.cls.item()),
-                       'class_name': self.model.names[int(box.cls.item())],
+                       'class_name': self.class_names[int(box.cls.item())],
                        'confidence': float(box.conf.item()),
                        'xyxy': [float(v) for v in box.xyxy[0].tolist()]}
-                      for box in result.boxes]
+                      for box in result.boxes
+                      if self.class_names[int(box.cls.item())]
+                      in ('fire extinguisher', 'person')]
         record = {'frame_index': self.counter, 'image_stamp': stamp,
                   'frame_id': msg.header.frame_id, 'width': msg.width, 'height': msg.height,
                   'pipeline_ms': latency, 'mission': self.mission, 'detections': detections}
-        annotated = result.plot(labels=False)
+        annotated = frame.copy()
         cv2.rectangle(annotated, (0, 0), (annotated.shape[1], 42), (35, 35, 35), -1)
         cv2.putText(annotated, self.mission, (5, 17), cv2.FONT_HERSHEY_SIMPLEX, .37, (255,255,255), 1)
-        cv2.putText(annotated, f'YOLO11n | sim {stamp:.1f}s | {latency:.1f} ms | {len(detections)} boxes',
+        cv2.putText(annotated, f'YOLO-World | sim {stamp:.1f}s | {latency:.1f} ms | {len(detections)} boxes',
                     (5, 34), cv2.FONT_HERSHEY_SIMPLEX, .31, (100,255,180), 1)
         # Keep labels inside the image, including boxes touching the top image edge.
         for index, det in enumerate(detections):
@@ -106,6 +126,9 @@ class YoloDetector(Node):
             x = max(1, min(int(det['xyxy'][0]), frame.shape[1]-105))
             y = max(57, min(int(det['xyxy'][1])+15, frame.shape[0]-8))
             (width, height), baseline = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, .4, 1)
+            color = {0:(255,80,0), 1:(255,220,0), 2:(0,0,255), 3:(0,220,0)}.get(det['class_id'],(255,255,255))
+            x1, y1, x2, y2 = [int(v) for v in det['xyxy']]
+            cv2.rectangle(annotated, (x1,y1), (x2,y2), color, 2)
             cv2.rectangle(annotated, (x,y-height-3), (min(frame.shape[1]-1,x+width+4),y+baseline),
                           (30,70,20),-1)
             cv2.putText(annotated,label,(x+2,y),cv2.FONT_HERSHEY_SIMPLEX,.4,(255,255,255),1)
@@ -114,7 +137,9 @@ class YoloDetector(Node):
         self.image_pub.publish(image_msg)
         self.json_pub.publish(String(data=json.dumps(record)))
         wall = time.monotonic()
-        if self.counter == 0 or (detections and wall-self.last_save >= 4):
+        visible_props = any(d['class_name'] in ('fire extinguisher', 'person')
+                            and d['confidence'] >= 0.08 for d in detections)
+        if self.counter == 0 or visible_props or (detections and wall-self.last_save >= 4):
             stem = f'frame_{self.counter:05d}_{stamp:.3f}'
             cv2.imwrite(str(self.out / 'detections' / (stem + '_raw.jpg')), frame)
             cv2.imwrite(str(self.out / 'detections' / (stem + '_yolo.jpg')), annotated)

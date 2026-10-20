@@ -24,9 +24,10 @@ export IGN_PARTITION="${BAI05_IGN_PARTITION:-bai05_isolated}"
 
 run_dir="${BAI05_OUTPUT_DIR:-$HOME/bai05_runs/$(date +%Y%m%d_%H%M%S)}"
 mkdir -p "$run_dir"
-model="${BAI05_YOLO_MODEL:-$HOME/xla/wk4/week5/yolo11n.pt}"
+model="${BAI05_YOLO_MODEL:-$package_dir/models/yolo_world_furniture.torchscript}"
 if [[ ! -f "$model" ]]; then
-  model=yolo11n.pt
+  printf 'YOLO model not found: %s\n' "$model" >&2
+  exit 1
 fi
 
 python3 "$package_dir/scripts/arrange_windows.py" &

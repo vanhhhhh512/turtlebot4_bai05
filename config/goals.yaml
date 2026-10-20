@@ -1,6 +1,8 @@
 frame_id: map
 goal_timeout_sec: 240.0
 dwell_sec: 6.0
+observation_pose: {name: Fire extinguisher view before Goal 3, x: 3.5, y: -7.3, yaw: -1.0}
+observation_dwell_sec: 8.0
 goals:
   - {name: Goal 1 - northwest, x: -8.5, y: 8.5, yaw: -1.57079632679}
   - {name: Goal 2 - southwest, x: -8.5, y: -8.5, yaw: 0.0}

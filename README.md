@@ -3,7 +3,7 @@
 Đỗ Việt Anh — 23020719 — K68E-RE. Ubuntu 22.04, ROS 2 Humble và Ignition Fortress.
 
 Chương trình dùng lại bản đồ `maze` tuần 4, định vị AMCL, gửi ba goal tuần tự bằng
-`nav2_simple_commander` và nhận diện ảnh RGB của OAK-D bằng Ultralytics YOLO11n.
+`nav2_simple_commander` và nhận diện ảnh RGB của OAK-D bằng YOLO-Worldv2.
 Hai node Python chạy độc lập: navigation tiếp tục hoạt động khi xử lý ảnh.
 
 Source nền là repository [Bài 04](https://github.com/vanhhhhh512/turtlebot4_bai04):
@@ -36,8 +36,13 @@ colcon build --symlink-install \
 source install/setup.bash
 ```
 
-YOLO tự tải `yolo11n.pt` trong lần chạy đầu nếu weights chưa có. Có thể truyền
-`yolo_model:=/đường/dẫn/yolo11n.pt` để dùng weights có sẵn. Cần desktop và OpenGL
+YOLO-World hiển thị box cho bình chữa cháy và người. World demo giữ lại một người ở vị trí
+an toàn, không chạm tường; bàn, ghế và người bị lỗi vị trí đã được bỏ khỏi scene.
+
+Model YOLO-World TorchScript trong `models/yolo_world_furniture.torchscript` đi kèm source,
+với các prompt `wooden table`, `chair`, `a red cylinder with a white stripe` (hiển thị là fire extinguisher), `person`; demo không
+cần tải weights ở lần chạy đầu. Có thể truyền `yolo_model:=/đường/dẫn/model.pt`
+để dùng model khác. Cần desktop và OpenGL
 để chạy Gazebo/RViz/OpenCV. CUDA được sử dụng nếu có; node tự chuyển CPU khi
 `torch.cuda.is_available()` là false; có thể chọn `device:=cpu`.
 
@@ -103,11 +108,16 @@ không phải quãng đường Nav2 đo được trong lượt chạy.
 Sửa `config/goals.yaml` trước lượt mới nếu thay goal. Launch mặc định nạp map
 từ package `bai04_turtlebot4`; bản sao trong `maps/` giữ nguyên từ Bài 04.
 `worlds/maze_yolo.sdf` giữ tường của maze và bổ sung mô hình
-người/ghế, 2 bàn và 2 bình chữa cháy; `worlds/placements.yaml` ghi đủ vị trí.
-Bàn và bình chữa cháy là model SDF dựng bằng hình học đơn giản, có collision
+hai bình chữa cháy gần Goal 1 và Goal 3; `worlds/placements.yaml` ghi vị trí.
+Chỉ giữ một model người ở vùng trống; người ở vùng vướng tường, bàn và ghế đã được bỏ.
+Bình chữa cháy là model SDF dựng bằng hình học đơn giản, có collision
 để LiDAR/costmap quan sát. Map `map.yaml`/`map.pgm` tuần 4 giữ nguyên; các vật
-thêm vào chỉ thuộc world mô phỏng. YOLO11n dùng class COCO nên có thể nhận
-`chair`, nhưng không có class `fire extinguisher` để gọi đúng tên bình.
+thêm vào chỉ thuộc world mô phỏng. Trước Goal 3, node Nav2 ghé pose quan sát
+`(3.5, -7.3, -1.0)` và dừng 8 giây để camera nhìn về bình chữa cháy cạnh
+tuyến tới Goal 3. Bình đặt sát tuyến đi để dễ thấy; Nav2 phải lập kế hoạch tránh
+vật cản khi tiếp tục. Đây là điểm quan sát giữa Goal 2 và Goal 3; ba goal ở ba góc
+vẫn giữ nguyên. YOLO chỉ vẽ box khi vật thể thật sự vào ảnh và vượt ngưỡng
+confidence 0,12.
 
 ## Chạy riêng từng phần
 
@@ -137,10 +147,11 @@ scripts/navigate_goals.py     BasicNavigator, undock/initialpose, goal results, 
 scripts/yolo_detector.py      Image -> cv_bridge -> YOLO -> bounding boxes/log/image
 launch/demo.launch.py         Gazebo server/GUI, clock bridge, robot, AMCL, Nav2, RViz
 config/goals.yaml             Ba pose mục tiêu
+config/localization.yaml      AMCL với beam skipping cho vật thể mới
 config/nav2.yaml              Tham số Nav2 thực sự dùng (Navfn + DWB, 0.26 m/s)
 config/gazebo_gui.config      Camera quan sát mô phỏng
 maps/map.yaml, map.pgm        Map tuần 4
-models/                      Model người/ghế/bàn/bình và metadata tác giả
+models/                      Model người, bình chữa cháy và YOLO-World TorchScript
 worlds/maze_yolo.sdf          World maze thêm vật thể
 worlds/placements.yaml       Vị trí các vật trong Gazebo
 ```
@@ -171,5 +182,5 @@ confidence, box xyxy). Mission state ở `/bai05/mission_status`.
 - [Fuel MaleVisitorOnPhone v2](https://fuel.gazebosim.org/1.0/OpenRobotics/models/MaleVisitorOnPhone/2)
 - [Fuel Chair v3](https://fuel.gazebosim.org/1.0/OpenRobotics/models/Chair/3)
 
-Mã bài tập do sinh viên thực hiện, Apache-2.0. Model Fuel và world upstream giữ
-quyền tác giả/điều khoản nguồn; xem `NOTICE`. Weights YOLO không được đưa vào Git.
+Mã bài tập do sinh viên thực hiện, Apache-2.0. Model Fuel, world upstream và
+YOLO-World weights giữ quyền tác giả/điều khoản nguồn; xem `NOTICE`.

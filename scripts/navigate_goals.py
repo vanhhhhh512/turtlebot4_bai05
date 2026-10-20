@@ -192,6 +192,43 @@ class RouteNavigator(BasicNavigator):
         self.event('LOCALIZATION_READY', amcl=pose_dict(self.amcl.pose.pose),
                    gt=pose_dict(self.gt.pose.pose))
 
+    def observe_before_goal_three(self):
+        view = self.config.get('observation_pose')
+        if not view:
+            return
+        pose = PoseStamped()
+        pose.header.frame_id = self.config.get('frame_id', 'map')
+        pose.pose.position.x, pose.pose.position.y = float(view['x']), float(view['y'])
+        pose.pose.orientation.z = math.sin(float(view['yaw']) / 2)
+        pose.pose.orientation.w = math.cos(float(view['yaw']) / 2)
+        self.event('OBSERVATION_SENT', target=view)
+        deadline = time.monotonic() + 150
+        for attempt in range(3):
+            pose.header.stamp = self.get_clock().now().to_msg()
+            if not self.goToPose(pose):
+                raise RuntimeError('Fire extinguisher observation pose rejected')
+            retry = False
+            while rclpy.ok() and not self.isTaskComplete():
+                error = self.localization_error()
+                if error is not None and error > 1.0:
+                    self.relocalize_from_gazebo('observation', error)
+                    retry = True
+                    break
+                if time.monotonic() > deadline:
+                    self.cancelTask()
+                    raise TimeoutError('Fire extinguisher observation pose timed out')
+            if retry:
+                continue
+            result = self.getResult()
+            if result != TaskResult.SUCCEEDED:
+                raise RuntimeError(f'Fire extinguisher observation pose failed: {result.name}')
+            self.event('OBSERVATION_RESULT', result=result.name,
+                       amcl=pose_dict(self.amcl.pose.pose),
+                       gt=pose_dict(self.gt.pose.pose))
+            self.spin_for(self.config.get('observation_dwell_sec', 5))
+            return
+        raise RuntimeError('Fire extinguisher observation lost localization repeatedly')
+
     def run_route(self):
         if self.get_parameter('initialize').value:
             self.initialize_robot()
@@ -199,6 +236,8 @@ class RouteNavigator(BasicNavigator):
             self.waitUntilNav2Active()
         results = []
         for index, goal in enumerate(self.config['goals'], 1):
+            if index == 3:
+                self.observe_before_goal_three()
             self.active_goal = index
             p = PoseStamped()
             p.header.frame_id = self.config.get('frame_id', 'map')
