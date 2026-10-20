@@ -275,7 +275,9 @@ Goal 3; Nav2 có thể cập nhật đường đi khi costmap thay đổi nhưng
 Việc YOLO nhìn thấy bình không kích hoạt gửi goal hoặc nối thêm đường đi.
 
 \subsection{Ảnh RViz}
-\fig{../results/rviz_reference_run04.png}{1.0}{Ảnh run04 được giữ để minh họa giao diện RViz: map, scan, costmap, path và camera. Bố trí goal và số liệu của bản cập nhật run10 được trình bày ở mục 7.3 và mục 9.}
+\fig{../results/rviz_rgb_camera.png}{1.0}{RViz hiển thị camera OAK-D RGB ở góc trên trái cùng map, scan LiDAR, costmap và path. Ảnh chụp từ lượt \code{corners_run04} minh họa giao diện có RGB trong RViz; số liệu kết quả cập nhật lấy từ run10 ở mục 9.}
+
+Panel \code{OAK-D RGB} dùng display Image, nhận topic \code{/oakd/rgb/preview/image_raw}; camera RGB được hiển thị trực tiếp trong RViz cùng dữ liệu LiDAR/map.
 
 Các dải màu quanh tường thể hiện chi phí vật cản và inflation. Marker Goal 1--3
 chỉ hiển thị vị trí trong file cấu hình; marker không phát action hoặc lệnh vận tốc.

@@ -2,6 +2,7 @@
 
 - [Video demo](https://drive.google.com/drive/folders/1GKdy0U0tKGbxUAaGAmAffTPxJa5pT8wy?usp=drive_link)
 - [Báo cáo PDF — 16 trang](report/Bao_cao_23020719_Bai_thuc_hanh_05.pdf)
+- [ZIP LaTeX mở/sửa trên Prism](report/Bao_cao_23020719_Bai05_LaTeX_Prism.zip)
 - [GitHub mã nguồn Bài 05](https://github.com/vanhhhhh512/turtlebot4_bai05)
 - [GitHub Bài 04 — map/localization](https://github.com/vanhhhhh512/turtlebot4_bai04)
 
@@ -26,7 +27,7 @@ hai timestamp có thể khác nhau, nên không coi đó là accuracy đồng b�
 - `tools/`: script tính số liệu/vẽ biểu đồ và dựng PDF.
 - `publication.json`: link demo, GitHub và commit code đã kiểm chứng.
 
-Ảnh RViz run04 trong PDF được ghi rõ là minh họa giao diện lịch sử. Bảng goal,
+Ảnh mục 7.2 từ corners_run04 có camera OAK-D RGB hiển thị ngay trong RViz; đây là ảnh minh họa giao diện được ghi rõ nguồn. Bảng goal,
 quỹ đạo, ảnh YOLO và số liệu kết quả thuộc run10; không ghép ảnh cũ thành minh
 chứng cho scene mới. Link Video demo do sinh viên cung cấp.
 
@@ -38,6 +39,7 @@ Cần Python 3 với NumPy, Matplotlib, Pillow và Tectonic (trong PATH hoặc
 ```bash
 python3 tools/analyze_run.py data/direct_goal_route_run10
 python3 tools/make_report.py
+python3 tools/package_latex.py
 ```
 
 Script dùng nguyên map ở `../maps/`, đọc log đã có và tạo lại `results/` cùng

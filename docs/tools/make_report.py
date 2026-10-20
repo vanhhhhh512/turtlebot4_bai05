@@ -95,7 +95,7 @@ for a,b in [('–','--'),('—','---'),('“','``'),('”',"''"),('’',"'")]:te
 (report/'Bao_cao_23020719_Bai_thuc_hanh_05.tex').write_text(tex)
 (results/'report_provenance.json').write_text(json.dumps({'run_dir':str(run),'metrics_source':str(results/'metrics.json'),
     'reference_pdf':'/home/admin1/23020719_Đỗ_Việt_Anh_week_4.pdf','chapter_count':11,
-    'navigation_screenshot':'results/rviz_reference_run04.png (historical interface illustration only)',
+    'navigation_screenshot':'runs/corners_run04/rviz_rgb_lidar_gazebo_yolo.png (RGB panel within RViz; interface illustration)',
     'current_results_run':m['run_id'],'repo_url':repo,'drive_url':video_url,
     'video_file':video_filename,
     'week4_repo_url':pub.get('week4_repo_url'),

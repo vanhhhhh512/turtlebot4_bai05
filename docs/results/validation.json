@@ -31,7 +31,13 @@
   "drive_public_access_verified": false,
   "pdf_has_clickable_drive_and_github_links": true,
   "pdf_layout": "16 A4 pages; 11 main sections; no Overfull or Missing character errors; rendered pages reviewed",
-  "rviz_illustration": "Historical run04 screenshot is explicitly labeled; updated numerical and camera evidence is from run10",
+  "rviz_illustration": "Section 7.2: corners_run04 screenshot, with OAK-D RGB panel inside RViz; run10 remains the source of updated numerical/camera evidence.",
   "archive_before_update": "archive/before_report_update_20261020_225756",
-  "legacy_video": "Original run04 MP4/WebM preserved locally; updated dossier uses the supplied Drive link"
+  "legacy_video": "Original run04 MP4/WebM preserved locally; updated dossier uses the supplied Drive link",
+  "section_7_2_image": {
+    "source": "runs/corners_run04/rviz_rgb_lidar_gazebo_yolo.png",
+    "asset": "results/rviz_rgb_camera.png",
+    "sha256": "76785c47b3998c424c34b7a3b6055e546651bedec5155f96549d0da0fc53d3e7",
+    "rgb_panel_inside_rviz": true
+  }
 }

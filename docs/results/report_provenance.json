@@ -3,7 +3,7 @@
   "metrics_source": "/home/admin1/xla/wk4/week5/results/metrics.json",
   "reference_pdf": "/home/admin1/23020719_Đỗ_Việt_Anh_week_4.pdf",
   "chapter_count": 11,
-  "navigation_screenshot": "results/rviz_reference_run04.png (historical interface illustration only)",
+  "navigation_screenshot": "runs/corners_run04/rviz_rgb_lidar_gazebo_yolo.png (RGB panel within RViz; interface illustration)",
   "current_results_run": "direct_goal_route_run10",
   "repo_url": "https://github.com/vanhhhhh512/turtlebot4_bai05",
   "drive_url": "https://drive.google.com/drive/folders/1GKdy0U0tKGbxUAaGAmAffTPxJa5pT8wy?usp=drive_link",
